@@ -1,0 +1,12 @@
+package-as: LibCurrencyInfo
+
+manual-changelog:
+    filename: Docs/Revisions.txt
+    markup-type: plain
+
+enable-nolib-creation: yes
+
+externals:
+   LibStub:
+        url: https://repos.wowace.com/wow/libstub/trunk
+        tag: latest
