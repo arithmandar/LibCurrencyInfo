@@ -3,7 +3,7 @@ $Id$
 Revision History:
 =================
 
-* v1.01 (Jul. xx, 2017)
+* v1.01 (Jul. 26, 2017)
 -----------------------
 - Fine-tuned GetCurrencyTokenStrings when currency description is not available
 
