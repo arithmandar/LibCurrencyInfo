@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.01 (Jul. xx, 2017)
+-----------------------
+- Fine-tuned GetCurrencyTokenStrings when currency description is not available
+
 * v1.00 (Jul. 25, 2017)
 -----------------------
 - Initial version which support WoW 7.2.5

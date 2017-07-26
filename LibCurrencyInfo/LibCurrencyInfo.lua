@@ -468,9 +468,9 @@ function lib:GetCurrencyTokenStrings(currencyID, lang)
 	local str = HIGHLIGHT_FONT_COLOR_CODE..name
 	if currencyDesc then str = str.."\n"..NORMAL_FONT_COLOR_CODE..currencyDesc end
 	if (totalMax and totalMax > 0) then
-		str = str.."\n\n"..format(CURRENCY_TOTAL_CAP, HIGHLIGHT_FONT_COLOR_CODE, count, totalMax)
+		str = str.."\n\n"..NORMAL_FONT_COLOR_CODE..format(CURRENCY_TOTAL_CAP, HIGHLIGHT_FONT_COLOR_CODE, count, totalMax)
 	else
-		str = str.."\n\n"..format(CURRENCY_TOTAL, HIGHLIGHT_FONT_COLOR_CODE, count)
+		str = str.."\n\n"..NORMAL_FONT_COLOR_CODE..format(CURRENCY_TOTAL, HIGHLIGHT_FONT_COLOR_CODE, count)
 	end
 	
 	return str
