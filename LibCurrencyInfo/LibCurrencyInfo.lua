@@ -175,7 +175,7 @@ data.CurrencyByCategory = {
 		1416, -- Coins of Air
 		1501, -- Writhing Essence
 		1506, -- Argus Waystone
-		1508, -- Unsullied Argunite
+		1508, -- Veiled Argunite
 	},
 	[142] = { -- Hidden
 --		395, -- Justice Points
@@ -308,7 +308,7 @@ data.Currencies = {
 		[1416] = { id=1416, category=141 }, -- Coins of Air, Legion
 		[1501] = { id=1501, category=141 }, -- Writhing Essence, Legion
 		[1506] = { id=1506, category=141 }, -- Argus Waystone, Legion
-		[1508] = { id=1508, category=141 }, -- Unsullied Argunite, Legion
+		[1508] = { id=1508, category=141 }, -- Veiled Argunite, Legion
 }
 
 data.CurrencyDesc = {
