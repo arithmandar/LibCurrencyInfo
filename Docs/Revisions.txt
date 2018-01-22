@@ -6,6 +6,7 @@ Revision History:
 * v1.03 (Jan. 22, 2017)
 -----------------------
 - Added Wakening Essence which was introduced in 7.3.2.25326
+- Updated Veiled Argunite's description
 
 * v1.02 (Aug. 29, 2017)
 -----------------------

@@ -206,111 +206,111 @@ data.CurrencyCategories = {
 }
 
 data.Currencies = {
-		[1] = { id=1, category=1, hide=true }, -- Currency Token Test Token 4, Miscellaneous
-		[2] = { id=2, category=1, hide=true }, -- Currency Token Test Token 2, Miscellaneous
-		[4] = { id=4, category=1, hide=true }, -- Currency Token Test Token 5, Miscellaneous
-		[22] = { id=22, category=41, hide=true }, -- Birmingham Test Item 3, Test
-		[42] = { id=42, category=1, hide=true }, -- Badge of Justice, Miscellaneous
-		[61] = { id=61, category=21 }, -- Dalaran Jewelcrafter's Token, Wrath of the Lich King
-		[81] = { id=81, category=1 }, -- Epicurean's Award, Miscellaneous
-		[101] = { id=101, category=22, hide=true }, -- Emblem of Heroism, Dungeon and Raid
-		[102] = { id=102, category=22, hide=true }, -- Emblem of Valor, Dungeon and Raid
-		[103] = { id=103, category=2, hide=true }, -- Arena Points, Player vs. Player
-		[104] = { id=104, category=2, hide=true }, -- Honor Points DEPRECATED, Player vs. Player
-		[121] = { id=121, category=2, hide=true }, -- Alterac Valley Mark of Honor, Player vs. Player
-		[122] = { id=122, category=2, hide=true }, -- Arathi Basin Mark of Honor, Player vs. Player
-		[123] = { id=123, category=2, hide=true }, -- Eye of the Storm Mark of Honor, Player vs. Player
-		[124] = { id=124, category=2, hide=true }, -- Strand of the Ancients Mark of Honor, Player vs. Player
-		[125] = { id=125, category=2, hide=true }, -- Warsong Gulch Mark of Honor, Player vs. Player
-		[126] = { id=126, category=2, hide=true }, -- Wintergrasp Mark of Honor, Player vs. Player
-		[161] = { id=161, category=2, hide=true }, -- Stone Keeper's Shard, Player vs. Player
-		[181] = { id=181, category=2, hide=true }, -- Honor Points DEPRECATED2, Player vs. Player
-		[201] = { id=201, category=2, hide=true }, -- Venture Coin, Player vs. Player
-		[221] = { id=221, category=22, hide=true }, -- Emblem of Conquest, Dungeon and Raid
-		[241] = { id=241, category=21 }, -- Champion's Seal, Wrath of the Lich King
-		[301] = { id=301, category=22, hide=true }, -- Emblem of Triumph, Dungeon and Raid
-		[321] = { id=321, category=2, hide=true }, -- Isle of Conquest Mark of Honor, Player vs. Player
-		[341] = { id=341, category=22, hide=true }, -- Emblem of Frost, Dungeon and Raid
-		[361] = { id=361, category=81 }, -- Illustrious Jewelcrafter's Token, Cataclysm
-		[384] = { id=384, category=82 }, -- Dwarf Archaeology Fragment, Archaeology
-		[385] = { id=385, category=82 }, -- Troll Archaeology Fragment, Archaeology
-		[391] = { id=391, category=2 }, -- Tol Barad Commendation, Player vs. Player
-		[393] = { id=393, category=82 }, -- Fossil Archaeology Fragment, Archaeology
-		[394] = { id=394, category=82 }, -- Night Elf Archaeology Fragment, Archaeology
-		[395] = { id=395, category=142, hide=true }, -- Justice Points, Hidden
-		[396] = { id=396, category=142, hide=true }, -- Valor Points, Hidden
-		[397] = { id=397, category=82 }, -- Orc Archaeology Fragment, Archaeology
-		[398] = { id=398, category=82 }, -- Draenei Archaeology Fragment, Archaeology
-		[399] = { id=399, category=82 }, -- Vrykul Archaeology Fragment, Archaeology
-		[400] = { id=400, category=82 }, -- Nerubian Archaeology Fragment, Archaeology
-		[401] = { id=401, category=82 }, -- Tol'vir Archaeology Fragment, Archaeology
-		[402] = { id=402, category=1 }, -- Ironpaw Token, Miscellaneous
-		[416] = { id=416, category=81 }, -- Mark of the World Tree, Cataclysm
-		[483] = { id=483, category=89, hide=true }, -- Conquest Arena Meta, Meta
-		[484] = { id=484, category=89, hide=true }, -- Conquest Rated BG Meta, Meta
-		[515] = { id=515, category=1 }, -- Darkmoon Prize Ticket, Miscellaneous
-		[614] = { id=614, category=81 }, -- Mote of Darkness, Cataclysm
-		[615] = { id=615, category=81 }, -- Essence of Corrupted Deathwing, Cataclysm
-		[676] = { id=676, category=82 }, -- Pandaren Archaeology Fragment, Archaeology
-		[677] = { id=677, category=82 }, -- Mogu Archaeology Fragment, Archaeology
-		[692] = { id=692, category=89, hide=true }, -- Conquest Random BG Meta, Meta
-		[697] = { id=697, category=133 }, -- Elder Charm of Good Fortune, Mists of Pandaria
-		[698] = { id=698, category=133 }, -- Zen Jewelcrafter's Token, Mists of Pandaria
-		[738] = { id=738, category=133 }, -- Lesser Charm of Good Fortune, Mists of Pandaria
-		[752] = { id=752, category=133 }, -- Mogu Rune of Fate, Mists of Pandaria
-		[754] = { id=754, category=82 }, -- Mantid Archaeology Fragment, Archaeology
-		[776] = { id=776, category=133 }, -- Warforged Seal, Mists of Pandaria
-		[777] = { id=777, category=133 }, -- Timeless Coin, Mists of Pandaria
-		[789] = { id=789, category=133 }, -- Bloody Coin, Mists of Pandaria
-		[810] = { id=810, category=133 }, -- Black Iron Fragment, Mists of Pandaria
-		[821] = { id=821, category=82 }, -- Draenor Clans Archaeology Fragment, Archaeology
-		[823] = { id=823, category=137 }, -- Apexis Crystal, Warlords of Draenor
-		[824] = { id=824, category=137 }, -- Garrison Resources, Warlords of Draenor
-		[828] = { id=828, category=82 }, -- Ogre Archaeology Fragment, Archaeology
-		[829] = { id=829, category=82 }, -- Arakkoa Archaeology Fragment, Archaeology
-		[830] = { id=830, category=82, hide=true }, -- n/a, Archaeology
-		[897] = { id=897, category=137, hide=true }, -- UNUSED, Warlords of Draenor
-		[910] = { id=910, category=137 }, -- Secret of Draenor Alchemy, Warlords of Draenor
-		[944] = { id=944, category=137 }, -- Artifact Fragment, Warlords of Draenor
-		[980] = { id=980, category=137 }, -- Dingy Iron Coins, Warlords of Draenor
-		[994] = { id=994, category=137 }, -- Seal of Tempered Fate, Warlords of Draenor
-		[999] = { id=999, category=137 }, -- Secret of Draenor Tailoring, Warlords of Draenor
-		[1008] = { id=1008, category=137 }, -- Secret of Draenor Jewelcrafting, Warlords of Draenor
-		[1017] = { id=1017, category=137 }, -- Secret of Draenor Leatherworking, Warlords of Draenor
-		[1020] = { id=1020, category=137 }, -- Secret of Draenor Blacksmithing, Warlords of Draenor
-		[1101] = { id=1101, category=137 }, -- Oil, Warlords of Draenor
-		[1129] = { id=1129, category=137 }, -- Seal of Inevitable Fate, Warlords of Draenor
-		[1149] = { id=1149, category=141 }, -- Sightless Eye, Legion
-		[1154] = { id=1154, category=141 }, -- Shadowy Coins, Legion
-		[1155] = { id=1155, category=141 }, -- Ancient Mana, Legion
-		[1166] = { id=1166, category=22 }, -- Timewarped Badge, Dungeon and Raid
-		[1171] = { id=1171, category=142 }, -- Artifact Knowledge, Hidden
-		[1172] = { id=1172, category=82 }, -- Highborne Archaeology Fragment, Archaeology
-		[1173] = { id=1173, category=82 }, -- Highmountain Tauren Archaeology Fragment, Archaeology
-		[1174] = { id=1174, category=82 }, -- Demonic Archaeology Fragment, Archaeology
-		[1191] = { id=1191, category=22 }, -- Valor, Dungeon and Raid
-		[1220] = { id=1220, category=141 }, -- Order Resources, Legion
-		[1226] = { id=1226, category=141 }, -- Nethershard, Legion
-		[1268] = { id=1268, category=141 }, -- Timeworn Artifact, Legion
-		[1273] = { id=1273, category=141 }, -- Seal of Broken Fate, Legion
-		[1275] = { id=1275, category=141 }, -- Curious Coin, Legion
-		[1299] = { id=1299, category=141 }, -- Brawler's Gold, Legion
-		[1314] = { id=1314, category=141 }, -- Lingering Soul Fragment, Legion
-		[1324] = { id=1324, category=142 }, -- Horde Qiraji Commendation, Hidden
-		[1325] = { id=1325, category=142 }, -- Alliance Qiraji Commendation, Hidden
-		[1342] = { id=1342, category=141 }, -- Legionfall War Supplies, Legion
-		[1347] = { id=1347, category=142, hide=true }, -- Legionfall Building - Personal Tracker - Mage Tower (Hidden), Hidden
-		[1349] = { id=1349, category=142, hide=true }, -- Legionfall Building - Personal Tracker - Command Tower (Hidden), Hidden
-		[1350] = { id=1350, category=142, hide=true }, -- Legionfall Building - Personal Tracker - Nether Tower (Hidden), Hidden
-		[1355] = { id=1355, category=141 }, -- Felessence, Legion
-		[1356] = { id=1356, category=141 }, -- Echoes of Battle, Legion
-		[1357] = { id=1357, category=141 }, -- Echoes of Domination, Legion
-		[1379] = { id=1379, category=1 }, -- Trial of Style Token, Miscellaneous
-		[1416] = { id=1416, category=141 }, -- Coins of Air, Legion
-		[1501] = { id=1501, category=141 }, -- Writhing Essence, Legion
-		[1506] = { id=1506, category=141 }, -- Argus Waystone, Legion
-		[1508] = { id=1508, category=141 }, -- Veiled Argunite, Legion
-		[1533] = { id=1533, category=141 }, -- Wakening Essence, Legion
+	[1] = { id=1, category=1, hide=true }, -- Currency Token Test Token 4, Miscellaneous
+	[2] = { id=2, category=1, hide=true }, -- Currency Token Test Token 2, Miscellaneous
+	[4] = { id=4, category=1, hide=true }, -- Currency Token Test Token 5, Miscellaneous
+	[22] = { id=22, category=41, hide=true }, -- Birmingham Test Item 3, Test
+	[42] = { id=42, category=1, hide=true }, -- Badge of Justice, Miscellaneous
+	[61] = { id=61, category=21 }, -- Dalaran Jewelcrafter's Token, Wrath of the Lich King
+	[81] = { id=81, category=1 }, -- Epicurean's Award, Miscellaneous
+	[101] = { id=101, category=22, hide=true }, -- Emblem of Heroism, Dungeon and Raid
+	[102] = { id=102, category=22, hide=true }, -- Emblem of Valor, Dungeon and Raid
+	[103] = { id=103, category=2, hide=true }, -- Arena Points, Player vs. Player
+	[104] = { id=104, category=2, hide=true }, -- Honor Points DEPRECATED, Player vs. Player
+	[121] = { id=121, category=2, hide=true }, -- Alterac Valley Mark of Honor, Player vs. Player
+	[122] = { id=122, category=2, hide=true }, -- Arathi Basin Mark of Honor, Player vs. Player
+	[123] = { id=123, category=2, hide=true }, -- Eye of the Storm Mark of Honor, Player vs. Player
+	[124] = { id=124, category=2, hide=true }, -- Strand of the Ancients Mark of Honor, Player vs. Player
+	[125] = { id=125, category=2, hide=true }, -- Warsong Gulch Mark of Honor, Player vs. Player
+	[126] = { id=126, category=2, hide=true }, -- Wintergrasp Mark of Honor, Player vs. Player
+	[161] = { id=161, category=2, hide=true }, -- Stone Keeper's Shard, Player vs. Player
+	[181] = { id=181, category=2, hide=true }, -- Honor Points DEPRECATED2, Player vs. Player
+	[201] = { id=201, category=2, hide=true }, -- Venture Coin, Player vs. Player
+	[221] = { id=221, category=22, hide=true }, -- Emblem of Conquest, Dungeon and Raid
+	[241] = { id=241, category=21 }, -- Champion's Seal, Wrath of the Lich King
+	[301] = { id=301, category=22, hide=true }, -- Emblem of Triumph, Dungeon and Raid
+	[321] = { id=321, category=2, hide=true }, -- Isle of Conquest Mark of Honor, Player vs. Player
+	[341] = { id=341, category=22, hide=true }, -- Emblem of Frost, Dungeon and Raid
+	[361] = { id=361, category=81 }, -- Illustrious Jewelcrafter's Token, Cataclysm
+	[384] = { id=384, category=82 }, -- Dwarf Archaeology Fragment, Archaeology
+	[385] = { id=385, category=82 }, -- Troll Archaeology Fragment, Archaeology
+	[391] = { id=391, category=2 }, -- Tol Barad Commendation, Player vs. Player
+	[393] = { id=393, category=82 }, -- Fossil Archaeology Fragment, Archaeology
+	[394] = { id=394, category=82 }, -- Night Elf Archaeology Fragment, Archaeology
+	[395] = { id=395, category=142, hide=true }, -- Justice Points, Hidden
+	[396] = { id=396, category=142, hide=true }, -- Valor Points, Hidden
+	[397] = { id=397, category=82 }, -- Orc Archaeology Fragment, Archaeology
+	[398] = { id=398, category=82 }, -- Draenei Archaeology Fragment, Archaeology
+	[399] = { id=399, category=82 }, -- Vrykul Archaeology Fragment, Archaeology
+	[400] = { id=400, category=82 }, -- Nerubian Archaeology Fragment, Archaeology
+	[401] = { id=401, category=82 }, -- Tol'vir Archaeology Fragment, Archaeology
+	[402] = { id=402, category=1 }, -- Ironpaw Token, Miscellaneous
+	[416] = { id=416, category=81 }, -- Mark of the World Tree, Cataclysm
+	[483] = { id=483, category=89, hide=true }, -- Conquest Arena Meta, Meta
+	[484] = { id=484, category=89, hide=true }, -- Conquest Rated BG Meta, Meta
+	[515] = { id=515, category=1 }, -- Darkmoon Prize Ticket, Miscellaneous
+	[614] = { id=614, category=81 }, -- Mote of Darkness, Cataclysm
+	[615] = { id=615, category=81 }, -- Essence of Corrupted Deathwing, Cataclysm
+	[676] = { id=676, category=82 }, -- Pandaren Archaeology Fragment, Archaeology
+	[677] = { id=677, category=82 }, -- Mogu Archaeology Fragment, Archaeology
+	[692] = { id=692, category=89, hide=true }, -- Conquest Random BG Meta, Meta
+	[697] = { id=697, category=133 }, -- Elder Charm of Good Fortune, Mists of Pandaria
+	[698] = { id=698, category=133 }, -- Zen Jewelcrafter's Token, Mists of Pandaria
+	[738] = { id=738, category=133 }, -- Lesser Charm of Good Fortune, Mists of Pandaria
+	[752] = { id=752, category=133 }, -- Mogu Rune of Fate, Mists of Pandaria
+	[754] = { id=754, category=82 }, -- Mantid Archaeology Fragment, Archaeology
+	[776] = { id=776, category=133 }, -- Warforged Seal, Mists of Pandaria
+	[777] = { id=777, category=133 }, -- Timeless Coin, Mists of Pandaria
+	[789] = { id=789, category=133 }, -- Bloody Coin, Mists of Pandaria
+	[810] = { id=810, category=133 }, -- Black Iron Fragment, Mists of Pandaria
+	[821] = { id=821, category=82 }, -- Draenor Clans Archaeology Fragment, Archaeology
+	[823] = { id=823, category=137 }, -- Apexis Crystal, Warlords of Draenor
+	[824] = { id=824, category=137 }, -- Garrison Resources, Warlords of Draenor
+	[828] = { id=828, category=82 }, -- Ogre Archaeology Fragment, Archaeology
+	[829] = { id=829, category=82 }, -- Arakkoa Archaeology Fragment, Archaeology
+	[830] = { id=830, category=82, hide=true }, -- n/a, Archaeology
+	[897] = { id=897, category=137, hide=true }, -- UNUSED, Warlords of Draenor
+	[910] = { id=910, category=137 }, -- Secret of Draenor Alchemy, Warlords of Draenor
+	[944] = { id=944, category=137 }, -- Artifact Fragment, Warlords of Draenor
+	[980] = { id=980, category=137 }, -- Dingy Iron Coins, Warlords of Draenor
+	[994] = { id=994, category=137 }, -- Seal of Tempered Fate, Warlords of Draenor
+	[999] = { id=999, category=137 }, -- Secret of Draenor Tailoring, Warlords of Draenor
+	[1008] = { id=1008, category=137 }, -- Secret of Draenor Jewelcrafting, Warlords of Draenor
+	[1017] = { id=1017, category=137 }, -- Secret of Draenor Leatherworking, Warlords of Draenor
+	[1020] = { id=1020, category=137 }, -- Secret of Draenor Blacksmithing, Warlords of Draenor
+	[1101] = { id=1101, category=137 }, -- Oil, Warlords of Draenor
+	[1129] = { id=1129, category=137 }, -- Seal of Inevitable Fate, Warlords of Draenor
+	[1149] = { id=1149, category=141 }, -- Sightless Eye, Legion
+	[1154] = { id=1154, category=141 }, -- Shadowy Coins, Legion
+	[1155] = { id=1155, category=141 }, -- Ancient Mana, Legion
+	[1166] = { id=1166, category=22 }, -- Timewarped Badge, Dungeon and Raid
+	[1171] = { id=1171, category=142 }, -- Artifact Knowledge, Hidden
+	[1172] = { id=1172, category=82 }, -- Highborne Archaeology Fragment, Archaeology
+	[1173] = { id=1173, category=82 }, -- Highmountain Tauren Archaeology Fragment, Archaeology
+	[1174] = { id=1174, category=82 }, -- Demonic Archaeology Fragment, Archaeology
+	[1191] = { id=1191, category=22 }, -- Valor, Dungeon and Raid
+	[1220] = { id=1220, category=141 }, -- Order Resources, Legion
+	[1226] = { id=1226, category=141 }, -- Nethershard, Legion
+	[1268] = { id=1268, category=141 }, -- Timeworn Artifact, Legion
+	[1273] = { id=1273, category=141 }, -- Seal of Broken Fate, Legion
+	[1275] = { id=1275, category=141 }, -- Curious Coin, Legion
+	[1299] = { id=1299, category=141 }, -- Brawler's Gold, Legion
+	[1314] = { id=1314, category=141 }, -- Lingering Soul Fragment, Legion
+	[1324] = { id=1324, category=142 }, -- Horde Qiraji Commendation, Hidden
+	[1325] = { id=1325, category=142 }, -- Alliance Qiraji Commendation, Hidden
+	[1342] = { id=1342, category=141 }, -- Legionfall War Supplies, Legion
+	[1347] = { id=1347, category=142, hide=true }, -- Legionfall Building - Personal Tracker - Mage Tower (Hidden), Hidden
+	[1349] = { id=1349, category=142, hide=true }, -- Legionfall Building - Personal Tracker - Command Tower (Hidden), Hidden
+	[1350] = { id=1350, category=142, hide=true }, -- Legionfall Building - Personal Tracker - Nether Tower (Hidden), Hidden
+	[1355] = { id=1355, category=141 }, -- Felessence, Legion
+	[1356] = { id=1356, category=141 }, -- Echoes of Battle, Legion
+	[1357] = { id=1357, category=141 }, -- Echoes of Domination, Legion
+	[1379] = { id=1379, category=1 }, -- Trial of Style Token, Miscellaneous
+	[1416] = { id=1416, category=141 }, -- Coins of Air, Legion
+	[1501] = { id=1501, category=141 }, -- Writhing Essence, Legion
+	[1506] = { id=1506, category=141 }, -- Argus Waystone, Legion
+	[1508] = { id=1508, category=141 }, -- Veiled Argunite, Legion
+	[1533] = { id=1533, category=141 }, -- Wakening Essence, Legion
 }
 
 data.CurrencyDesc = {
@@ -396,7 +396,19 @@ data.CurrencyDesc = {
 	[1416] = { enUS="Evaporate into mist after a while.", deDE="Löst sich nach einer Weile in Nebel auf.", esES="Se evaporan pasado un rato.", esMX="Se evaporan y se vuelven niebla después de un tiempo.", frFR="S’évapore dans la brume au bout d’un certain temps.", itIT="Evaporano nell'aria dopo poco.", koKR="시간이 지나면 증발합니다.", ptBR="Evapora na forma de bruma após alguns instantes.", ruRU="Через некоторое время растворяются в воздухе.", zhCN="旋即蒸发，化为迷雾。", zhTW="過一陣子會化為霧氣消散。" },
 	[1501] = { enUS="Used to upgrade Legion Legendary items to item level 970.", deDE="Wird verwendet, um legendäre Gegenstände von Legion auf Gegenstandsstufe 970 aufzuwerten.", esES="Se usa para mejorar los objetos legendarios de Legion a nivel de objeto 970.", esMX="Usado para mejorar objetos legendarios a nivel 970.", frFR="Utilisée pour améliorer les objets légendaires de Legion jusqu’au niveau d’objet 970.", itIT="Usata per potenziare gli oggetti leggendari di Legion al livello 970.", koKR="군단 전설 아이템의 아이템 레벨을 970으로 강화하는 데 사용합니다.", ptBR="Usado para aprimorar itens lendários de Legion até o nível de item 970.", ruRU="Используется для улучшения легендарных предметов Legion до 970-го уровня.", zhCN="用于将《军团再临》传说物品的物品等级提升至970。", zhTW="將軍團傳說級裝備的物品等級提高至970所需的物品。" },
 	[1506] = { enUS="Used by the minions of Sargeras to force open portals from Argus to other Legion-controlled worlds.", deDE="Wird von Sargeras' Dienern benutzt, um auf Argus Portale in andere von der Legion kontrollierte Welten aufzureißen.", esES="Usada por los esbirros de Sargeras para forzar la apertura de portales desde Argus hasta otros mundos controlados por la Legión.", esMX="Los esbirros de Sargeras la usan para abrir portales desde Argus a otros mundos controlados por la Legión.", frFR="Utilisées par les serviteurs de Sargeras pour ouvrir des portails entre Argus et les autres mondes contrôlés par la Légion.", itIT="Used by the minions of Sargeras to force open portals from Argus to other Legion-controlled worlds.", koKR="살게라스의 부하들이 아르거스에서 군단이 점령 중인 다른 행성으로 차원문을 열 때 사용합니다.", ptBR="Usada pelos lacaios de Sargeras para abrir portais de Argus para outros mundos controlados pela Legião.", ruRU="С помощью этого предмета слуги Саргераса открывают порталы из Аргуса в другие миры, захваченные Легионом.", zhCN="萨格拉斯的仆从用它来强行打开从阿古斯前往其他被军团控制的世界的传送门。", zhTW="由薩格拉斯的手下用來從阿古斯強制開啟傳送門前往其他由燃燒軍團控制的世界。" },
-	[1508] = { enUS="Sought by the Army of the Light to fuel their war against the Burning Legion.", deDE="Begehrt bei der Armee des Lichts, um ihren Krieg gegen die Brennende Legion voranzutreiben.", esES="Sought by the Army of the Light to fuel their war against the Burning Legion.", esMX="Sought by the Army of the Light to fuel their war against the Burning Legion.", frFR="Recherchée par l’armée de la Lumière pour alimenter sa guerre contre la Légion ardente.", itIT="Sought by the Army of the Light to fuel their war against the Burning Legion.", koKR="Sought by the Army of the Light to fuel their war against the Burning Legion.", ptBR="Sought by the Army of the Light to fuel their war against the Burning Legion.", ruRU="Sought by the Army of the Light to fuel their war against the Burning Legion.", zhCN="圣光军团急需这种物资来支援他们与燃烧军团的战争。", zhTW="Sought by the Army of the Light to fuel their war against the Burning Legion." },
+	[1508] = { 
+		enUS="This dull-colored crystal is highly valued by ethereal traders, especially Thaumaturge Vashreen aboard the Vindicaar.", 
+		deDE="Dieser matte Kristall wird von astralen Händlern hochgeschätzt – vor allem von Thaumaturg Vashreen an Bord der Vindikaar.", 
+		esES="Este cristal de color apagado es muy valioso para los comerciantes etéreos, sobre todo para el taumaturgo Vashreen, a bordo del Vindicaar.", 
+		esMX="Este cristal de color apagado es muy valioso para los comerciantes etéreos, sobre todo para el taumaturgo Vashreen, a bordo del Vindicaar.", 
+		frFR="Ce cristal terne et sans vie est très convoité par les marchands éthériens, en particulier par le thaumaturge Vashreen, à bord du Vindicaar.", 
+		itIT="Questo cristallo opaco è molto apprezzato dai mercanti Eterei, in particolare dal Taumaturgo Vashreen a bordo della Vindicaar.", 
+		koKR="탁한 색의 수정으로, 에테리얼 상인들이 매우 귀하게 여깁니다. 그중에서도 구원호에 있는 마력술사 바시린이 대표적입니다.", 
+		ptBR="Esse cristal opaco é muito estimado pelos mercadores etéreos, principalmente pelo Taumaturgo Vashreen, a bordo da Vindicaar.", 
+		ruRU="Этот блеклый кристалл представляет большую ценность для эфириалов-торговцев. Чудотворец Вашрин с \"Виндикара\" определенно заинтересуется им.", 
+		zhCN="这种没有光泽的水晶是虚灵商人眼中的极品，对维迪卡尔上的魔术师瓦西里恩来说更是如此。", 
+		zhTW="這種顏色黯淡的水晶對以太族商人來說奇貨可居，尤其是梵迪卡爾上的奇術師瓦須林。" 
+	},
 	[1533] = {
 		enUS="Used by Arcanomancer Vridiel in Dalaran above the Broken Isles to create or upgrade Legion Legendary items.",
 		deDE="Wird von Arkanomant Vridiel in Dalaran verwendet, um legendäre Gegenstände von Legion herzustellen oder aufzuwerten.",
@@ -408,7 +420,7 @@ data.CurrencyDesc = {
 		ptBR="Usado pelo Arcanomante Vridiel em Dalaran, sobre as Ilhas Partidas, para criar ou aprimorar itens lendários de Legion.",
 		koKR="부서진 섬 위의 달라란에 있는 비전역술사 브리디엘이 군단 전설 아이템을 만들거나 업그레이드할 때 사용합니다.",
 		zhCN="供破碎群岛上方的达拉然的奥法工匠维迪尔使用，他可以制造或升级《军团再临》传说物品。",
-		zhTW="",
+		zhTW="Used by Arcanomancer Vridiel in Dalaran above the Broken Isles to create or upgrade Legion Legendary items."
 	},
 }
 
