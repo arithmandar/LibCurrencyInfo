@@ -176,6 +176,7 @@ data.CurrencyByCategory = {
 		1501, -- Writhing Essence
 		1506, -- Argus Waystone
 		1508, -- Veiled Argunite
+		1533, -- Wakening Essence
 	},
 	[142] = { -- Hidden
 --		395, -- Justice Points
@@ -309,6 +310,7 @@ data.Currencies = {
 		[1501] = { id=1501, category=141 }, -- Writhing Essence, Legion
 		[1506] = { id=1506, category=141 }, -- Argus Waystone, Legion
 		[1508] = { id=1508, category=141 }, -- Veiled Argunite, Legion
+		[1533] = { id=1533, category=141 }, -- Wakening Essence, Legion
 }
 
 data.CurrencyDesc = {
@@ -395,6 +397,19 @@ data.CurrencyDesc = {
 	[1501] = { enUS="Used to upgrade Legion Legendary items to item level 970.", deDE="Wird verwendet, um legendäre Gegenstände von Legion auf Gegenstandsstufe 970 aufzuwerten.", esES="Se usa para mejorar los objetos legendarios de Legion a nivel de objeto 970.", esMX="Usado para mejorar objetos legendarios a nivel 970.", frFR="Utilisée pour améliorer les objets légendaires de Legion jusqu’au niveau d’objet 970.", itIT="Usata per potenziare gli oggetti leggendari di Legion al livello 970.", koKR="군단 전설 아이템의 아이템 레벨을 970으로 강화하는 데 사용합니다.", ptBR="Usado para aprimorar itens lendários de Legion até o nível de item 970.", ruRU="Используется для улучшения легендарных предметов Legion до 970-го уровня.", zhCN="用于将《军团再临》传说物品的物品等级提升至970。", zhTW="將軍團傳說級裝備的物品等級提高至970所需的物品。" },
 	[1506] = { enUS="Used by the minions of Sargeras to force open portals from Argus to other Legion-controlled worlds.", deDE="Wird von Sargeras' Dienern benutzt, um auf Argus Portale in andere von der Legion kontrollierte Welten aufzureißen.", esES="Usada por los esbirros de Sargeras para forzar la apertura de portales desde Argus hasta otros mundos controlados por la Legión.", esMX="Los esbirros de Sargeras la usan para abrir portales desde Argus a otros mundos controlados por la Legión.", frFR="Utilisées par les serviteurs de Sargeras pour ouvrir des portails entre Argus et les autres mondes contrôlés par la Légion.", itIT="Used by the minions of Sargeras to force open portals from Argus to other Legion-controlled worlds.", koKR="살게라스의 부하들이 아르거스에서 군단이 점령 중인 다른 행성으로 차원문을 열 때 사용합니다.", ptBR="Usada pelos lacaios de Sargeras para abrir portais de Argus para outros mundos controlados pela Legião.", ruRU="С помощью этого предмета слуги Саргераса открывают порталы из Аргуса в другие миры, захваченные Легионом.", zhCN="萨格拉斯的仆从用它来强行打开从阿古斯前往其他被军团控制的世界的传送门。", zhTW="由薩格拉斯的手下用來從阿古斯強制開啟傳送門前往其他由燃燒軍團控制的世界。" },
 	[1508] = { enUS="Sought by the Army of the Light to fuel their war against the Burning Legion.", deDE="Begehrt bei der Armee des Lichts, um ihren Krieg gegen die Brennende Legion voranzutreiben.", esES="Sought by the Army of the Light to fuel their war against the Burning Legion.", esMX="Sought by the Army of the Light to fuel their war against the Burning Legion.", frFR="Recherchée par l’armée de la Lumière pour alimenter sa guerre contre la Légion ardente.", itIT="Sought by the Army of the Light to fuel their war against the Burning Legion.", koKR="Sought by the Army of the Light to fuel their war against the Burning Legion.", ptBR="Sought by the Army of the Light to fuel their war against the Burning Legion.", ruRU="Sought by the Army of the Light to fuel their war against the Burning Legion.", zhCN="圣光军团急需这种物资来支援他们与燃烧军团的战争。", zhTW="Sought by the Army of the Light to fuel their war against the Burning Legion." },
+	[1533] = {
+		enUS="Used by Arcanomancer Vridiel in Dalaran above the Broken Isles to create or upgrade Legion Legendary items.",
+		deDE="Wird von Arkanomant Vridiel in Dalaran verwendet, um legendäre Gegenstände von Legion herzustellen oder aufzuwerten.",
+		esES="El arcanomántico Vridiel la usa en Dalaran, sobre las Islas Abruptas, para crear o mejorar objetos legendarios de Legion.",
+		esMX="El arcanomántico Vridiel la usa en Dalaran, sobre las Islas Abruptas, para crear o mejorar objetos legendarios de Legion.",
+		frFR="Utilisée par l’arcanomancien Vridiel à Dalaran, au-dessus des îles Brisées, pour créer et améliorer des objets légendaires de Legion.",
+		itIT="Usata dall'Arcanomante Vridiel a Dalaran sopra le Isole Disperse per creare o potenziare gli oggetti leggendari di Legion.",
+		ruRU="Используется у Чароманта Вридиэля в Даларане, что над Расколотыми островами, для улучшения легендарных предметов Legion.",
+		ptBR="Usado pelo Arcanomante Vridiel em Dalaran, sobre as Ilhas Partidas, para criar ou aprimorar itens lendários de Legion.",
+		koKR="부서진 섬 위의 달라란에 있는 비전역술사 브리디엘이 군단 전설 아이템을 만들거나 업그레이드할 때 사용합니다.",
+		zhCN="供破碎群岛上方的达拉然的奥法工匠维迪尔使用，他可以制造或升级《军团再临》传说物品。",
+		zhTW="",
+	},
 }
 
 local function CheckLang(lang)
