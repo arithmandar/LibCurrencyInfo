@@ -3,7 +3,11 @@ $Id$
 Revision History:
 =================
 
-* v1.03 (Jan. 22, 2017)
+* v1.04 (Mar. 28, 2018)
+-----------------------
+- Update ToC info
+
+* v1.03 (Jan. 22, 2018)
 -----------------------
 - Added Wakening Essence which was introduced in 7.3.2.25326
 - Updated Veiled Argunite's description

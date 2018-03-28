@@ -1,6 +1,6 @@
 ﻿## Interface: 70300
 ## LoadOnDemand: 1
-## Title: Lib: Scenarios
+## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information
 #@end-debug@
 ## Author: Arith
