@@ -19,7 +19,6 @@ local name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDisco
 
 local currencyPerCategory = {}
 currencyPerCategory = lib:GetCurrencyByCategoryID(categoryID)
-
 ]]
 -- ----------------------------------------------------------------------------
 -- Localized Lua globals.
@@ -36,7 +35,7 @@ local GetCurrencyInfo, GetLocale = _G.GetCurrencyInfo, _G.GetLocale
 local LibStub = _G.LibStub
 
 local MAJOR_VERSION = "LibCurrencyInfo"
-local MINOR_VERSION = 90000 + tonumber(("$Rev: 2$"):match("%d+"))
+local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
 
 local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
 if not lib then return end
