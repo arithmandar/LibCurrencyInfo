@@ -173,9 +173,9 @@ data.CurrencyByCategory = {
 		1357, -- Echoes of Domination
 		1416, -- Coins of Air
 		1501, -- Writhing Essence
-		1506, -- Argus Waystone
+		1506, -- Argus Waystone, this is actually in "hidden" category, but would make more sense to put under Legion one
 		1508, -- Veiled Argunite
-		1533, -- Wakening Essence
+		1533, -- Wakening Essence, this is actually in "hidden" category, but would make more sense to put under Legion one
 	},
 	[142] = { -- Hidden
 --		395, -- Justice Points
