@@ -3,6 +3,14 @@ $Id$
 Revision History:
 =================
 
+* v1.05 (Apr. 25, 2018)
+-----------------------
+- Added currencies introduced after WoW 8.0.1 (but currently won't displayed in WoW 7.3.5)
+- Split data into separate file
+- Added two new functions:
+  - GetCurrencyCategoryNameByCurrencyID(currencyID, lang)
+  - GetCurrencyCategoryNameByCategoryID(categoryID, lang)
+
 * v1.04 (Mar. 28, 2018)
 -----------------------
 - Update ToC info
