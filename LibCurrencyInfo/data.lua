@@ -169,6 +169,7 @@ data.CurrencyByCategory = {
 		1565, -- Rich Azerite Fragment
 		1580, -- Seal of Ancient Fate
 		1587, -- War Supplies
+		1710, -- Seafarer's Dubloon
 	},
 	[144] = { -- Virtual
 		1553, -- Azerite
@@ -320,6 +321,7 @@ data.Currencies = {
 	[1565] = { id=1565, category=143 }, -- Rich Azerite Fragment
 	[1580] = { id=1580, category=143 }, -- Seal of Ancient Fate
 	[1587] = { id=1587, category=143 }, -- War Supplies
+	[1710] = { id=1710, category=143 }, -- Seafarer's Dubloon
 	[1553] = { id=1553, category=144 }, -- Azerite
 	[1585] = { id=1585, category=144 }, -- Honor
 	[1586] = { id=1586, category=144 }, -- Honor Level
@@ -457,5 +459,6 @@ data.CurrencyDesc = {
 	[1553] = { enUS="Azerite", }, 
 	[1585] = { enUS="Honor", }, 
 	[1586] = { enUS="Honor Level", }, 
+	[1710] = { enUS="Seafarer's Dubloon", },
 }
 

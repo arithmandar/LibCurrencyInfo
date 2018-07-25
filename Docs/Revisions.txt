@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.06 (Jul. 25, 2018)
+-----------------------
+- ToC Update to support WoW 8.0.1
+- Added Seafarer's Dubloon
+
 * v1.05 (Apr. 25, 2018)
 -----------------------
 - Added currencies introduced after WoW 8.0.1 (but currently won't displayed in WoW 7.3.5)
