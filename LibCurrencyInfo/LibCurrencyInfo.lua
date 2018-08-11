@@ -105,10 +105,12 @@ function lib:GetCurrencyByID(currencyID, lang)
 
 	name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity = GetCurrencyInfo(currencyID)
 	if not name then return end
+	local CurrencyDisplayInfo = C_CurrencyInfo.GetBasicCurrencyInfo(currencyID)
 	
 	categoryID = lib.data.Currencies[currencyID].category
 	categoryName = lib.data.CurrencyCategories[categoryID] and lib.data.CurrencyCategories[categoryID][lang] or nil
-	currencyDesc = lib.data.CurrencyDesc[currencyID] and lib.data.CurrencyDesc[currencyID][lang] or nil
+	--currencyDesc = lib.data.CurrencyDesc[currencyID] and lib.data.CurrencyDesc[currencyID][lang] or nil
+	currencyDesc = CurrencyDisplayInfo and CurrencyDisplayInfo.description or nil
 	
 	return name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity, categoryID, categoryName, currencyDesc
 end

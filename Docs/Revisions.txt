@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.07 (Aug. 11, 2018)
+-----------------------
+- Update currency info
+- Remove data.CurrencyDesc as those can be retrieved by calling C_CurrencyInfo.GetBasicCurrencyInfo(CurrencyTypeID)
+
 * v1.06 (Jul. 25, 2018)
 -----------------------
 - ToC Update to support WoW 8.0.1
