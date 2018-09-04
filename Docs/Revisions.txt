@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.08 (Sep. 05, 2018)
+-----------------------
+- Fixed the issue that Wakening Essence was missing in Legion category
+
 * v1.07 (Aug. 11, 2018)
 -----------------------
 - Update currency info

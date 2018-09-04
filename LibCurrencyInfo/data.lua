@@ -144,6 +144,7 @@ data.CurrencyByCategory = {
 		1357, -- Echoes of Domination
 		1416, -- Coins of Air
 		1508, -- Veiled Argunite
+		1533, -- Wakening Essence
 	},
 	[142] = { -- Hidden
 --		395, -- Justice Points
