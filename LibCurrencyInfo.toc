@@ -1,4 +1,4 @@
-﻿## Interface: 80000
+﻿## Interface: 80100
 ## LoadOnDemand: 1
 ## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information

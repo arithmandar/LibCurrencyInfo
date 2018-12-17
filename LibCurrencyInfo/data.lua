@@ -179,6 +179,9 @@ data.CurrencyByCategory = {
 		1580, -- Seal of Ancient Fate
 		1587, -- War Supplies
 		1710, -- Seafarer's Dubloon
+		1716, -- Honorbound Service Medal
+		1717, -- 7th Legion Service Medal
+		1718, -- Titan Residuum
 	},
 	[144] = { -- Virtual
 		1553, -- Azerite
@@ -340,6 +343,10 @@ data.Currencies = {
 	[1704] = { id=1704, category=23 }, -- Spirit Shard, The shard pulses with energy.
 	[1705] = { id=1705, category=142 }, -- Warfronts - Personal Tracker - Iron in Chest (Hidden),  
 	[1710] = { id=1710, category=143 }, -- Seafarer's Dubloon, Currency used by the many varied tribes of the Great Sea. Used to procure items from traders on Island Expeditions.
+	[1716] = { id=1716, category=143 }, -- Honorbound Service Medal
+	[1717] = { id=1717, category=143 }, -- 7th Legion Service Medal
+	[1718] = { id=1718, category=143 }, -- Titan Residuum
+	
 }
 
 -- currency description can be retrieved by calling C_CurrencyInfo.GetBasicCurrencyInfo(CurrencyTypeID)

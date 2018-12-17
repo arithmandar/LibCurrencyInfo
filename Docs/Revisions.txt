@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.09 (Dec. 17, 2018)
+-----------------------
+- ToC Update to support WoW 8.1.0
+- Added BfA currencies: 7th Legion Service Medal, Honorbound Service Medal, Titan Residuum
+
 * v1.08 (Sep. 05, 2018)
 -----------------------
 - Fixed the issue that Wakening Essence was missing in Legion category
