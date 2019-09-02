@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.10 (Sep. 02, 2019)
+-----------------------
+- ToC Update to support WoW 8.2.0
+- Added BfA currencies
+
 * v1.09 (Dec. 17, 2018)
 -----------------------
 - ToC Update to support WoW 8.1.0
