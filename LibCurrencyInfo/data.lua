@@ -387,7 +387,7 @@ data.Currencies = {
 	[1748] = { id=1748, category=142 }, -- Nazjatar Ally - Bladesman Inowari
 	[1749] = { id=1749, category=142 }, -- Nazjatar Ally - Hunter Akana
 	[1750] = { id=1750, category=142 }, -- Nazjatar Ally - Farseer Ori
-	[1752] = ( id=1752, category=142 }, -- Honeyback Hive
+	[1752] = { id=1752, category=142 }, -- Honeyback Hive
 
 }
 

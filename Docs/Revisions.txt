@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.12 (Jan. 07, 2020)
+-----------------------
+- Fixed syntax error
+
 * v1.11 (Jan. 07, 2020)
 -----------------------
 - ToC Update to support WoW 8.2.5
