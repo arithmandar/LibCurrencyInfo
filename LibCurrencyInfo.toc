@@ -1,5 +1,4 @@
-﻿## Interface: 80200
-## LoadOnDemand: 1
+﻿## Interface: 80205
 ## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information
 #@end-debug@

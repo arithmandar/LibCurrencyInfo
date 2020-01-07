@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.11 (Jan. 07, 2020)
+-----------------------
+- ToC Update to support WoW 8.2.5
+- Added new currency: Honeyback Hive
+
 * v1.10 (Sep. 02, 2019)
 -----------------------
 - ToC Update to support WoW 8.2.0
