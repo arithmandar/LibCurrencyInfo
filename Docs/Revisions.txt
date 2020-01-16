@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.13 (Jan. 17, 2020)
+-----------------------
+- ToC Update to support WoW 8.3.0
+- Added new currency: Uldum Accord, Rajani, Coalescing Visions
+
 * v1.12 (Jan. 07, 2020)
 -----------------------
 - Fixed syntax error
