@@ -201,6 +201,7 @@ data.CurrencyByCategory = {
 		1716,	 -- Honorbound Service Medal
 		1717,	 -- 7th Legion Service Medal
 		1718,	 -- Titan Residuum
+		1719,	 -- Corrupted Memento
 		1721,	 -- Prismatic Manapearl
 --		1743,	 -- 8.2 NOT CURRENTLY USED
 		1755, 	 -- Coalescing Visions
@@ -377,6 +378,7 @@ data.Currencies = {
 	[1717] = { id=1717, category=143 }, -- 7th Legion Service Medal
 	[1717] = { id=1717, category=143 }, -- 7th Legion Service Medal
 	[1718] = { id=1718, category=143 }, -- Titan Residuum
+	[1719] = { id=1719, category=143 }, -- Corrupted Memento
 	[1721] = { id=1721, category=143 }, -- Prismatic Manapearl
 	[1722] = { id=1722, category=142 }, -- Azerite Ore
 	[1723] = { id=1723, category=142 }, -- Lumber

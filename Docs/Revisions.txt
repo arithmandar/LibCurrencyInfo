@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.14 (Jan. 20, 2020)
+-----------------------
+- Added Corrupted Memento
+
 * v1.13 (Jan. 17, 2020)
 -----------------------
 - ToC Update to support WoW 8.3.0
