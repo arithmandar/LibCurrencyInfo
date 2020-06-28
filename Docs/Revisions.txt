@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.15 (Jun. 28, 2020)
+-----------------------
+- Added Echoes of Ny'alotha
+- Added Shadowlands currencies
+
 * v1.14 (Jan. 20, 2020)
 -----------------------
 - Added Corrupted Memento
