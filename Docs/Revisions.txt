@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.16 (Aug. xx, 2020)
+-----------------------
+- Shadowlands supports
+
 * v1.15 (Jun. 28, 2020)
 -----------------------
 - Added Echoes of Ny'alotha
