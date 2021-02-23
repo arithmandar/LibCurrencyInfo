@@ -3,8 +3,22 @@ $Id$
 Revision History:
 =================
 
-* v1.16 (Aug. xx, 2020)
+* v1.19 (Dec. 01, 2020)
 -----------------------
+- Update currencies data to 9.0.2.36753
+
+* v1.18 (Nov. 22, 2020)
+-----------------------
+- ToC Update to support WoW 9.0.2
+- Bug fixed: Prevent from currency not available which through out error
+
+* v1.17 (Oct. 21, 2020)
+-----------------------
+- Updated Shadowlands currencies
+
+* v1.16 (Oct. 18, 2020)
+-----------------------
+- ToC Update to support WoW 9.0.1
 - Shadowlands supports
 
 * v1.15 (Jun. 28, 2020)

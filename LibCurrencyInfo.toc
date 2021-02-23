@@ -1,4 +1,4 @@
-﻿## Interface: 80300
+﻿## Interface: 90002
 ## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information
 #@end-debug@

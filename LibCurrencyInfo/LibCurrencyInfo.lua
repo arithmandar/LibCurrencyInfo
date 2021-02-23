@@ -32,17 +32,15 @@ local GetCurrencyInfo
 local GetLocale = _G.GetLocale
 
 -- Determine WoW TOC Version
-local WoWClassic, WoWRetail, WoWShadowlands
+local WoWClassic, WoWRetail
 local wowtocversion  = select(4, GetBuildInfo())
 if wowtocversion < 19999 then
 	WoWClassic = true
-elseif wowtocversion > 19999 and wowtocversion < 90000 then 
-	WoWRetail = true
 else
-	WoWShadowlands = true
+	WoWRetail = true
 end
 
-if WoWClassic or WoWRetail then
+if WoWClassic then
 	GetCurrencyInfo = _G.GetCurrencyInfo
 else -- Shadowlands
 	GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
@@ -122,10 +120,11 @@ function lib:GetCurrencyByID(currencyID, lang)
 		lang = GetLocale()
 	end
 	
-	if WoWClassic or WoWRetail then
+	if WoWClassic then
 		name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity = GetCurrencyInfo(currencyID)
 	else
 		local curr = GetCurrencyInfo(currencyID)
+		if curr then
 		name = curr.name
 		currentAmount = curr.quantity
 		texture = curr.iconFileID
@@ -134,6 +133,7 @@ function lib:GetCurrencyByID(currencyID, lang)
 		totalMax = curr.maxQuantity
 		isDiscovered = curr.discovered
 		rarity = curr.quality
+		end
 	end
 	if not name then return end
 	local CurrencyDisplayInfo = C_CurrencyInfo.GetBasicCurrencyInfo(currencyID)
