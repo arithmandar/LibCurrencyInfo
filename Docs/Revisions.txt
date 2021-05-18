@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.20 (May 19, 2021)
+-----------------------
+- ToC Update to support WoW 9.0.5
+
 * v1.19 (Dec. 01, 2020)
 -----------------------
 - Update currencies data to 9.0.2.36753
