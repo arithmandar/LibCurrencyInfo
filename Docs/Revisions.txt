@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.21 (May 19, 2021)
+-----------------------
+- Support WoW Classic 2.5.1
+
 * v1.20 (May 19, 2021)
 -----------------------
 - ToC Update to support WoW 9.0.5

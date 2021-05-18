@@ -552,3 +552,4 @@ data.Currencies = {
 data.CurrencyDesc = {
 }
 ]]
+
