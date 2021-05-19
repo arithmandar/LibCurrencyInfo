@@ -3,6 +3,12 @@ $Id$
 Revision History:
 =================
 
+* v1.22 (May 19, 2021)
+-----------------------
+- Added new currencies: Tower Knowledge, Soul Cinders, Cataloged Research, 
+  9.1 - Torghast XP - Prototype - LJS (probably for 9.1 testing), Invisible Reward (probably for 9.1 testing), 
+  Death's Advance, Bonus Valor
+
 * v1.21 (May 19, 2021)
 -----------------------
 - Support WoW Classic 2.5.1

@@ -229,6 +229,10 @@ data.CurrencyByCategory = {
 		1888, 	 -- Marasmius
 		1889, 	 -- Adventure Campaign Progress
 		1891, 	 -- Honor from Rated
+		1902, 	 -- 9.1 - Torghast XP - Prototype - LJS, 
+		1903, 	 -- Invisible Reward, 
+		1907, 	 -- Death's Advance	Grants reputation with the Death's Advance., 
+		1947, 	 -- Bonus Valor, 
 	},
 	[143] = { -- Battle for Azeroth
 		1299,	 -- Brawler's Gold
@@ -284,6 +288,46 @@ data.CurrencyByCategory = {
 		1873, 	 -- Sanctum Anima Weaver-Night Fae
 		1874, 	 -- Sanctum Anima Weaver-Necrolord
 		1885, 	 -- Grateful Offering
+		1904, 	 -- Tower Knowledge, 
+		1906, 	 -- Soul Cinders, 
+		1931, 	 -- Cataloged Research, 
+	},
+	[248] = { -- Torghast UI (Hidden)
+		1909, 	 -- Torghast - Scoreboard - Clear Percent, 
+		1910, 	 -- Torghast - Scoreboard - Souls Percent, 
+		1911, 	 -- Torghast - Scoreboard - Urns Percent, 
+		1912, 	 -- Torghast - Scoreboard - Hot Streak Percent, 
+		1913, 	 -- Torghast - Scoreboard - Total Time, 
+		1914, 	 -- Torghast - Scoreboard - Par Time, 
+		1915, 	 -- Torghast - Scoreboard - Deaths Excess Count, 
+		1916, 	 -- Torghast - Scoreboard - Deaths Start Count, 
+		1917, 	 -- Torghast - Scoreboard - Floor Reached, 
+		1918, 	 -- Torghast - Scoreboard - Toast Display - Time Score, 
+		1919, 	 -- Torghast - Scoreboard - Toast Display - Hot Streak Score, 
+		1920, 	 -- Torghast - Scoreboard - Toast Display - Deaths Excess Score, 
+		1921, 	 -- Torghast - Scoreboard - Toast Display - Total Score, 
+		1922, 	 -- Torghast - Scoreboard - Toast Display - Total Rewards, 
+		1923, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Souls Rescued, 
+		1924, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Urns Broken, 
+		1925, 	 -- Torghast - Scoreboard - Toast Display - Deaths Zero, 
+		1926, 	 -- Torghast - Scoreboard - Toast Display - Stars, 
+		1932, 	 -- Torghast - Scoreboard - Toast Display - Boss Killed, 
+		1933, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Chests Opened, 
+		1934, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Escorts Complete, 
+		1935, 	 -- Torghast - Scoreboard - Toast Display - Bonus - No Trap Damage, 
+		1936, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Fast, 
+		1937, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Single Stacks, 
+		1938, 	 -- Torghast - Scoreboard - Toast Display - Bonus - 5 Stacks, 
+		1939, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Broker Killer, 
+		1940, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Elite Slayer, 
+		1941, 	 -- Torghast - Scoreboard - Toast Display - Bonus - 1000 Phantasma, 
+		1942, 	 -- Torghast - Scoreboard - Toast Display - Bonus - 500 Phant Left, 
+		1943, 	 -- Torghast - Scoreboard - Toast Display - Bonus - No Deaths, 
+		1944, 	 -- Torghast - Scoreboard - Toast Display - Bonus - No Epics, 
+		1945, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Elite Unnatural, 
+		1946, 	 -- Torghast - Scoreboard - Toast Display - Total Rewards - AV Bonus, 
+		1948, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Faster, 
+		1949, 	 -- Torghast - Scoreboard - Toast Display - Bonus - 30+ Count, 
 	},
 }
 
@@ -304,6 +348,7 @@ data.CurrencyCategories = {
 	[143] = { enUS="Battle for Azeroth",deDE="Battle for Azeroth",esES="Battle for Azeroth",esMX="Battle for Azeroth",frFR="Battle for Azeroth",itIT="Battle for Azeroth",koKR="격전의 아제로스",ptBR="Battle for Azeroth",ruRU="Battle for Azeroth",zhCN="争霸艾泽拉斯",zhTW="決戰艾澤拉斯", },
 	[144] = { enUS="Virtual",deDE="Virtuell",esES="Virtual",esMX="Virtual",frFR="Virtuelle",itIT="Virtuale",koKR="가상",ptBR="Virtual",ruRU="Виртуальная валюта",zhCN="虚拟",zhTW="虛擬", },
 	[245] = { enUS=EXPANSION_NAME8,deDE=EXPANSION_NAME8,esES=EXPANSION_NAME8,esMX=EXPANSION_NAME8,frFR=EXPANSION_NAME8,itIT=EXPANSION_NAME8,koKR=EXPANSION_NAME8,ptBR=EXPANSION_NAME8,ruRU=EXPANSION_NAME8,zhCN=EXPANSION_NAME8,zhTW=EXPANSION_NAME8, },
+	[248] = { enUS="Torghast UI",deDE="Torghast UI",esES="Torghast UI",esMX="Torghast UI",frFR="Torghast UI",itIT="Torghast UI",koKR="Torghast UI",ptBR="Torghast UI",ruRU="Torghast UI",zhCN="Torghast UI",zhTW="Torghast UI", },
 }
 
 data.Currencies = {
@@ -545,6 +590,49 @@ data.Currencies = {
 	[1888] = { id=1888, category=142 }, -- Marasmius
 	[1889] = { id=1889, category=142 }, -- Adventure Campaign Progress
 	[1891] = { id=1891, category=142 }, -- Honor from Rated
+	[1902] = { id=1902, category=142 }, -- 9.1 - Torghast XP - Prototype - LJS
+	[1903] = { id=1903, category=142 }, -- Invisible Reward
+	[1904] = { id=1904, category=245 }, -- Tower Knowledge
+	[1906] = { id=1906, category=245 }, -- Soul Cinders
+	[1907] = { id=1907, category=142 }, -- Death's Advance
+	[1909] = { id=1909, category=248 }, -- Torghast - Scoreboard - Clear Percent
+	[1910] = { id=1910, category=248 }, -- Torghast - Scoreboard - Souls Percent
+	[1911] = { id=1911, category=248 }, -- Torghast - Scoreboard - Urns Percent
+	[1912] = { id=1912, category=248 }, -- Torghast - Scoreboard - Hot Streak Percent
+	[1913] = { id=1913, category=248 }, -- Torghast - Scoreboard - Total Time
+	[1914] = { id=1914, category=248 }, -- Torghast - Scoreboard - Par Time
+	[1915] = { id=1915, category=248 }, -- Torghast - Scoreboard - Deaths Excess Count
+	[1916] = { id=1916, category=248 }, -- Torghast - Scoreboard - Deaths Start Count
+	[1917] = { id=1917, category=248 }, -- Torghast - Scoreboard - Floor Reached
+	[1918] = { id=1918, category=248 }, -- Torghast - Scoreboard - Toast Display - Time Score
+	[1919] = { id=1919, category=248 }, -- Torghast - Scoreboard - Toast Display - Hot Streak Score
+	[1920] = { id=1920, category=248 }, -- Torghast - Scoreboard - Toast Display - Deaths Excess Score
+	[1921] = { id=1921, category=248 }, -- Torghast - Scoreboard - Toast Display - Total Score
+	[1922] = { id=1922, category=248 }, -- Torghast - Scoreboard - Toast Display - Total Rewards
+	[1923] = { id=1923, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Souls Rescued
+	[1924] = { id=1924, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Urns Broken
+	[1925] = { id=1925, category=248 }, -- Torghast - Scoreboard - Toast Display - Deaths Zero
+	[1926] = { id=1926, category=248 }, -- Torghast - Scoreboard - Toast Display - Stars
+	[1931] = { id=1931, category=245 }, -- Cataloged Research
+	[1932] = { id=1932, category=248 }, -- Torghast - Scoreboard - Toast Display - Boss Killed
+	[1933] = { id=1933, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Chests Opened
+	[1934] = { id=1934, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Escorts Complete
+	[1935] = { id=1935, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - No Trap Damage
+	[1936] = { id=1936, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Fast
+	[1937] = { id=1937, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Single Stacks
+	[1938] = { id=1938, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 5 Stacks
+	[1939] = { id=1939, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Broker Killer
+	[1940] = { id=1940, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Elite Slayer
+	[1941] = { id=1941, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 1000 Phantasma
+	[1942] = { id=1942, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 500 Phant Left
+	[1943] = { id=1943, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - No Deaths
+	[1944] = { id=1944, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - No Epics
+	[1945] = { id=1945, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Elite Unnatural
+	[1946] = { id=1946, category=248 }, -- Torghast - Scoreboard - Toast Display - Total Rewards - AV Bonus
+	[1947] = { id=1947, category=142 }, -- Bonus Valor
+	[1948] = { id=1948, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Faster
+	[1949] = { id=1949, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 30+ Count
+
 }
 
 -- currency description can be retrieved by calling C_CurrencyInfo.GetBasicCurrencyInfo(CurrencyTypeID)
