@@ -291,6 +291,7 @@ data.CurrencyByCategory = {
 		1904, 	 -- Tower Knowledge, 
 		1906, 	 -- Soul Cinders, 
 		1931, 	 -- Cataloged Research, 
+		1977,	 -- Stygian Ember
 	},
 	[248] = { -- Torghast UI (Hidden)
 		1909, 	 -- Torghast - Scoreboard - Clear Percent, 
@@ -328,6 +329,30 @@ data.CurrencyByCategory = {
 		1946, 	 -- Torghast - Scoreboard - Toast Display - Total Rewards - AV Bonus, 
 		1948, 	 -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Faster, 
 		1949, 	 -- Torghast - Scoreboard - Toast Display - Bonus - 30+ Count, 
+		1950,	 -- Torghast - Scoreboard - Toast Display - 1 Star Value
+		1951,	 -- Torghast - Scoreboard - Toast Display - 2 Star Value
+		1952,	 -- Torghast - Scoreboard - Toast Display - 3 Star Value
+		1953,	 -- Torghast - Scoreboard - Toast Display - 4 Star Value
+		1954,	 -- Torghast - Scoreboard - Toast Display - 5 Star Value
+		1955,	 -- Torghast - Scoreboard - Toast Display - Points While Empowered
+		1956,	 -- Torghast - Scoreboard - Toast Display - Points Empowered Score
+		1957,	 -- Torghast - Scoreboard - Floor Clear Percent Floor 1
+		1958,	 -- Torghast - Scoreboard - Floor Clear Percent Floor 2
+		1959,	 -- Torghast - Scoreboard - Floor Clear Percent Floor 3
+		1960,	 -- Torghast - Scoreboard - Floor Clear Percent Floor 4
+		1961,	 -- Torghast - Scoreboard - Floor Empowered Percent Floor 1
+		1962,	 -- Torghast - Scoreboard - Floor Empowered Percent Floor 2
+		1963,	 -- Torghast - Scoreboard - Floor Empowered Percent Floor 3
+		1964,	 -- Torghast - Scoreboard - Floor Empowered Percent Floor 4
+		1965,	 -- Torghast - Scoreboard - Floor Time Floor 1
+		1966,	 -- Torghast - Scoreboard - Floor Time Floor 2
+		1967,	 -- Torghast - Scoreboard - Floor Time Floor 3
+		1968,	 -- Torghast - Scoreboard - Floor Time Floor 4
+		1969,	 -- Torghast - Scoreboard - Floor Par Time Floor 1
+		1970,	 -- Torghast - Scoreboard - Floor Par Time Floor 2
+		1971,	 -- Torghast - Scoreboard - Floor Par Time Floor 3
+		1972,	 -- Torghast - Scoreboard - Floor Par Time Floor 4
+		1976,	 -- Torghast - Scoreboard - Toast Display - Bonus - Phant Left Group
 	},
 }
 
@@ -348,7 +373,7 @@ data.CurrencyCategories = {
 	[143] = { enUS="Battle for Azeroth",deDE="Battle for Azeroth",esES="Battle for Azeroth",esMX="Battle for Azeroth",frFR="Battle for Azeroth",itIT="Battle for Azeroth",koKR="격전의 아제로스",ptBR="Battle for Azeroth",ruRU="Battle for Azeroth",zhCN="争霸艾泽拉斯",zhTW="決戰艾澤拉斯", },
 	[144] = { enUS="Virtual",deDE="Virtuell",esES="Virtual",esMX="Virtual",frFR="Virtuelle",itIT="Virtuale",koKR="가상",ptBR="Virtual",ruRU="Виртуальная валюта",zhCN="虚拟",zhTW="虛擬", },
 	[245] = { enUS=EXPANSION_NAME8,deDE=EXPANSION_NAME8,esES=EXPANSION_NAME8,esMX=EXPANSION_NAME8,frFR=EXPANSION_NAME8,itIT=EXPANSION_NAME8,koKR=EXPANSION_NAME8,ptBR=EXPANSION_NAME8,ruRU=EXPANSION_NAME8,zhCN=EXPANSION_NAME8,zhTW=EXPANSION_NAME8, },
-	[248] = { enUS="Torghast UI",deDE="Torghast UI",esES="Torghast UI",esMX="Torghast UI",frFR="Torghast UI",itIT="Torghast UI",koKR="Torghast UI",ptBR="Torghast UI",ruRU="Torghast UI",zhCN="Torghast UI",zhTW="Torghast UI", },
+	[248] = { enUS="Torghast",deDE="Torghast",esES="Torghast",esMX="Torghast",frFR="Tourment",itIT="Torgast",koKR="토르가스트",ptBR="Thanator",ruRU="Торгаст",zhCN="托加斯特",zhTW="托迦司", hide=true, },
 }
 
 data.Currencies = {
@@ -595,43 +620,68 @@ data.Currencies = {
 	[1904] = { id=1904, category=245 }, -- Tower Knowledge
 	[1906] = { id=1906, category=245 }, -- Soul Cinders
 	[1907] = { id=1907, category=142 }, -- Death's Advance
-	[1909] = { id=1909, category=248 }, -- Torghast - Scoreboard - Clear Percent
-	[1910] = { id=1910, category=248 }, -- Torghast - Scoreboard - Souls Percent
-	[1911] = { id=1911, category=248 }, -- Torghast - Scoreboard - Urns Percent
-	[1912] = { id=1912, category=248 }, -- Torghast - Scoreboard - Hot Streak Percent
-	[1913] = { id=1913, category=248 }, -- Torghast - Scoreboard - Total Time
-	[1914] = { id=1914, category=248 }, -- Torghast - Scoreboard - Par Time
-	[1915] = { id=1915, category=248 }, -- Torghast - Scoreboard - Deaths Excess Count
-	[1916] = { id=1916, category=248 }, -- Torghast - Scoreboard - Deaths Start Count
-	[1917] = { id=1917, category=248 }, -- Torghast - Scoreboard - Floor Reached
-	[1918] = { id=1918, category=248 }, -- Torghast - Scoreboard - Toast Display - Time Score
-	[1919] = { id=1919, category=248 }, -- Torghast - Scoreboard - Toast Display - Hot Streak Score
-	[1920] = { id=1920, category=248 }, -- Torghast - Scoreboard - Toast Display - Deaths Excess Score
-	[1921] = { id=1921, category=248 }, -- Torghast - Scoreboard - Toast Display - Total Score
-	[1922] = { id=1922, category=248 }, -- Torghast - Scoreboard - Toast Display - Total Rewards
-	[1923] = { id=1923, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Souls Rescued
-	[1924] = { id=1924, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Urns Broken
-	[1925] = { id=1925, category=248 }, -- Torghast - Scoreboard - Toast Display - Deaths Zero
-	[1926] = { id=1926, category=248 }, -- Torghast - Scoreboard - Toast Display - Stars
+	[1909] = { id=1909, category=248, hidden=true }, -- Torghast - Scoreboard - Clear Percent
+	[1910] = { id=1910, category=248, hidden=true }, -- Torghast - Scoreboard - Souls Percent
+	[1911] = { id=1911, category=248, hidden=true }, -- Torghast - Scoreboard - Urns Percent
+	[1912] = { id=1912, category=248, hidden=true }, -- Torghast - Scoreboard - Hot Streak Percent
+	[1913] = { id=1913, category=248, hidden=true }, -- Torghast - Scoreboard - Total Time
+	[1914] = { id=1914, category=248, hidden=true }, -- Torghast - Scoreboard - Par Time
+	[1915] = { id=1915, category=248, hidden=true }, -- Torghast - Scoreboard - Deaths Excess Count
+	[1916] = { id=1916, category=248, hidden=true }, -- Torghast - Scoreboard - Deaths Start Count
+	[1917] = { id=1917, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Reached
+	[1918] = { id=1918, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Time Score
+	[1919] = { id=1919, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Hot Streak Score
+	[1920] = { id=1920, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Deaths Excess Score
+	[1921] = { id=1921, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Total Score
+	[1922] = { id=1922, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Total Rewards
+	[1923] = { id=1923, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Souls Rescued
+	[1924] = { id=1924, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Urns Broken
+	[1925] = { id=1925, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Deaths Zero
+	[1926] = { id=1926, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Stars
 	[1931] = { id=1931, category=245 }, -- Cataloged Research
-	[1932] = { id=1932, category=248 }, -- Torghast - Scoreboard - Toast Display - Boss Killed
-	[1933] = { id=1933, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Chests Opened
-	[1934] = { id=1934, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Escorts Complete
-	[1935] = { id=1935, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - No Trap Damage
-	[1936] = { id=1936, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Fast
-	[1937] = { id=1937, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Single Stacks
-	[1938] = { id=1938, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 5 Stacks
-	[1939] = { id=1939, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Broker Killer
-	[1940] = { id=1940, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Elite Slayer
-	[1941] = { id=1941, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 1000 Phantasma
-	[1942] = { id=1942, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 500 Phant Left
-	[1943] = { id=1943, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - No Deaths
-	[1944] = { id=1944, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - No Epics
-	[1945] = { id=1945, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Elite Unnatural
-	[1946] = { id=1946, category=248 }, -- Torghast - Scoreboard - Toast Display - Total Rewards - AV Bonus
+	[1932] = { id=1932, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Boss Killed
+	[1933] = { id=1933, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Chests Opened
+	[1934] = { id=1934, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Escorts Complete
+	[1935] = { id=1935, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - No Trap Damage
+	[1936] = { id=1936, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Fast
+	[1937] = { id=1937, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Single Stacks
+	[1938] = { id=1938, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - 5 Stacks
+	[1939] = { id=1939, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Broker Killer
+	[1940] = { id=1940, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Elite Slayer
+	[1941] = { id=1941, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - 1000 Phantasma
+	[1942] = { id=1942, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - 500 Phant Left
+	[1943] = { id=1943, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - No Deaths
+	[1944] = { id=1944, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - No Epics
+	[1945] = { id=1945, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Elite Unnatural
+	[1946] = { id=1946, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Total Rewards - AV Bonus
 	[1947] = { id=1947, category=142 }, -- Bonus Valor
-	[1948] = { id=1948, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Faster
-	[1949] = { id=1949, category=248 }, -- Torghast - Scoreboard - Toast Display - Bonus - 30+ Count
+	[1948] = { id=1948, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Kill Boss Faster
+	[1949] = { id=1949, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - 30+ Count
+	[1950] = { id=1950, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - 1 Star Value
+	[1951] = { id=1951, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - 2 Star Value
+	[1952] = { id=1952, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - 3 Star Value
+	[1953] = { id=1953, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - 4 Star Value
+	[1954] = { id=1954, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - 5 Star Value
+	[1955] = { id=1955, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Points While Empowered
+	[1956] = { id=1956, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Points Empowered Score
+	[1957] = { id=1957, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Clear Percent Floor 1
+	[1958] = { id=1958, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Clear Percent Floor 2
+	[1959] = { id=1959, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Clear Percent Floor 3
+	[1960] = { id=1960, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Clear Percent Floor 4
+	[1961] = { id=1961, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Empowered Percent Floor 1
+	[1962] = { id=1962, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Empowered Percent Floor 2
+	[1963] = { id=1963, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Empowered Percent Floor 3
+	[1964] = { id=1964, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Empowered Percent Floor 4
+	[1965] = { id=1965, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Time Floor 1
+	[1966] = { id=1966, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Time Floor 2
+	[1967] = { id=1967, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Time Floor 3
+	[1968] = { id=1968, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Time Floor 4
+	[1969] = { id=1969, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Par Time Floor 1
+	[1970] = { id=1970, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Par Time Floor 2
+	[1971] = { id=1971, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Par Time Floor 3
+	[1972] = { id=1972, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Par Time Floor 4
+	[1976] = { id=1976, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Phant Left Group
+	[1977] = { id=1977, category=245 }, -- Stygian Ember
 
 }
 

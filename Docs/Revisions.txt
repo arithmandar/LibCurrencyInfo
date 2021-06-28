@@ -3,6 +3,12 @@ $Id$
 Revision History:
 =================
 
+* v1.23 (Jun. 28, 2021)
+-----------------------
+- ToC Update to support WoW 9.1.0
+- Added Shadowlands currency item: Stygian Ember
+- Added more Torghast items (although they should be hidden)
+
 * v1.22 (May 19, 2021)
 -----------------------
 - Added new currencies: Tower Knowledge, Soul Cinders, Cataloged Research, 
