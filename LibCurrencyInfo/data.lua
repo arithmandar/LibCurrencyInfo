@@ -229,8 +229,8 @@ data.CurrencyByCategory = {
 		1888, 	 -- Marasmius
 		1889, 	 -- Adventure Campaign Progress
 		1891, 	 -- Honor from Rated
-		1902, 	 -- 9.1 - Torghast XP - Prototype - LJS, 
-		1903, 	 -- Invisible Reward, 
+--		1902, 	 -- 9.1 - Torghast XP - Prototype - LJS, 
+--		1903, 	 -- Invisible Reward, 
 		1907, 	 -- Death's Advance	Grants reputation with the Death's Advance., 
 		1947, 	 -- Bonus Valor, 
 	},
@@ -615,8 +615,8 @@ data.Currencies = {
 	[1888] = { id=1888, category=142 }, -- Marasmius
 	[1889] = { id=1889, category=142 }, -- Adventure Campaign Progress
 	[1891] = { id=1891, category=142 }, -- Honor from Rated
-	[1902] = { id=1902, category=142 }, -- 9.1 - Torghast XP - Prototype - LJS
-	[1903] = { id=1903, category=142 }, -- Invisible Reward
+	[1902] = { id=1902, category=142, hidden=true }, -- 9.1 - Torghast XP - Prototype - LJS
+	[1903] = { id=1903, category=142, hidden=true }, -- Invisible Reward
 	[1904] = { id=1904, category=245 }, -- Tower Knowledge
 	[1906] = { id=1906, category=245 }, -- Soul Cinders
 	[1907] = { id=1907, category=142 }, -- Death's Advance

@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.24 (Jun. 29, 2021)
+-----------------------
+- Set currencies 1902 and 1903 to be hidded
+
 * v1.23 (Jun. 28, 2021)
 -----------------------
 - ToC Update to support WoW 9.1.0
