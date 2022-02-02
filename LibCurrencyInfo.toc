@@ -1,4 +1,4 @@
-﻿## Interface: 90100
+﻿## Interface: 90105
 ## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information
 #@end-debug@

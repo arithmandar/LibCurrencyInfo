@@ -3,9 +3,14 @@ $Id$
 Revision History:
 =================
 
+* v1.25 (Feb. 3, 2022)
+-----------------------
+- ToC Update to support WoW 9.1.5
+- Added: Archivists' Codex, Torghast - Scoreboard - Run Layer, Torghast - Scoreboard - Run ID
+
 * v1.24 (Jun. 29, 2021)
 -----------------------
-- Set currencies 1902 and 1903 to be hidded
+- Set currencies 1902 and 1903 to be hidden
 
 * v1.23 (Jun. 28, 2021)
 -----------------------
