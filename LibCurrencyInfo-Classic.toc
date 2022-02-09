@@ -1,0 +1,16 @@
+﻿## Interface: 11402
+## Title: Lib: Currency Info
+## Notes: A library to get currencies' related information
+#@end-debug@
+## Author: Arith
+## X-eMail: arithmandarjp at yahoo.co.jp
+## X-Category: Library
+## X-License: MIT
+## X-Date: @project-date-iso@
+## X-Website: https://www.wowace.com/projects/libcurrencyinfo
+
+#@no-lib-strip@
+LibStub\LibStub.lua
+#@end-no-lib-strip@
+LibCurrencyInfo\lib.xml
+
