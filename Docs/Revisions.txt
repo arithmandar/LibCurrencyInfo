@@ -3,7 +3,7 @@ $Id$
 Revision History:
 =================
 
-* v1.25 (Feb. 9, 2022)
+* v1.26 (Feb. 9, 2022)
 -----------------------
 - Support multiple ToC
 - BCC ToC update to support WoW 2.5.3
