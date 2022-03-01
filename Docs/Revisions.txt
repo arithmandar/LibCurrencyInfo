@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.29 (Mar. 1, 2022)
+-----------------------
+- Corrected category
+
 * v1.28 (Mar. 1, 2022)
 -----------------------
 - Added the following currencies: 

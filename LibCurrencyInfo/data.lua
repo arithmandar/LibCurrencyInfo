@@ -233,7 +233,9 @@ data.CurrencyByCategory = {
 --		1903, 	 -- Invisible Reward, 
 		1907, 	 -- Death's Advance	Grants reputation with the Death's Advance., 
 		1947, 	 -- Bonus Valor, 
+		1982,	 -- The Enlightened	Grants reputation with The Enlightened.
 		1997,	 -- Archivists' Codex
+		2000,	 -- Motes of Fate	
 	},
 	[143] = { -- Battle for Azeroth
 		1299,	 -- Brawler's Gold
@@ -293,6 +295,9 @@ data.CurrencyByCategory = {
 		1906, 	 -- Soul Cinders, 
 		1931, 	 -- Cataloged Research, 
 		1977,	 -- Stygian Ember
+		1979,	 -- Cyphers of the First Ones
+		2009,	 -- Cosmic Flux	Swirling fragments of creation energy that enable transformation, Cosmic Flux can be used to empower equipment at the Creation Catalyst in Zereth Mortis or fuel the Runecarver's Chamber in Torghast.
+--		2010,	 -- [DNT] Byron Test Currency	A currency used to test currencies.
 	},
 	[248] = { -- Torghast UI (Hidden)
 		1909, 	 -- Torghast - Scoreboard - Clear Percent, 
@@ -354,16 +359,8 @@ data.CurrencyByCategory = {
 		1971,	 -- Torghast - Scoreboard - Floor Par Time Floor 3
 		1972,	 -- Torghast - Scoreboard - Floor Par Time Floor 4
 		1976,	 -- Torghast - Scoreboard - Toast Display - Bonus - Phant Left Group
-		1977, 	 -- Stygian Ember
-		1979,	 -- Cyphers of the First Ones
 		1980,	 -- Torghast - Scoreboard - Run Layer
 		1981,	 -- Torghast - Scoreboard - Run ID
-		1982,	 -- The Enlightened	Grants reputation with The Enlightened.
-		1997,	 -- Archivists' Codex	Grants progress with the Archivists' Codex.
-		2000,	 -- Motes of Fate	
-		2009,	 -- Cosmic Flux	Swirling fragments of creation energy that enable transformation, Cosmic Flux can be used to empower equipment at the Creation Catalyst in Zereth Mortis or fuel the Runecarver's Chamber in Torghast.
-		2010,	 -- [DNT] Byron Test Currency	A currency used to test currencies.
-
 	},
 }
 
@@ -697,8 +694,8 @@ data.Currencies = {
 	[1981] = { id=1981, category=248, hidden=true }, -- Torghast - Scoreboard - Run ID
 	[1997] = { id=1997, category=142 }, -- Archivists' Codex
 	[1979] = { id=1979, category=245, }, -- Cyphers of the First Ones
-	[1980] = { id=1980, category=248, }, -- Torghast - Scoreboard - Run Layer
-	[1981] = { id=1981, category=248, }, -- Torghast - Scoreboard - Run ID
+	[1980] = { id=1980, category=248, hidden=true }, -- Torghast - Scoreboard - Run Layer
+	[1981] = { id=1981, category=248, hidden=true }, -- Torghast - Scoreboard - Run ID
 	[1982] = { id=1982, category=142, }, -- The Enlightened
 	[1997] = { id=1997, category=142, }, -- Archivists' Codex
 	[2000] = { id=2000, category=142, }, -- Motes of Fate
