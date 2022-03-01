@@ -3,6 +3,19 @@ $Id$
 Revision History:
 =================
 
+* v1.28 (Mar. 1, 2022)
+-----------------------
+- Added the following currencies: 
+	1979	Cyphers of the First Ones
+	1980	Torghast - Scoreboard - Run Layer
+	1981	Torghast - Scoreboard - Run ID
+	1982	The Enlightened
+	1997	Archivists' Codex
+	2000	Motes of Fate
+	2009	Cosmic Flux
+	2010	[DNT] Byron Test Currency
+
+
 * v1.27 (Feb. 23, 2022)
 -----------------------
 - Toc update to support WoW 9.2.0

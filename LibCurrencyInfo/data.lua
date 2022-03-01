@@ -354,8 +354,15 @@ data.CurrencyByCategory = {
 		1971,	 -- Torghast - Scoreboard - Floor Par Time Floor 3
 		1972,	 -- Torghast - Scoreboard - Floor Par Time Floor 4
 		1976,	 -- Torghast - Scoreboard - Toast Display - Bonus - Phant Left Group
+		1977, 	 -- Stygian Ember
+		1979,	 -- Cyphers of the First Ones
 		1980,	 -- Torghast - Scoreboard - Run Layer
 		1981,	 -- Torghast - Scoreboard - Run ID
+		1982,	 -- The Enlightened	Grants reputation with The Enlightened.
+		1997,	 -- Archivists' Codex	Grants progress with the Archivists' Codex.
+		2000,	 -- Motes of Fate	
+		2009,	 -- Cosmic Flux	Swirling fragments of creation energy that enable transformation, Cosmic Flux can be used to empower equipment at the Creation Catalyst in Zereth Mortis or fuel the Runecarver's Chamber in Torghast.
+		2010,	 -- [DNT] Byron Test Currency	A currency used to test currencies.
 
 	},
 }
@@ -689,6 +696,14 @@ data.Currencies = {
 	[1981] = { id=1980, category=248, hidden=true }, -- Torghast - Scoreboard - Run Layer
 	[1981] = { id=1981, category=248, hidden=true }, -- Torghast - Scoreboard - Run ID
 	[1997] = { id=1997, category=142 }, -- Archivists' Codex
+	[1979] = { id=1979, category=245, }, -- Cyphers of the First Ones
+	[1980] = { id=1980, category=248, }, -- Torghast - Scoreboard - Run Layer
+	[1981] = { id=1981, category=248, }, -- Torghast - Scoreboard - Run ID
+	[1982] = { id=1982, category=142, }, -- The Enlightened
+	[1997] = { id=1997, category=142, }, -- Archivists' Codex
+	[2000] = { id=2000, category=142, }, -- Motes of Fate
+	[2009] = { id=2009, category=245, }, -- Cosmic Flux
+	[2010] = { id=2010, category=245, hidden=true }, -- [DNT] Byron Test Currency
 }
 
 -- currency description can be retrieved by calling C_CurrencyInfo.GetBasicCurrencyInfo(CurrencyTypeID)
