@@ -3,6 +3,14 @@ $Id$
 Revision History:
 =================
 
+* v1.30 (Jul. 17, 2022)
+-----------------------
+- Retail ToC update to support WoW 9.2.5
+- BCC ToC update to support WoW 2.5.4
+- Added Dragonflight and curencies
+- Updated currency category:
+  - Valor now moved to Shadowlands
+
 * v1.29 (Mar. 1, 2022)
 -----------------------
 - Corrected category
