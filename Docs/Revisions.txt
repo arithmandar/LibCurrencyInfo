@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.31 (Jul. 17, 2022)
+-----------------------
+- Fixed syntax error
+
 * v1.30 (Jul. 17, 2022)
 -----------------------
 - Retail ToC update to support WoW 9.2.5

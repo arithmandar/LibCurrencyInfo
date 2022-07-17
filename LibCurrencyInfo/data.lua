@@ -479,8 +479,8 @@ data.CurrencyCategories = {
 	[144] = { enUS="Virtual",deDE="Virtuell",esES="Virtual",esMX="Virtual",frFR="Virtuelle",itIT="Virtuale",koKR="가상",ptBR="Virtual",ruRU="Виртуальная валюта",zhCN="虚拟",zhTW="虛擬", },
 	[245] = { enUS=EXPANSION_NAME8,deDE=EXPANSION_NAME8,esES=EXPANSION_NAME8,esMX=EXPANSION_NAME8,frFR=EXPANSION_NAME8,itIT=EXPANSION_NAME8,koKR=EXPANSION_NAME8,ptBR=EXPANSION_NAME8,ruRU=EXPANSION_NAME8,zhCN=EXPANSION_NAME8,zhTW=EXPANSION_NAME8, },
 	[248] = { enUS="Torghast",deDE="Torghast",esES="Torghast",esMX="Torghast",frFR="Tourment",itIT="Torgast",koKR="토르가스트",ptBR="Thanator",ruRU="Торгаст",zhCN="托加斯特",zhTW="托迦司", hide=true, },
-	[250] = { enUS="Dragonflight" deDE="Dragonflight",esES="Dragonflight",esMX="Dragonflight",frFR="Vol draconique",itIT="Dragonflight",koKR="용군단",ptBR="Revoada Dragônica",ruRU="Dragonflight",zhCN="巨龙时代",zhTW="巨龍軍團", },
-	[251] = { enUS="Dragon Racing UI (Hidden)", deDE="Dragon Racing UI (Hidden)",esES="Dragon Racing UI (Hidden)",esMX="Dragon Racing UI (Hidden)",frFR="Dragon Racing UI (Hidden)",itIT="Dragon Racing UI (Hidden)",koKR="Dragon Racing UI (Hidden)",ptBR="Dragon Racing UI (Hidden)",ruRU="Dragon Racing UI (Hidden)",zhCN="Dragon Racing UI (Hidden)",zhTW="Dragon Racing UI (Hidden)",hide=true, },
+	[250] = { enUS="Dragonflight",deDE="Dragonflight",esES="Dragonflight",esMX="Dragonflight",frFR="Vol draconique",itIT="Dragonflight",koKR="용군단",ptBR="Revoada Dragônica",ruRU="Dragonflight",zhCN="巨龙时代",zhTW="巨龍軍團", },
+	[251] = { enUS="Dragon Racing UI (Hidden)",deDE="Dragon Racing UI (Hidden)",esES="Dragon Racing UI (Hidden)",esMX="Dragon Racing UI (Hidden)",frFR="Dragon Racing UI (Hidden)",itIT="Dragon Racing UI (Hidden)",koKR="Dragon Racing UI (Hidden)",ptBR="Dragon Racing UI (Hidden)",ruRU="Dragon Racing UI (Hidden)",zhCN="Dragon Racing UI (Hidden)",zhTW="Dragon Racing UI (Hidden)",hide=true, },
 }
 
 data.Currencies = {
