@@ -3,7 +3,12 @@ $Id$
 Revision History:
 =================
 
-* v1.31 (Jul. 17, 2022)
+* v1.33 (Aig. 17, 2022)
+-----------------------
+- Toc update to support WoW 9.2.7
+- Added support for Wrath of the  Lich King Classic (WoW 3.4.0)
+
+* v1.32 (Jul. 17, 2022)
 -----------------------
 - Classic ToC update to support WoW 1.14.3
 
