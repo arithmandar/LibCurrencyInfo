@@ -3,7 +3,13 @@ $Id$
 Revision History:
 =================
 
-* v1.33 (Aig. 17, 2022)
+* v1.34 (Nov. 3, 2022)
+-----------------------
+- Toc update to support WoW 10.0.0
+- Added currencies:
+  - Bloody Tokens, Purified Arcane Energy, Elemental Overflow, Storm Sigil, Cobalt Assembly
+
+* v1.33 (Aug. 17, 2022)
 -----------------------
 - Toc update to support WoW 9.2.7
 - Added support for Wrath of the  Lich King Classic (WoW 3.4.0)
