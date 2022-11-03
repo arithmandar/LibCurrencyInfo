@@ -394,10 +394,10 @@ data.CurrencyByCategory = {
 		2011,	-- Effigy Adornments
 		2045,	-- Dragon Glyph Embers
 		2073,	-- [AC] Major Faction Test Currency
-		2105,	--Purified Arcane Energy
-		2118,	--Elemental Overflow
-		2122,	--Storm Sigil
-		2134,	--Cobalt Assembly
+		2105,	-- Purified Arcane Energy
+		2118,	-- Elemental Overflow
+		2122,	-- Storm Sigil
+		2134,	-- Cobalt Assembly
 	},
 	[251] = {
 		2016,	-- Dragon Racing - Scoreboard - Race Complete Time
