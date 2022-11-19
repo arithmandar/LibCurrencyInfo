@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.36 (Nov. 19, 2022)
+-----------------------
+- Toc update to support WoW 10.0.2
+
 * v1.35 (Nov. 3, 2022)
 -----------------------
 - added data update
