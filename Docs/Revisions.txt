@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.38 (Feb. 04, 2023)
+-----------------------
+- Toc update to support WoW 10.0.5
+- Added new currencies
+
 * v1.37 (Nov. 29, 2022)
 -----------------------
 - WOLTKC data correction

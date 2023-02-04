@@ -129,6 +129,7 @@ else
 	--		2013,	-- Frost Talent Points (DNT)
 	--		2014,	-- Unholy Talent Points (DNT)
 	--		2015,	-- Blood Talent Points (DNT)
+			2032, 	-- Trader's Tender
 		},
 		[2] = { -- Player vs. Player
 	--		103, -- Arena Points
@@ -159,6 +160,7 @@ else
 	--		301, -- Emblem of Triumph
 	--		341, -- Emblem of Frost
 			1166, -- Timewarped Badge
+			1191, 	-- Valor
 		},
 		[23] = { -- Burning Crusade
 			1704, -- Spirit Shard
@@ -352,6 +354,26 @@ else
 			2087,	-- Renown-Tuskarr
 			2088,	-- Renown-Valdrakken
 	--		2094,	-- [DNT] AC Major Faction Test Renown
+			2106, 	-- Valdrakken Accord
+			2107, 	-- Artisan's Consortium
+			2108, 	-- Maruuk Centaur
+			2109, 	-- Iskaara Tuskarr
+			2148, 	-- Red Whelp (Fire Shot)
+			2149, 	-- Red Whelp (Lobbing Fire Nova)
+			2150, 	-- Red Whelp (Curing Whiff)
+			2151, 	-- Red Whelp (Mending Breath)
+			2152, 	-- Red Whelp (Sleepy Ruby Warmth)
+			2153, 	-- Red Whelp (Under Red Wings)
+			2165, 	-- Profession - Public Order Capacity - Blacksmithing
+			2166, 	-- Renascent Lifeblood
+			2167, 	-- Catalyst Charges
+			2169, 	-- Profession - Public Order Capacity - Leatherworking
+			2170, 	-- Profession - Public Order Capacity - Alchemy
+			2171, 	-- Profession - Public Order Capacity - Tailoring
+			2172, 	-- Profession - Public Order Capacity - Engineering
+			2173, 	-- Profession - Public Order Capacity - Enchanting
+			2174, 	-- Profession - Public Order Capacity - Jewelcrafting
+			2175, 	-- Profession - Public Order Capacity - Inscription
 		},
 		[143] = { -- Battle for Azeroth
 			1299,	 -- Brawler's Gold
@@ -373,9 +395,9 @@ else
 			1553, -- Azerite
 			1585, -- Honor
 			1586, -- Honor Level
+			2001, 	-- Paden Test Currency
 		},
 		[245] = { -- Shadowlands
-			1191,	 -- Valor
 	--		1743, 	 -- Fake Anima for Quest Tracking
 			1754, 	 -- Argent Commendation
 			1767, 	 -- Stygia
@@ -543,7 +565,7 @@ else
 			2086,	-- Dragon Racing - Personal Best Record - Azure Span 05 Hard
 			2089,	-- Dragon Racing - Personal Best Record - Azure Span 06 Easy
 			2090,	-- Dragon Racing - Personal Best Record - Azure Span 06 Hard
-			2091,	-- Dragon Racing - Tracking
+			--2091,	-- Dragon Racing - Tracking
 			2092,	-- Dragon Racing - Personal Best Record - Thaldraszus 02 Easy
 			2093,	-- Dragon Racing - Personal Best Record - Thaldraszus 02 Hard
 			2095,	-- Dragon Racing - Personal Best Record - Thaldraszus MP 1
@@ -551,7 +573,7 @@ else
 			2097,	-- Dragon Racing - Personal Best Record - Thaldraszus 03 Hard
 			2098,	-- Dragon Racing - Personal Best Record - Thaldraszus 04 Easy
 			2099,	-- Dragon Racing - Personal Best Record - Thaldraszus 04 Hard
-			2100,	--Dragon Racing - Versioning [DNT]
+			--2100,	--Dragon Racing - Versioning [DNT]
 			2101,	--Dragon Racing - Personal Best Record - Thaldraszus 05 Easy
 			2102,	--Dragon Racing - Personal Best Record - Thaldraszus 05 Hard
 			2103,	--Dragon Racing - Personal Best Record - Thaldraszus 06 Easy
@@ -568,8 +590,8 @@ else
 			2130,	--Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 100
 			2131,	--Dragon Racing - Scoreboard - Personal Best Time - Fraction 10
 			2132,	--Dragon Racing - Scoreboard - Personal Best Time - Fraction 100
-			2133,	--Dragonriding - Accepting Passengers [DNT]
-			2154,	--Dragon Racing - Personal Best Record - Waking Shores 01 Test
+			--2133,	--Dragonriding - Accepting Passengers [DNT]
+			--2154,	--Dragon Racing - Personal Best Record - Waking Shores 01 Test
 			2155,	--Dragon Racing - Best Time Display - Whole
 			2156,	--Dragon Racing - Best Time Display - Fraction 1
 			2157,	--Dragon Racing - Best Time Display - Fraction 10
@@ -578,6 +600,37 @@ else
 			2160,	--Dragon Racing - Best Time Display - Advanced - Fraction 1
 			2161,	--Dragon Racing - Best Time Display - Advanced - Fraction 10
 			2162,	--Dragon Racing - Best Time Display - Advanced - Fraction 100
+			2176, 	-- Dragon Racing - Personal Best Record - Waking Shores 02 Reverse
+			2177, 	-- Dragon Racing - Personal Best Record - Waking Shores 03 Reverse
+			2178, 	-- Dragon Racing - Personal Best Record - Waking Shores 04 Reverse
+			2179, 	-- Dragon Racing - Personal Best Record - Waking Shores 05 Reverse
+			2180, 	-- Dragon Racing - Personal Best Record - Waking Shores 06 Reverse
+			2181, 	-- Dragon Racing - Personal Best Record - Waking Shores 07 Reverse
+			2182, 	-- Dragon Racing - Personal Best Record - Waking Shores 08 Reverse
+			2183, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains01Reverse
+			2184, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains02Reverse
+			2185, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains03Reverse
+			2186, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains04Reverse
+			2187, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains07Reverse
+			2188, 	-- Dragon Racing - Personal Best Record - Azure Span 01 Reverse
+			2189, 	-- Dragon Racing - Personal Best Record - Azure Span 02 Reverse
+			2190, 	-- Dragon Racing - Personal Best Record - Azure Span 03 Reverse
+			2191, 	-- Dragon Racing - Personal Best Record - Azure Span 04 Reverse
+			2192, 	-- Dragon Racing - Personal Best Record - Azure Span 05 Reverse
+			2193, 	-- Dragon Racing - Personal Best Record - Azure Span 06 Reverse
+			2194, 	-- Dragon Racing - Personal Best Record - Thaldraszus 01 Reverse
+			2195, 	-- Dragon Racing - Personal Best Record - Thaldraszus 02 Reverse
+			2196, 	-- Dragon Racing - Personal Best Record - Thaldraszus 03 Reverse
+			2197, 	-- Dragon Racing - Personal Best Record - Thaldraszus 04 Reverse
+			2198, 	-- Dragon Racing - Personal Best Record - Thaldraszus 05 Reverse
+			2199, 	-- Dragon Racing - Personal Best Record - Thaldraszus 06 Reverse
+			2224, 	-- Dragon Racing - Best Time Display - Reverse - Whole
+			2225, 	-- Dragon Racing - Best Time Display - Reverse - Fraction 1
+			2226, 	-- Dragon Racing - Best Time Display - Reverse - Fraction 10
+			2227, 	-- Dragon Racing - Best Time Display - Reverse - Fraction 100
+			2235, 	-- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT]
+			2236, 	-- Dragon Racing - Scoreboard - Race Complete Time MS
+			2237, 	-- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
 		},
 		[252] = {
 			2113,	--Tuskarr - Fishing Net - Location 01 - Net 01 - Loot
@@ -924,6 +977,7 @@ else
 		[1982] = { id=1982, category=142, }, -- The Enlightened
 		[1997] = { id=1997, category=142, }, -- Archivists' Codex
 		[2000] = { id=2000, category=142, }, -- Motes of Fate
+		[2001] = { id=2001, category=144, hidden=true }, -- Paden Test Currency
 		[2002] = { id=2002, category=142, }, -- Renown-Maruuk Centaur
 		[2003] = { id=2003, category=250, }, -- Dragon Isles Supplies
 		[2005] = { id=2005, category=1, hidden=true }, -- Druid Talent Points (DNT)
@@ -951,6 +1005,7 @@ else
 		[2029] = { id=2029, category=142, }, -- Dragon Isles Jewelcrafting Knowledge
 		[2030] = { id=2030, category=142, }, -- Dragon Isles Enchanting Knowledge
 		[2031] = { id=2031, category=142, }, -- Dragonscale Expedition
+		[2032] = { id=2032, category=1 }, -- Trader's Tender
 		[2033] = { id=2033, category=142, }, -- Dragon Isles Skinning Knowledge
 		[2034] = { id=2034, category=142, }, -- Dragon Isles Herbalism Knowledge
 		[2035] = { id=2035, category=142, }, -- Dragon Isles Mining Knowledge
@@ -1079,6 +1134,37 @@ else
 		[2173] = { id=2173, category=142, hidden=true }, -- Profession - Public Order Capacity - Enchanting
 		[2174] = { id=2174, category=142, hidden=true }, -- Profession - Public Order Capacity - Jewelcrafting
 		[2175] = { id=2175, category=142, hidden=true }, -- Profession - Public Order Capacity - Inscription
+		[2176] = { id=2176, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 02 Reverse
+		[2177] = { id=2177, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 03 Reverse
+		[2178] = { id=2178, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 04 Reverse
+		[2179] = { id=2179, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 05 Reverse
+		[2180] = { id=2180, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 06 Reverse
+		[2181] = { id=2181, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 07 Reverse
+		[2182] = { id=2182, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 08 Reverse
+		[2183] = { id=2183, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains01Reverse
+		[2184] = { id=2184, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains02Reverse
+		[2185] = { id=2185, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains03Reverse
+		[2186] = { id=2186, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains04Reverse
+		[2187] = { id=2187, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains07Reverse
+		[2188] = { id=2188, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 01 Reverse
+		[2189] = { id=2189, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 02 Reverse
+		[2190] = { id=2190, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 03 Reverse
+		[2191] = { id=2191, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 04 Reverse
+		[2192] = { id=2192, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 05 Reverse
+		[2193] = { id=2193, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 06 Reverse
+		[2194] = { id=2194, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 01 Reverse
+		[2195] = { id=2195, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Reverse
+		[2196] = { id=2196, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Reverse
+		[2197] = { id=2197, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 04 Reverse
+		[2198] = { id=2198, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 05 Reverse
+		[2199] = { id=2199, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 06 Reverse
+		[2224] = { id=2224, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Whole
+		[2225] = { id=2225, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 1
+		[2226] = { id=2226, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 10
+		[2227] = { id=2227, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 100
+		[2235] = { id=2235, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT]
+		[2236] = { id=2236, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time MS
+		[2237] = { id=2237, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
 	}
 end
 
