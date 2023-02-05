@@ -46,6 +46,7 @@ if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
 			42, -- Badge of Justice
 			61, -- Dalaran Jewelcrafter's Token
 			81, -- Epicurean's Award
+			241, -- Champion's Seal
 		},
 	--	[3] = { -- Unused
 	--		4, Currency Token Test Token 5
@@ -74,7 +75,6 @@ if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
 			341, -- Emblem of Frost
 		},
 	}
-	
 	data.CurrencyCategories = {
 		[1] = { enUS="Miscellaneous",deDE="Verschiedenes",esES="Miscelánea",esMX="Miscelánea",frFR="Divers",itIT="Varie",koKR="기타",ptBR="Diversos",ruRU="Разное",zhCN="其它",zhTW="雜項", },
 		[2] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Personaggio vs Personaggio",koKR="플레이어 간 전투",ptBR="Jogador x Jogador",ruRU="PvP",zhCN="PvP",zhTW="玩家對玩家", },
@@ -102,6 +102,7 @@ if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
 		[181] = { id=181, category=2, hide=true }, -- Honor Points DEPRECATED2, Player vs. Player
 		[201] = { id=201, category=2 }, -- Venture Coin, Player vs. Player
 		[221] = { id=221, category=22 }, -- Emblem of Conquest, Dungeon and Raid
+		[241] = { id=241, category=1 }, -- Champion's Seal
 		[301] = { id=301, category=22 }, -- Emblem of Triumph, Dungeon and Raid
 		[321] = { id=321, category=2 }, -- Isle of Conquest Mark of Honor, Player vs. Player
 		[341] = { id=341, category=22 }, -- Emblem of Frost, Dungeon and Raid
