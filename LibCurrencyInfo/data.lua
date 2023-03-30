@@ -502,7 +502,7 @@ else
 			1980,	-- Torghast - Scoreboard - Run Layer
 			1981,	-- Torghast - Scoreboard - Run ID
 		},
-		[250] = {
+		[250] = { -- Dragonflight 
 			2003,	-- Dragon Isles Supplies
 			2011,	-- Effigy Adornments
 			2045,	-- Dragon Glyph Embers
@@ -511,8 +511,9 @@ else
 			2118,	-- Elemental Overflow
 			2122,	-- Storm Sigil
 			2134,	-- Cobalt Assembly
+			2245, 	-- Flightstones -- Added in patch 10.1.0.48480
 		},
-		[251] = {
+		[251] = { -- Dragon Racing UI (Hidden)
 			2016,	-- Dragon Racing - Scoreboard - Race Complete Time
 			2017,	-- Dragon Racing - Scoreboard - Race Complete Time - Fraction
 			2018,	-- Dragon Racing - Scoreboard - Race Quest ID
@@ -633,7 +634,7 @@ else
 			2236, 	-- Dragon Racing - Scoreboard - Race Complete Time MS
 			2237, 	-- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
 		},
-		[252] = {
+		[252] = { -- Tuskarr 
 			2113,	--Tuskarr - Fishing Net - Location 01 - Net 01 - Loot
 			2114,	--Tuskarr - Fishing Net - Location 01 - Net 04 (Quest) - Loot
 			2115,	--Tuskarr - Fishing Net - Location 01 - Net 02 - Loot
@@ -646,6 +647,7 @@ else
 			2140,	--Tuskarr - Fishing Net - Location 04 - Net 02 - Loot
 			2141,	--Tuskarr - Fishing Net - Location 05 - Net 01 - Loot
 			2142,	--Tuskarr - Fishing Net - Location 05 - Net 02 - Loot
+			2228,	--Tuskarr - Fishing Net - Location 06 - Net 01 - Loot
 		},
 	}
 	data.CurrencyCategories = {
@@ -1163,9 +1165,11 @@ else
 		[2225] = { id=2225, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 1
 		[2226] = { id=2226, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 10
 		[2227] = { id=2227, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 100
+		[2228] = { id=2228, category=252, hidden=true }, -- Tuskarr - Fishing Net - Location 06 - Net 01 - Loot
 		[2235] = { id=2235, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT]
 		[2236] = { id=2236, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time MS
 		[2237] = { id=2237, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
+		[2245] = { id=2245, category=250, }, -- Flightstones
 	}
 end
 
