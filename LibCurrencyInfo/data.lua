@@ -67,19 +67,26 @@ if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
 			1900, -- Arena Points
 			1901, -- Honor Points
 		},
+		[21] = { -- Wrath of the Lich King
+		},
 		[22] = { -- Dungeon and Raid
 			101, -- Emblem of Heroism
 			102, -- Emblem of Valor
 			221, -- Emblem of Conquest
 			301, -- Emblem of Triumph
 			341, -- Emblem of Frost
+			2589, -- Sidereal Essence
+		},
+		[23] = { -- Burning Crusade
 		},
 	}
 	data.CurrencyCategories = {
 		[1] = { enUS="Miscellaneous",deDE="Verschiedenes",esES="Miscelánea",esMX="Miscelánea",frFR="Divers",itIT="Varie",koKR="기타",ptBR="Diversos",ruRU="Разное",zhCN="其它",zhTW="雜項", },
 		[2] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Personaggio vs Personaggio",koKR="플레이어 간 전투",ptBR="Jogador x Jogador",ruRU="PvP",zhCN="PvP",zhTW="玩家對玩家", },
 --		[3] = { enUS="Unused",deDE="Unbenutzt",esES="No las uso",esMX="No las uso",frFR="Inutilisées",itIT="Non usato",koKR="미사용",ptBR="Não usado",ruRU="Неактивно",zhCN="未使用",zhTW="未使用", hide=true, },
+		[21] = { enUS="Wrath of the Lich King",deDE="Wrath of the Lich King",esES="Wrath of the Lich King",esMX="Wrath of the Lich King",frFR="Wrath of the Lich King",itIT="Wrath of the Lich King",koKR="리치 왕의 분노",ptBR="Wrath of the Lich King",ruRU="Wrath of the Lich King",zhCN="巫妖王之怒",zhTW="巫妖王之怒", },
 		[22] = { enUS="Dungeon and Raid",deDE="Dungeon und Schlachtzug",esES="Mazmorra y banda",esMX="Calabozo y banda",frFR="Donjons & Raids",itIT="Spedizioni e Incursioni",koKR="던전 및 공격대",ptBR="Masmorras e Raides",ruRU="Подземелья и рейды",zhCN="地下城与团队副本",zhTW="地城與團隊", },
+		[23] = { enUS="Burning Crusade",deDE="Burning Crusade",esES="Burning Crusade",esMX="Burning Crusade",frFR="Burning Crusade",itIT="Burning Crusade",koKR="불타는 성전",ptBR="Burning Crusade",ruRU="Burning Crusade",zhCN="燃烧的远征",zhTW="燃燒的遠征", hide=true, },
 	}
 	data.Currencies = {
 		[1] = { id=1, category=1, hide=true }, -- Currency Token Test Token 4, Miscellaneous
@@ -108,6 +115,7 @@ if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
 		[341] = { id=341, category=22 }, -- Emblem of Frost, Dungeon and Raid
 		[1900] = { id=1900, category=2 }, -- Arena Points
 		[1901] = { id=1901, category=2 }, -- Honor Points
+		[2589] = { id=2589, category=22 }, -- Sidereal Essence
 	}
 else
 	data.CurrencyByCategory = {
@@ -512,127 +520,358 @@ else
 			2122,	-- Storm Sigil
 			2134,	-- Cobalt Assembly
 			2245, 	-- Flightstones -- Added in patch 10.1.0.48480
+			2594, 	-- Paracausal Flakes, added in 10.1.5.50379
 		},
 		[251] = { -- Dragon Racing UI (Hidden)
-			2016,	-- Dragon Racing - Scoreboard - Race Complete Time
-			2017,	-- Dragon Racing - Scoreboard - Race Complete Time - Fraction
-			2018,	-- Dragon Racing - Scoreboard - Race Quest ID
-			2019,	-- Dragon Racing - Scoreboard - Race Complete Time - Silver
-			2020,	-- Dragon Racing - Scoreboard - Race Complete Time - Gold
-			2022,	-- Dragon Racing - Multiplayer Race Placement
-			2037,	-- Dragon Racing - Scoreboard - Race Complete Time -Silver Fraction
-			2038,	-- Dragon Racing - Scoreboard - Race Complete Time - Gold Fraction
-			2039,	-- Dragon Racing - Scoreboard - Personal Best - Waking Shores 1
-			2040,	-- Dragon Racing - Scoreboard - Personal Best Time
-			2041,	-- Dragon Racing - Scoreboard - Personal Best Time - Fraction
-			2042,	-- Dragon Racing - Personal Best Record - Waking Shores 01 Easy
-			2043,	-- Dragon Racing - Personal Best Record - Waking Shores 01 Medium
-			2044,	-- Dragon Racing - Personal Best Record - Waking Shores 01 Hard
-			2046,	-- Dragon Racing - Personal Best Record - Waking Shores 07 Easy
-			2047,	-- Dragon Racing - Personal Best Record - Waking Shores 07 Hard
-			2048,	-- Dragon Racing - Personal Best Record - Waking Shores 02 Easy
-			2049,	-- Dragon Racing - Personal Best Record - Waking Shores 02 Hard
-			2050,	-- Dragon Racing - Personal Best Record - Waking Shores 08 Easy
-			2051,	-- Dragon Racing - Personal Best Record - Waking Shores 08 Hard
-			2052,	-- Dragon Racing - Personal Best Record - Waking Shores 03 Easy
-			2053,	-- Dragon Racing - Personal Best Record - Waking Shores 03 Hard
-			2054,	-- Dragon Racing - Personal Best Record - Waking Shores 04 Easy
-			2055,	-- Dragon Racing - Personal Best Record - Waking Shores 04 Hard
-			2056,	-- Dragon Racing - Personal Best Record - Waking Shores 05 Easy
-			2057,	-- Dragon Racing - Personal Best Record - Waking Shores 05 Hard
-			2058,	-- Dragon Racing - Personal Best Record - Waking Shores 06 Easy
-			2059,	-- Dragon Racing - Personal Best Record - Waking Shores 06 Hard
-			2060,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 01 Easy
-			2061,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 01 Hard
-			2062,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 02 Easy
-			2063,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 02 Hard
-			2064,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 03 Easy
-			2065,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 03 Hard
-			2066,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 04 Easy
-			2067,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains 04 Hard
-			2069,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains D05 Easy
-			2070,	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains D06 Easy
-			2074,	-- Dragon Racing - Personal Best Record - Azure Span 01 Easy
-			2075,	-- Dragon Racing - Personal Best Record - Azure Span 01 Hard
-			2076,	-- Dragon Racing - Personal Best Record - Azure Span 02 Easy
-			2077,	-- Dragon Racing - Personal Best Record - Azure Span 02 Hard
-			2078,	-- Dragon Racing - Personal Best Record - Azure Span 03 Easy
-			2079,	-- Dragon Racing - Personal Best Record - Azure Span 03 Hard
-			2080,	-- Dragon Racing - Personal Best Record - Thaldraszus 01 Easy
-			2081,	-- Dragon Racing - Personal Best Record - Thaldraszus 01 Hard
-			2082,	-- Dragon Racing - Personal Best Record - Waking Shores MP 1
-			2083,	-- Dragon Racing - Personal Best Record - Azure Span 04 Easy
-			2084,	-- Dragon Racing - Personal Best Record - Azure Span 04 Hard
-			2085,	-- Dragon Racing - Personal Best Record - Azure Span 05 Easy
-			2086,	-- Dragon Racing - Personal Best Record - Azure Span 05 Hard
-			2089,	-- Dragon Racing - Personal Best Record - Azure Span 06 Easy
-			2090,	-- Dragon Racing - Personal Best Record - Azure Span 06 Hard
-			--2091,	-- Dragon Racing - Tracking
-			2092,	-- Dragon Racing - Personal Best Record - Thaldraszus 02 Easy
-			2093,	-- Dragon Racing - Personal Best Record - Thaldraszus 02 Hard
-			2095,	-- Dragon Racing - Personal Best Record - Thaldraszus MP 1
-			2096,	-- Dragon Racing - Personal Best Record - Thaldraszus 03 Easy
-			2097,	-- Dragon Racing - Personal Best Record - Thaldraszus 03 Hard
-			2098,	-- Dragon Racing - Personal Best Record - Thaldraszus 04 Easy
-			2099,	-- Dragon Racing - Personal Best Record - Thaldraszus 04 Hard
-			--2100,	--Dragon Racing - Versioning [DNT]
-			2101,	--Dragon Racing - Personal Best Record - Thaldraszus 05 Easy
-			2102,	--Dragon Racing - Personal Best Record - Thaldraszus 05 Hard
-			2103,	--Dragon Racing - Personal Best Record - Thaldraszus 06 Easy
-			2104,	--Dragon Racing - Personal Best Record - Thaldraszus 06 Hard
-			2110,	--Dragon Racing - Personal Best Record - Ohn'ahran Plains MP 1
-			2111,	--Dragon Racing - Personal Best Record - Azure Span MP 1
-			2119,	--Dragon Racing - Personal Best Record - Ohn'ahran Plains 07 Easy
-			2120,	--Dragon Racing - Personal Best Record - Ohn'ahran Plains 07 Hard
-			2124,	--Dragon Racing - Scoreboard - Race Complete Time - Fraction 10
-			2125,	--Dragon Racing - Scoreboard - Race Complete Time - Fraction 100
-			2126,	--Dragon Racing - Scoreboard - Race Complete Time -Silver Fract 10
-			2128,	--Dragon Racing - Scoreboard - Race Complete Time -Silver Fract100
-			2129,	--Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 10
-			2130,	--Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 100
-			2131,	--Dragon Racing - Scoreboard - Personal Best Time - Fraction 10
-			2132,	--Dragon Racing - Scoreboard - Personal Best Time - Fraction 100
-			--2133,	--Dragonriding - Accepting Passengers [DNT]
-			--2154,	--Dragon Racing - Personal Best Record - Waking Shores 01 Test
-			2155,	--Dragon Racing - Best Time Display - Whole
-			2156,	--Dragon Racing - Best Time Display - Fraction 1
-			2157,	--Dragon Racing - Best Time Display - Fraction 10
-			2158,	--Dragon Racing - Best Time Display - Fraction 100
-			2159,	--Dragon Racing - Best Time Display - Advanced - Whole
-			2160,	--Dragon Racing - Best Time Display - Advanced - Fraction 1
-			2161,	--Dragon Racing - Best Time Display - Advanced - Fraction 10
-			2162,	--Dragon Racing - Best Time Display - Advanced - Fraction 100
-			2176, 	-- Dragon Racing - Personal Best Record - Waking Shores 02 Reverse
-			2177, 	-- Dragon Racing - Personal Best Record - Waking Shores 03 Reverse
-			2178, 	-- Dragon Racing - Personal Best Record - Waking Shores 04 Reverse
-			2179, 	-- Dragon Racing - Personal Best Record - Waking Shores 05 Reverse
-			2180, 	-- Dragon Racing - Personal Best Record - Waking Shores 06 Reverse
-			2181, 	-- Dragon Racing - Personal Best Record - Waking Shores 07 Reverse
-			2182, 	-- Dragon Racing - Personal Best Record - Waking Shores 08 Reverse
-			2183, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains01Reverse
-			2184, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains02Reverse
-			2185, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains03Reverse
-			2186, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains04Reverse
-			2187, 	-- Dragon Racing - Personal Best Record - Ohn'ahran Plains07Reverse
-			2188, 	-- Dragon Racing - Personal Best Record - Azure Span 01 Reverse
-			2189, 	-- Dragon Racing - Personal Best Record - Azure Span 02 Reverse
-			2190, 	-- Dragon Racing - Personal Best Record - Azure Span 03 Reverse
-			2191, 	-- Dragon Racing - Personal Best Record - Azure Span 04 Reverse
-			2192, 	-- Dragon Racing - Personal Best Record - Azure Span 05 Reverse
-			2193, 	-- Dragon Racing - Personal Best Record - Azure Span 06 Reverse
-			2194, 	-- Dragon Racing - Personal Best Record - Thaldraszus 01 Reverse
-			2195, 	-- Dragon Racing - Personal Best Record - Thaldraszus 02 Reverse
-			2196, 	-- Dragon Racing - Personal Best Record - Thaldraszus 03 Reverse
-			2197, 	-- Dragon Racing - Personal Best Record - Thaldraszus 04 Reverse
-			2198, 	-- Dragon Racing - Personal Best Record - Thaldraszus 05 Reverse
-			2199, 	-- Dragon Racing - Personal Best Record - Thaldraszus 06 Reverse
-			2224, 	-- Dragon Racing - Best Time Display - Reverse - Whole
-			2225, 	-- Dragon Racing - Best Time Display - Reverse - Fraction 1
-			2226, 	-- Dragon Racing - Best Time Display - Reverse - Fraction 10
-			2227, 	-- Dragon Racing - Best Time Display - Reverse - Fraction 100
-			2235, 	-- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT]
-			2236, 	-- Dragon Racing - Scoreboard - Race Complete Time MS
-			2237, 	-- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
+			2016, 	 -- Dragon Racing - Scoreboard - Race Complete Time
+			2017, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Fraction 1
+			2018, 	 -- Dragon Racing - Scoreboard - Race Quest ID
+			2019, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Silver
+			2020, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Gold
+			2022, 	 -- Dragon Racing - Multiplayer Race Placement
+			2037, 	 -- Dragon Racing - Scoreboard - Race Complete Time -Silver Fract 1
+			2038, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 1
+			2039, 	 -- Dragon Racing - Scoreboard - Personal Best - Waking Shores 1
+			2040, 	 -- Dragon Racing - Scoreboard - Personal Best Time
+			2041, 	 -- Dragon Racing - Scoreboard - Personal Best Time - Fraction 1
+			2042, 	 -- Dragon Racing - Personal Best Record - Waking Shores 01 Easy
+			2043, 	 -- Dragon Racing - Personal Best Record - Waking Shores 01 Medium
+			2044, 	 -- Dragon Racing - Personal Best Record - Waking Shores 01 Hard
+			2046, 	 -- Dragon Racing - Personal Best Record - Waking Shores 07 Easy
+			2047, 	 -- Dragon Racing - Personal Best Record - Waking Shores 07 Hard
+			2048, 	 -- Dragon Racing - Personal Best Record - Waking Shores 02 Easy
+			2049, 	 -- Dragon Racing - Personal Best Record - Waking Shores 02 Hard
+			2050, 	 -- Dragon Racing - Personal Best Record - Waking Shores 08 Easy
+			2051, 	 -- Dragon Racing - Personal Best Record - Waking Shores 08 Hard
+			2052, 	 -- Dragon Racing - Personal Best Record - Waking Shores 03 Easy
+			2053, 	 -- Dragon Racing - Personal Best Record - Waking Shores 03 Hard
+			2054, 	 -- Dragon Racing - Personal Best Record - Waking Shores 04 Easy
+			2055, 	 -- Dragon Racing - Personal Best Record - Waking Shores 04 Hard
+			2056, 	 -- Dragon Racing - Personal Best Record - Waking Shores 05 Easy
+			2057, 	 -- Dragon Racing - Personal Best Record - Waking Shores 05 Hard
+			2058, 	 -- Dragon Racing - Personal Best Record - Waking Shores 06 Easy
+			2059, 	 -- Dragon Racing - Personal Best Record - Waking Shores 06 Hard
+			2060, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 01 Easy
+			2061, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 01 Hard
+			2062, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 02 Easy
+			2063, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 02 Hard
+			2064, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 03 Easy
+			2065, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 03 Hard
+			2066, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 04 Easy
+			2067, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 04 Hard
+			2069, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains D05 Easy
+			2070, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains D06 Easy
+			2074, 	 -- Dragon Racing - Personal Best Record - Azure Span 01 Easy
+			2075, 	 -- Dragon Racing - Personal Best Record - Azure Span 01 Hard
+			2076, 	 -- Dragon Racing - Personal Best Record - Azure Span 02 Easy
+			2077, 	 -- Dragon Racing - Personal Best Record - Azure Span 02 Hard
+			2078, 	 -- Dragon Racing - Personal Best Record - Azure Span 03 Easy
+			2079, 	 -- Dragon Racing - Personal Best Record - Azure Span 03 Hard
+			2080, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 01 Easy
+			2081, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 01 Hard
+			2082, 	 -- Dragon Racing - Personal Best Record - Waking Shores MP 1
+			2083, 	 -- Dragon Racing - Personal Best Record - Azure Span 04 Easy
+			2084, 	 -- Dragon Racing - Personal Best Record - Azure Span 04 Hard
+			2085, 	 -- Dragon Racing - Personal Best Record - Azure Span 05 Easy
+			2086, 	 -- Dragon Racing - Personal Best Record - Azure Span 05 Hard
+			2089, 	 -- Dragon Racing - Personal Best Record - Azure Span 06 Easy
+			2090, 	 -- Dragon Racing - Personal Best Record - Azure Span 06 Hard
+			-- 2091, 	 -- Dragon Racing - Tracking [DNT]
+			2092, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 02 Easy
+			2093, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 02 Hard
+			2095, 	 -- Dragon Racing - Personal Best Record - Thaldraszus MP 1
+			2096, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 03 Easy
+			2097, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 03 Hard
+			2098, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 04 Easy
+			2099, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 04 Hard
+			-- 2100, 	 -- Dragon Racing - Versioning [DNT]
+			2101, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 05 Easy
+			2102, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 05 Hard
+			2103, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 06 Easy
+			2104, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 06 Hard
+			2110, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains MP 1
+			2111, 	 -- Dragon Racing - Personal Best Record - Azure Span MP 1
+			2119, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 07 Easy
+			2120, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 07 Hard
+			2124, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Fraction 10
+			2125, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Fraction 100
+			2126, 	 -- Dragon Racing - Scoreboard - Race Complete Time -Silver Fract 10
+			2128, 	 -- Dragon Racing - Scoreboard - Race Complete Time -Silver Fract100
+			2129, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 10
+			2130, 	 -- Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 100
+			2131, 	 -- Dragon Racing - Scoreboard - Personal Best Time - Fraction 10
+			2132, 	 -- Dragon Racing - Scoreboard - Personal Best Time - Fraction 100
+			-- 2133, 	 -- Dragonriding - Accepting Passengers [DNT]
+			-- 2154, 	 -- Dragon Racing - Personal Best Record - Waking Shores 01 Reverse
+			2155, 	 -- Dragon Racing - Best Time Display - Whole
+			2156, 	 -- Dragon Racing - Best Time Display - Fraction 1
+			2157, 	 -- Dragon Racing - Best Time Display - Fraction 10
+			2158, 	 -- Dragon Racing - Best Time Display - Fraction 100
+			2159, 	 -- Dragon Racing - Best Time Display - Advanced - Whole
+			2160, 	 -- Dragon Racing - Best Time Display - Advanced - Fraction 1
+			2161, 	 -- Dragon Racing - Best Time Display - Advanced - Fraction 10
+			2162, 	 -- Dragon Racing - Best Time Display - Advanced - Fraction 100
+			2176, 	 -- Dragon Racing - Personal Best Record - Waking Shores 02 Reverse
+			2177, 	 -- Dragon Racing - Personal Best Record - Waking Shores 03 Reverse
+			2178, 	 -- Dragon Racing - Personal Best Record - Waking Shores 04 Reverse
+			2179, 	 -- Dragon Racing - Personal Best Record - Waking Shores 05 Reverse
+			2180, 	 -- Dragon Racing - Personal Best Record - Waking Shores 06 Reverse
+			2181, 	 -- Dragon Racing - Personal Best Record - Waking Shores 07 Reverse
+			2182, 	 -- Dragon Racing - Personal Best Record - Waking Shores 08 Reverse
+			2183, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains01Reverse
+			2184, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains02Reverse
+			2185, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains03Reverse
+			2186, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains04Reverse
+			2187, 	 -- Dragon Racing - Personal Best Record - Ohn'ahran Plains07Reverse
+			2188, 	 -- Dragon Racing - Personal Best Record - Azure Span 01 Reverse
+			2189, 	 -- Dragon Racing - Personal Best Record - Azure Span 02 Reverse
+			2190, 	 -- Dragon Racing - Personal Best Record - Azure Span 03 Reverse
+			2191, 	 -- Dragon Racing - Personal Best Record - Azure Span 04 Reverse
+			2192, 	 -- Dragon Racing - Personal Best Record - Azure Span 05 Reverse
+			2193, 	 -- Dragon Racing - Personal Best Record - Azure Span 06 Reverse
+			2194, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 01 Reverse
+			2195, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 02 Reverse
+			2196, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 03 Reverse
+			2197, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 04 Reverse
+			2198, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 05 Reverse
+			2199, 	 -- Dragon Racing - Personal Best Record - Thaldraszus 06 Reverse
+			2201, 	 -- Dragon Racing - Personal Best Record - F Reach 01
+			2202, 	 -- Dragon Racing - Personal Best Record - F Reach 02
+			2203, 	 -- Dragon Racing - Personal Best Record - F Reach 03
+			2204, 	 -- Dragon Racing - Personal Best Record - F Reach 04
+			2205, 	 -- Dragon Racing - Personal Best Record - F Reach 05
+			2206, 	 -- Dragon Racing - Personal Best Record - F Reach 06
+			2207, 	 -- Dragon Racing - Personal Best Record - F Reach 01 Advanced
+			2208, 	 -- Dragon Racing - Personal Best Record - F Reach 02 Advanced
+			2209, 	 -- Dragon Racing - Personal Best Record - F Reach 03 Advanced
+			2210, 	 -- Dragon Racing - Personal Best Record - F Reach 04 Advanced
+			2211, 	 -- Dragon Racing - Personal Best Record - F Reach 05 Advanced
+			2212, 	 -- Dragon Racing - Personal Best Record - F Reach 06 Advanced
+			2213, 	 -- Dragon Racing - Personal Best Record - F Reach 01 Reverse
+			2214, 	 -- Dragon Racing - Personal Best Record - F Reach 02 Reverse
+			2215, 	 -- Dragon Racing - Personal Best Record - F Reach 03 Reverse
+			2216, 	 -- Dragon Racing - Personal Best Record - F Reach 04 Reverse
+			2217, 	 -- Dragon Racing - Personal Best Record - F Reach 05 Reverse
+			2218, 	 -- Dragon Racing - Personal Best Record - F Reach 06 Reverse
+			2224, 	 -- Dragon Racing - Best Time Display - Reverse - Whole
+			2225, 	 -- Dragon Racing - Best Time Display - Reverse - Fraction 1
+			2226, 	 -- Dragon Racing - Best Time Display - Reverse - Fraction 10
+			2227, 	 -- Dragon Racing - Best Time Display - Reverse - Fraction 100
+			-- 2235, 	 -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT]
+			2236, 	 -- Dragon Racing - Scoreboard - Race Complete Time MS
+			-- 2237, 	 -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
+			2246, 	 -- Dragon Racing - Personal Best Record - Z Cavern 01
+			2247, 	 -- Dragon Racing - Personal Best Record - Z Cavern 02
+			2248, 	 -- Dragon Racing - Personal Best Record - Z Cavern 03
+			2249, 	 -- Dragon Racing - Personal Best Record - Z Cavern 04
+			2250, 	 -- Dragon Racing - Personal Best Record - Z Cavern 05
+			2251, 	 -- Dragon Racing - Personal Best Record - Z Cavern 06
+			2252, 	 -- Dragon Racing - Personal Best Record - Z Cavern 01 Advanced
+			2253, 	 -- Dragon Racing - Personal Best Record - Z Cavern 02 Advanced
+			2254, 	 -- Dragon Racing - Personal Best Record - Z Cavern 03 Advanced
+			2255, 	 -- Dragon Racing - Personal Best Record - Z Cavern 04 Advanced
+			2256, 	 -- Dragon Racing - Personal Best Record - Z Cavern 05 Advanced
+			2257, 	 -- Dragon Racing - Personal Best Record - Z Cavern 06 Advanced
+			2258, 	 -- Dragon Racing - Personal Best Record - Z Cavern 01 Reverse
+			2259, 	 -- Dragon Racing - Personal Best Record - Z Cavern 02 Reverse
+			2260, 	 -- Dragon Racing - Personal Best Record - Z Cavern 03 Reverse
+			2261, 	 -- Dragon Racing - Personal Best Record - Z Cavern 04 Reverse
+			2262, 	 -- Dragon Racing - Personal Best Record - Z Cavern 05 Reverse
+			2263, 	 -- Dragon Racing - Personal Best Record - Z Cavern 06 Reverse
+			2312, 	 -- Dragon Racing - Personal Best Record - Kalimdor 01
+			2313, 	 -- Dragon Racing - Personal Best Record - Kalimdor 02
+			2314, 	 -- Dragon Racing - Personal Best Record - Kalimdor 03
+			2315, 	 -- Dragon Racing - Personal Best Record - Kalimdor 04
+			2316, 	 -- Dragon Racing - Personal Best Record - Kalimdor 05
+			2317, 	 -- Dragon Racing - Personal Best Record - Kalimdor 06
+			2318, 	 -- Dragon Racing - Personal Best Record - Kalimdor 07
+			2319, 	 -- Dragon Racing - Personal Best Record - Kalimdor 08
+			2320, 	 -- Dragon Racing - Personal Best Record - Kalimdor 09
+			2321, 	 -- Dragon Racing - Personal Best Record - Kalimdor 10
+			2322, 	 -- Dragon Racing - Personal Best Record - Kalimdor 11
+			2323, 	 -- Dragon Racing - Personal Best Record - Kalimdor 12
+			2324, 	 -- Dragon Racing - Personal Best Record - Kalimdor 13
+			2325, 	 -- Dragon Racing - Personal Best Record - Kalimdor 14
+			2326, 	 -- Dragon Racing - Personal Best Record - Kalimdor 15
+			2327, 	 -- Dragon Racing - Personal Best Record - Kalimdor 16
+			2328, 	 -- Dragon Racing - Personal Best Record - Kalimdor 17
+			2329, 	 -- Dragon Racing - Personal Best Record - Kalimdor 18
+			2330, 	 -- Dragon Racing - Personal Best Record - Kalimdor 19
+			2331, 	 -- Dragon Racing - Personal Best Record - Kalimdor 20
+			2332, 	 -- Dragon Racing - Personal Best Record - Kalimdor 21
+			2333, 	 -- Dragon Racing - Personal Best Record - Kalimdor 22
+			2334, 	 -- Dragon Racing - Personal Best Record - Kalimdor 23
+			2335, 	 -- Dragon Racing - Personal Best Record - Kalimdor 24
+			2336, 	 -- Dragon Racing - Personal Best Record - Kalimdor 25
+			2337, 	 -- Dragon Racing - Personal Best Record - Kalimdor 26
+			2338, 	 -- Dragon Racing - Personal Best Record - Kalimdor 27
+			2339, 	 -- Dragon Racing - Personal Best Record - Kalimdor 28
+			2340, 	 -- Dragon Racing - Personal Best Record - Kalimdor 29
+			2341, 	 -- Dragon Racing - Personal Best Record - Kalimdor 30
+			2342, 	 -- Dragon Racing - Personal Best Record - Kalimdor 01 Advanced
+			2343, 	 -- Dragon Racing - Personal Best Record - Kalimdor 02 Advanced
+			2344, 	 -- Dragon Racing - Personal Best Record - Kalimdor 03 Advanced
+			2345, 	 -- Dragon Racing - Personal Best Record - Kalimdor 04 Advanced
+			2346, 	 -- Dragon Racing - Personal Best Record - Kalimdor 05 Advanced
+			2347, 	 -- Dragon Racing - Personal Best Record - Kalimdor 06 Advanced
+			2348, 	 -- Dragon Racing - Personal Best Record - Kalimdor 07 Advanced
+			2349, 	 -- Dragon Racing - Personal Best Record - Kalimdor 08 Advanced
+			2350, 	 -- Dragon Racing - Personal Best Record - Kalimdor 09 Advanced
+			2351, 	 -- Dragon Racing - Personal Best Record - Kalimdor 10 Advanced
+			2352, 	 -- Dragon Racing - Personal Best Record - Kalimdor 11 Advanced
+			2353, 	 -- Dragon Racing - Personal Best Record - Kalimdor 12 Advanced
+			2354, 	 -- Dragon Racing - Personal Best Record - Kalimdor 13 Advanced
+			2355, 	 -- Dragon Racing - Personal Best Record - Kalimdor 14 Advanced
+			2356, 	 -- Dragon Racing - Personal Best Record - Kalimdor 15 Advanced
+			2357, 	 -- Dragon Racing - Personal Best Record - Kalimdor 16 Advanced
+			2358, 	 -- Dragon Racing - Personal Best Record - Kalimdor 17 Advanced
+			2359, 	 -- Dragon Racing - Personal Best Record - Kalimdor 18 Advanced
+			2360, 	 -- Dragon Racing - Personal Best Record - Kalimdor 19 Advanced
+			2361, 	 -- Dragon Racing - Personal Best Record - Kalimdor 20 Advanced
+			2362, 	 -- Dragon Racing - Personal Best Record - Kalimdor 21 Advanced
+			2363, 	 -- Dragon Racing - Personal Best Record - Kalimdor 22 Advanced
+			2364, 	 -- Dragon Racing - Personal Best Record - Kalimdor 23 Advanced
+			2365, 	 -- Dragon Racing - Personal Best Record - Kalimdor 24 Advanced
+			2366, 	 -- Dragon Racing - Personal Best Record - Kalimdor 25 Advanced
+			2367, 	 -- Dragon Racing - Personal Best Record - Kalimdor 26 Advanced
+			2368, 	 -- Dragon Racing - Personal Best Record - Kalimdor 27 Advanced
+			2369, 	 -- Dragon Racing - Personal Best Record - Kalimdor 28 Advanced
+			2370, 	 -- Dragon Racing - Personal Best Record - Kalimdor 29 Advanced
+			2371, 	 -- Dragon Racing - Personal Best Record - Kalimdor 30 Advanced
+			2372, 	 -- Dragon Racing - Personal Best Record - Kalimdor 01 Reverse
+			2373, 	 -- Dragon Racing - Personal Best Record - Kalimdor 02 Reverse
+			2374, 	 -- Dragon Racing - Personal Best Record - Kalimdor 03 Reverse
+			2375, 	 -- Dragon Racing - Personal Best Record - Kalimdor 04 Reverse
+			2376, 	 -- Dragon Racing - Personal Best Record - Kalimdor 05 Reverse
+			2377, 	 -- Dragon Racing - Personal Best Record - Kalimdor 06 Reverse
+			2378, 	 -- Dragon Racing - Personal Best Record - Kalimdor 07 Reverse
+			2379, 	 -- Dragon Racing - Personal Best Record - Kalimdor 08 Reverse
+			2380, 	 -- Dragon Racing - Personal Best Record - Kalimdor 09 Reverse
+			2381, 	 -- Dragon Racing - Personal Best Record - Kalimdor 10 Reverse
+			2382, 	 -- Dragon Racing - Personal Best Record - Kalimdor 11 Reverse
+			2383, 	 -- Dragon Racing - Personal Best Record - Kalimdor 12 Reverse
+			2384, 	 -- Dragon Racing - Personal Best Record - Kalimdor 13 Reverse
+			2385, 	 -- Dragon Racing - Personal Best Record - Kalimdor 14 Reverse
+			2386, 	 -- Dragon Racing - Personal Best Record - Kalimdor 15 Reverse
+			2387, 	 -- Dragon Racing - Personal Best Record - Kalimdor 16 Reverse
+			2388, 	 -- Dragon Racing - Personal Best Record - Kalimdor 17 Reverse
+			2389, 	 -- Dragon Racing - Personal Best Record - Kalimdor 18 Reverse
+			2390, 	 -- Dragon Racing - Personal Best Record - Kalimdor 19 Reverse
+			2391, 	 -- Dragon Racing - Personal Best Record - Kalimdor 20 Reverse
+			2392, 	 -- Dragon Racing - Personal Best Record - Kalimdor 21 Reverse
+			2393, 	 -- Dragon Racing - Personal Best Record - Kalimdor 22 Reverse
+			2394, 	 -- Dragon Racing - Personal Best Record - Kalimdor 23 Reverse
+			2395, 	 -- Dragon Racing - Personal Best Record - Kalimdor 24 Reverse
+			2396, 	 -- Dragon Racing - Personal Best Record - Kalimdor 25 Reverse
+			2397, 	 -- Dragon Racing - Personal Best Record - Kalimdor 26 Reverse
+			2398, 	 -- Dragon Racing - Personal Best Record - Kalimdor 27 Reverse
+			2399, 	 -- Dragon Racing - Personal Best Record - Kalimdor 28 Reverse
+			2400, 	 -- Dragon Racing - Personal Best Record - Kalimdor 29 Reverse
+			2401, 	 -- Dragon Racing - Personal Best Record - Kalimdor 30 Reverse
+			2414, 	 -- 10.1.5 Whelp Daycare - Whelp Racing - Black - 001 (OJF)
+			2415, 	 -- 10.1.5 Whelp Daycare - Whelp Racing - Blue - 001 (OJF)
+			2416, 	 -- 10.1.5 Whelp Daycare - Whelp Racing - Bronze - 001 (OJF)
+			2417, 	 -- 10.1.5 Whelp Daycare - Whelp Racing - Green - 001 (OJF)
+			2418, 	 -- 10.1.5 Whelp Daycare - Whelp Racing - Red - 001 (OJF)
+			2536, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 01
+			2537, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 02
+			2538, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 03
+			2539, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 04
+			2540, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 05
+			2541, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 06
+			2542, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 07
+			2543, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 08
+			2544, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 09
+			2545, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 10
+			2546, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 11
+			2547, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 12
+			2548, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 13
+			2549, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 14
+			2550, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 15
+			2551, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 16
+			2552, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 01 Advanced
+			2553, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 02 Advanced
+			2554, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 03 Advanced
+			2555, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 04 Advanced
+			2556, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 05 Advanced
+			2557, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 06 Advanced
+			2558, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 07 Advanced
+			2559, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 08 Advanced
+			2560, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 09 Advanced
+			2561, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 10 Advanced
+			2562, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 11 Advanced
+			2563, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 12 Advanced
+			2564, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 13 Advanced
+			2565, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 14 Advanced
+			2566, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 15 Advanced
+			2567, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 16 Advanced
+			2568, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 01 Reverse
+			2569, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 02 Reverse
+			2570, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 03 Reverse
+			2571, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 04 Reverse
+			2572, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 05 Reverse
+			2573, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 06 Reverse
+			2574, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 07 Reverse
+			2575, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 08 Reverse
+			2576, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 09 Reverse
+			2577, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 10 Reverse
+			2578, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 11 Reverse
+			2579, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 12 Reverse
+			2580, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 13 Reverse
+			2581, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 14 Reverse
+			2582, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 15 Reverse
+			2583, 	 -- Dragon Racing - Personal Best Record - E Kingdoms 16 Reverse
+			-- 2595, 	 -- Dragon Racing - Medal Widget - Normal [DNT]
+			-- 2596, 	 -- Dragon Racing - Medal Widget - Advanced [DNT]
+			-- 2597, 	 -- Dragon Racing - Medal Widget - Reverse [DNT]
+			-- 2598, 	 -- Dragon Racing - Medal Widget - Temp [DNT]
+			-- 2599, 	 -- Dragon Racing - Medal Widget - Temp2 [DNT]
+			2600, 	 -- Dragon Racing - Personal Best Record - Outland 01
+			2601, 	 -- Dragon Racing - Personal Best Record - Outland 02
+			2602, 	 -- Dragon Racing - Personal Best Record - Outland 03
+			2603, 	 -- Dragon Racing - Personal Best Record - Outland 04
+			2604, 	 -- Dragon Racing - Personal Best Record - Outland 05
+			2605, 	 -- Dragon Racing - Personal Best Record - Outland 06
+			2606, 	 -- Dragon Racing - Personal Best Record - Outland 07
+			2607, 	 -- Dragon Racing - Personal Best Record - Outland 08
+			2608, 	 -- Dragon Racing - Personal Best Record - Outland 09
+			2609, 	 -- Dragon Racing - Personal Best Record - Outland 10
+			2610, 	 -- Dragon Racing - Personal Best Record - Outland 11
+			2611, 	 -- Dragon Racing - Personal Best Record - Outland 12
+			2612, 	 -- Dragon Racing - Personal Best Record - Outland 13
+			2613, 	 -- Dragon Racing - Personal Best Record - Outland 14
+			2614, 	 -- Dragon Racing - Personal Best Record - Outland 15
+			2615, 	 -- Dragon Racing - Personal Best Record - Outland 01 Advanced
+			2616, 	 -- Dragon Racing - Personal Best Record - Outland 02 Advanced
+			2617, 	 -- Dragon Racing - Personal Best Record - Outland 03 Advanced
+			2618, 	 -- Dragon Racing - Personal Best Record - Outland 04 Advanced
+			2619, 	 -- Dragon Racing - Personal Best Record - Outland 05 Advanced
+			2620, 	 -- Dragon Racing - Personal Best Record - Outland 06 Advanced
+			2621, 	 -- Dragon Racing - Personal Best Record - Outland 07 Advanced
+			2622, 	 -- Dragon Racing - Personal Best Record - Outland 08 Advanced
+			2623, 	 -- Dragon Racing - Personal Best Record - Outland 09 Advanced
+			2624, 	 -- Dragon Racing - Personal Best Record - Outland 10 Advanced
+			2625, 	 -- Dragon Racing - Personal Best Record - Outland 11 Advanced
+			2626, 	 -- Dragon Racing - Personal Best Record - Outland 12 Advanced
+			2627, 	 -- Dragon Racing - Personal Best Record - Outland 13 Advanced
+			2628, 	 -- Dragon Racing - Personal Best Record - Outland 14 Advanced
+			2629, 	 -- Dragon Racing - Personal Best Record - Outland 15 Advanced
+			2630, 	 -- Dragon Racing - Personal Best Record - Outland 01 Reverse
+			2631, 	 -- Dragon Racing - Personal Best Record - Outland 02 Reverse
+			2632, 	 -- Dragon Racing - Personal Best Record - Outland 03 Reverse
+			2633, 	 -- Dragon Racing - Personal Best Record - Outland 04 Reverse
+			2634, 	 -- Dragon Racing - Personal Best Record - Outland 05 Reverse
+			2635, 	 -- Dragon Racing - Personal Best Record - Outland 06 Reverse
+			2636, 	 -- Dragon Racing - Personal Best Record - Outland 07 Reverse
+			2637, 	 -- Dragon Racing - Personal Best Record - Outland 08 Reverse
+			2638, 	 -- Dragon Racing - Personal Best Record - Outland 09 Reverse
+			2639, 	 -- Dragon Racing - Personal Best Record - Outland 10 Reverse
+			2640, 	 -- Dragon Racing - Personal Best Record - Outland 11 Reverse
+			2641, 	 -- Dragon Racing - Personal Best Record - Outland 12 Reverse
+			2642, 	 -- Dragon Racing - Personal Best Record - Outland 13 Reverse
+			2643, 	 -- Dragon Racing - Personal Best Record - Outland 14 Reverse
+			2644, 	 -- Dragon Racing - Personal Best Record - Outland 15 Reverse
+			2654, 	 -- Dragon Racing - Kalimdor Cup Preferred Mount
 		},
 		[252] = { -- Tuskarr 
 			2113,	--Tuskarr - Fishing Net - Location 01 - Net 01 - Loot
@@ -993,7 +1232,7 @@ else
 		[2014] = { id=2014, category=1, hidden=true }, -- Unholy Talent Points (DNT)
 		[2015] = { id=2015, category=1, hidden=true }, -- Blood Talent Points (DNT)
 		[2016] = { id=2016, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time
-		[2017] = { id=2017, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Fraction
+		[2017] = { id=2017, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Fraction 1
 		[2018] = { id=2018, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Quest ID
 		[2019] = { id=2019, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Silver
 		[2020] = { id=2020, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Gold
@@ -1013,11 +1252,11 @@ else
 		[2034] = { id=2034, category=142, }, -- Dragon Isles Herbalism Knowledge
 		[2035] = { id=2035, category=142, }, -- Dragon Isles Mining Knowledge
 		[2036] = { id=2036, category=142, }, -- Ancient Waygate Energy
-		[2037] = { id=2037, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time -Silver Fraction
-		[2038] = { id=2038, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Gold Fraction
+		[2037] = { id=2037, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time -Silver Fract 1
+		[2038] = { id=2038, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 1
 		[2039] = { id=2039, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Personal Best - Waking Shores 1
 		[2040] = { id=2040, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Personal Best Time
-		[2041] = { id=2041, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Personal Best Time - Fraction
+		[2041] = { id=2041, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Personal Best Time - Fraction 1
 		[2042] = { id=2042, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 01 Easy
 		[2043] = { id=2043, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 01 Medium
 		[2044] = { id=2044, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 01 Hard
@@ -1064,7 +1303,7 @@ else
 		[2088] = { id=2088, category=142, }, -- Renown-Valdrakken
 		[2089] = { id=2089, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 06 Easy
 		[2090] = { id=2090, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Azure Span 06 Hard
-		[2091] = { id=2091, category=251, hidden=true }, -- Dragon Racing - Tracking
+		[2091] = { id=2091, category=251, hidden=true }, -- Dragon Racing - Tracking [DNT]
 		[2092] = { id=2092, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Easy
 		[2093] = { id=2093, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Hard
 		[2094] = { id=2094, category=142, }, -- [DNT] AC Major Faction Test Renown
@@ -1073,7 +1312,7 @@ else
 		[2097] = { id=2097, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Hard
 		[2098] = { id=2098, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 04 Easy
 		[2099] = { id=2099, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 04 Hard
-		[2100] = { id=2100, category=251, hidden=true }, -- Dragon Racing - Versioning
+		[2100] = { id=2100, category=251, hidden=true }, -- Dragon Racing - Versioning [DNT]
 		[2101] = { id=2101, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 05 Easy
 		[2102] = { id=2102, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 05 Hard
 		[2103] = { id=2103, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 06 Easy
@@ -1118,7 +1357,7 @@ else
 		[2151] = { id=2151, category=142, hidden=true }, -- Red Whelp (Mending Breath)
 		[2152] = { id=2152, category=142, hidden=true }, -- Red Whelp (Sleepy Ruby Warmth)
 		[2153] = { id=2153, category=142, hidden=true }, -- Red Whelp (Under Red Wings)
-		[2154] = { id=2154, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 01 Test
+		[2154] = { id=2154, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Waking Shores 01 Reverse
 		[2155] = { id=2155, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Whole
 		[2156] = { id=2156, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Fraction 1
 		[2157] = { id=2157, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Fraction 10
@@ -1161,6 +1400,24 @@ else
 		[2197] = { id=2197, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 04 Reverse
 		[2198] = { id=2198, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 05 Reverse
 		[2199] = { id=2199, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 06 Reverse
+		[2201] = { id=2201, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 01
+		[2202] = { id=2202, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 02
+		[2203] = { id=2203, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 03
+		[2204] = { id=2204, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 04
+		[2205] = { id=2205, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 05
+		[2206] = { id=2206, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 06
+		[2207] = { id=2207, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 01 Advanced
+		[2208] = { id=2208, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 02 Advanced
+		[2209] = { id=2209, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 03 Advanced
+		[2210] = { id=2210, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 04 Advanced
+		[2211] = { id=2211, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 05 Advanced
+		[2212] = { id=2212, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 06 Advanced
+		[2213] = { id=2213, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 01 Reverse
+		[2214] = { id=2214, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 02 Reverse
+		[2215] = { id=2215, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 03 Reverse
+		[2216] = { id=2216, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 04 Reverse
+		[2217] = { id=2217, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 05 Reverse
+		[2218] = { id=2218, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - F Reach 06 Reverse
 		[2224] = { id=2224, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Whole
 		[2225] = { id=2225, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 1
 		[2226] = { id=2226, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 10
@@ -1170,6 +1427,219 @@ else
 		[2236] = { id=2236, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time MS
 		[2237] = { id=2237, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
 		[2245] = { id=2245, category=250, }, -- Flightstones
+		[2246] = { id=2246, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 01
+		[2247] = { id=2247, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 02
+		[2248] = { id=2248, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 03
+		[2249] = { id=2249, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 04
+		[2250] = { id=2250, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 05
+		[2251] = { id=2251, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 06
+		[2252] = { id=2252, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 01 Advanced
+		[2253] = { id=2253, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 02 Advanced
+		[2254] = { id=2254, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 03 Advanced
+		[2255] = { id=2255, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 04 Advanced
+		[2256] = { id=2256, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 05 Advanced
+		[2257] = { id=2257, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 06 Advanced
+		[2258] = { id=2258, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 01 Reverse
+		[2259] = { id=2259, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 02 Reverse
+		[2260] = { id=2260, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 03 Reverse
+		[2261] = { id=2261, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 04 Reverse
+		[2262] = { id=2262, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 05 Reverse
+		[2263] = { id=2263, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 06 Reverse
+		[2312] = { id=2312, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 01
+		[2313] = { id=2313, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 02
+		[2314] = { id=2314, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 03
+		[2315] = { id=2315, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 04
+		[2316] = { id=2316, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 05
+		[2317] = { id=2317, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 06
+		[2318] = { id=2318, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 07
+		[2319] = { id=2319, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 08
+		[2320] = { id=2320, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 09
+		[2321] = { id=2321, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 10
+		[2322] = { id=2322, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 11
+		[2323] = { id=2323, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 12
+		[2324] = { id=2324, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 13
+		[2325] = { id=2325, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 14
+		[2326] = { id=2326, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 15
+		[2327] = { id=2327, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 16
+		[2328] = { id=2328, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 17
+		[2329] = { id=2329, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 18
+		[2330] = { id=2330, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 19
+		[2331] = { id=2331, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 20
+		[2332] = { id=2332, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 21
+		[2333] = { id=2333, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 22
+		[2334] = { id=2334, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 23
+		[2335] = { id=2335, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 24
+		[2336] = { id=2336, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 25
+		[2337] = { id=2337, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 26
+		[2338] = { id=2338, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 27
+		[2339] = { id=2339, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 28
+		[2340] = { id=2340, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 29
+		[2341] = { id=2341, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 30
+		[2342] = { id=2342, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 01 Advanced
+		[2343] = { id=2343, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 02 Advanced
+		[2344] = { id=2344, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 03 Advanced
+		[2345] = { id=2345, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 04 Advanced
+		[2346] = { id=2346, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 05 Advanced
+		[2347] = { id=2347, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 06 Advanced
+		[2348] = { id=2348, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 07 Advanced
+		[2349] = { id=2349, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 08 Advanced
+		[2350] = { id=2350, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 09 Advanced
+		[2351] = { id=2351, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 10 Advanced
+		[2352] = { id=2352, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 11 Advanced
+		[2353] = { id=2353, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 12 Advanced
+		[2354] = { id=2354, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 13 Advanced
+		[2355] = { id=2355, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 14 Advanced
+		[2356] = { id=2356, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 15 Advanced
+		[2357] = { id=2357, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 16 Advanced
+		[2358] = { id=2358, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 17 Advanced
+		[2359] = { id=2359, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 18 Advanced
+		[2360] = { id=2360, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 19 Advanced
+		[2361] = { id=2361, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 20 Advanced
+		[2362] = { id=2362, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 21 Advanced
+		[2363] = { id=2363, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 22 Advanced
+		[2364] = { id=2364, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 23 Advanced
+		[2365] = { id=2365, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 24 Advanced
+		[2366] = { id=2366, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 25 Advanced
+		[2367] = { id=2367, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 26 Advanced
+		[2368] = { id=2368, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 27 Advanced
+		[2369] = { id=2369, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 28 Advanced
+		[2370] = { id=2370, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 29 Advanced
+		[2371] = { id=2371, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 30 Advanced
+		[2372] = { id=2372, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 01 Reverse
+		[2373] = { id=2373, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 02 Reverse
+		[2374] = { id=2374, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 03 Reverse
+		[2375] = { id=2375, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 04 Reverse
+		[2376] = { id=2376, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 05 Reverse
+		[2377] = { id=2377, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 06 Reverse
+		[2378] = { id=2378, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 07 Reverse
+		[2379] = { id=2379, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 08 Reverse
+		[2380] = { id=2380, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 09 Reverse
+		[2381] = { id=2381, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 10 Reverse
+		[2382] = { id=2382, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 11 Reverse
+		[2383] = { id=2383, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 12 Reverse
+		[2384] = { id=2384, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 13 Reverse
+		[2385] = { id=2385, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 14 Reverse
+		[2386] = { id=2386, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 15 Reverse
+		[2387] = { id=2387, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 16 Reverse
+		[2388] = { id=2388, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 17 Reverse
+		[2389] = { id=2389, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 18 Reverse
+		[2390] = { id=2390, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 19 Reverse
+		[2391] = { id=2391, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 20 Reverse
+		[2392] = { id=2392, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 21 Reverse
+		[2393] = { id=2393, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 22 Reverse
+		[2394] = { id=2394, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 23 Reverse
+		[2395] = { id=2395, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 24 Reverse
+		[2396] = { id=2396, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 25 Reverse
+		[2397] = { id=2397, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 26 Reverse
+		[2398] = { id=2398, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 27 Reverse
+		[2399] = { id=2399, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 28 Reverse
+		[2400] = { id=2400, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 29 Reverse
+		[2401] = { id=2401, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 30 Reverse
+		[2414] = { id=2414, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Black - 001 (OJF)
+		[2415] = { id=2415, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Blue - 001 (OJF)
+		[2416] = { id=2416, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Bronze - 001 (OJF)
+		[2417] = { id=2417, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Green - 001 (OJF)
+		[2418] = { id=2418, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Red - 001 (OJF)
+		[2536] = { id=2536, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 01
+		[2537] = { id=2537, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 02
+		[2538] = { id=2538, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 03
+		[2539] = { id=2539, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 04
+		[2540] = { id=2540, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 05
+		[2541] = { id=2541, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 06
+		[2542] = { id=2542, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 07
+		[2543] = { id=2543, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 08
+		[2544] = { id=2544, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 09
+		[2545] = { id=2545, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 10
+		[2546] = { id=2546, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 11
+		[2547] = { id=2547, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 12
+		[2548] = { id=2548, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 13
+		[2549] = { id=2549, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 14
+		[2550] = { id=2550, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 15
+		[2551] = { id=2551, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 16
+		[2552] = { id=2552, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 01 Advanced
+		[2553] = { id=2553, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 02 Advanced
+		[2554] = { id=2554, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 03 Advanced
+		[2555] = { id=2555, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 04 Advanced
+		[2556] = { id=2556, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 05 Advanced
+		[2557] = { id=2557, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 06 Advanced
+		[2558] = { id=2558, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 07 Advanced
+		[2559] = { id=2559, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 08 Advanced
+		[2560] = { id=2560, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 09 Advanced
+		[2561] = { id=2561, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 10 Advanced
+		[2562] = { id=2562, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 11 Advanced
+		[2563] = { id=2563, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 12 Advanced
+		[2564] = { id=2564, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 13 Advanced
+		[2565] = { id=2565, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 14 Advanced
+		[2566] = { id=2566, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 15 Advanced
+		[2567] = { id=2567, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 16 Advanced
+		[2568] = { id=2568, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 01 Reverse
+		[2569] = { id=2569, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 02 Reverse
+		[2570] = { id=2570, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 03 Reverse
+		[2571] = { id=2571, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 04 Reverse
+		[2572] = { id=2572, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 05 Reverse
+		[2573] = { id=2573, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 06 Reverse
+		[2574] = { id=2574, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 07 Reverse
+		[2575] = { id=2575, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 08 Reverse
+		[2576] = { id=2576, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 09 Reverse
+		[2577] = { id=2577, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 10 Reverse
+		[2578] = { id=2578, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 11 Reverse
+		[2579] = { id=2579, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 12 Reverse
+		[2580] = { id=2580, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 13 Reverse
+		[2581] = { id=2581, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 14 Reverse
+		[2582] = { id=2582, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 15 Reverse
+		[2583] = { id=2583, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 16 Reverse
+		[2594] = { id=2594, category=250, }, -- Paracausal Flakes
+		[2595] = { id=2595, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Normal [DNT]
+		[2596] = { id=2596, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Advanced [DNT]
+		[2597] = { id=2597, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Reverse [DNT]
+		[2598] = { id=2598, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Temp [DNT]
+		[2599] = { id=2599, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Temp2 [DNT]
+		[2600] = { id=2600, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 01
+		[2601] = { id=2601, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 02
+		[2602] = { id=2602, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 03
+		[2603] = { id=2603, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 04
+		[2604] = { id=2604, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 05
+		[2605] = { id=2605, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 06
+		[2606] = { id=2606, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 07
+		[2607] = { id=2607, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 08
+		[2608] = { id=2608, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 09
+		[2609] = { id=2609, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 10
+		[2610] = { id=2610, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 11
+		[2611] = { id=2611, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 12
+		[2612] = { id=2612, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 13
+		[2613] = { id=2613, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 14
+		[2614] = { id=2614, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 15
+		[2615] = { id=2615, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 01 Advanced
+		[2616] = { id=2616, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 02 Advanced
+		[2617] = { id=2617, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 03 Advanced
+		[2618] = { id=2618, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 04 Advanced
+		[2619] = { id=2619, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 05 Advanced
+		[2620] = { id=2620, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 06 Advanced
+		[2621] = { id=2621, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 07 Advanced
+		[2622] = { id=2622, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 08 Advanced
+		[2623] = { id=2623, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 09 Advanced
+		[2624] = { id=2624, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 10 Advanced
+		[2625] = { id=2625, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 11 Advanced
+		[2626] = { id=2626, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 12 Advanced
+		[2627] = { id=2627, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 13 Advanced
+		[2628] = { id=2628, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 14 Advanced
+		[2629] = { id=2629, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 15 Advanced
+		[2630] = { id=2630, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 01 Reverse
+		[2631] = { id=2631, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 02 Reverse
+		[2632] = { id=2632, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 03 Reverse
+		[2633] = { id=2633, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 04 Reverse
+		[2634] = { id=2634, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 05 Reverse
+		[2635] = { id=2635, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 06 Reverse
+		[2636] = { id=2636, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 07 Reverse
+		[2637] = { id=2637, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 08 Reverse
+		[2638] = { id=2638, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 09 Reverse
+		[2639] = { id=2639, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 10 Reverse
+		[2640] = { id=2640, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 11 Reverse
+		[2641] = { id=2641, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 12 Reverse
+		[2642] = { id=2642, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 13 Reverse
+		[2643] = { id=2643, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 14 Reverse
+		[2644] = { id=2644, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 15 Reverse
+		[2654] = { id=2654, category=251, hidden=true }, -- Dragon Racing - Kalimdor Cup Preferred Mount
 	}
 end
 

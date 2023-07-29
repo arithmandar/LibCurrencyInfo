@@ -1,4 +1,4 @@
-﻿## Interface: 30401
+﻿## Interface: 30402
 ## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information
 #@end-debug@

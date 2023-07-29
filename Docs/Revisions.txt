@@ -3,6 +3,12 @@ $Id$
 Revision History:
 =================
 
+* v1.42 (Jul. 29, 2023)
+-----------------------
+- Toc update to support WoW 10.1.5 / 3.4.2
+- Added Sidereal Essence for WolTKC
+- Update (added) lots of Dragonflight currencies
+
 * v1.41 (Mar. 30, 2023)
 -----------------------
 - Added Flightstones (10.1.0.48480)
