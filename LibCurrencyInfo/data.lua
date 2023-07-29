@@ -139,6 +139,8 @@ else
 	--		2014,	-- Unholy Talent Points (DNT)
 	--		2015,	-- Blood Talent Points (DNT)
 			2032, 	-- Trader's Tender
+			2588, 	-- Riders of Azeroth Badge
+
 		},
 		[2] = { -- Player vs. Player
 	--		103, -- Arena Points
@@ -169,7 +171,7 @@ else
 	--		301, -- Emblem of Triumph
 	--		341, -- Emblem of Frost
 			1166, -- Timewarped Badge
-			1191, 	-- Valor
+			1191, 	-- Valor (category originally in 142)
 		},
 		[23] = { -- Burning Crusade
 			1704, -- Spirit Shard
@@ -383,6 +385,35 @@ else
 			2173, 	-- Profession - Public Order Capacity - Enchanting
 			2174, 	-- Profession - Public Order Capacity - Jewelcrafting
 			2175, 	-- Profession - Public Order Capacity - Inscription
+			2244, 	-- Forbidden Reach Return - Renown Dailies Completed
+	--		2264, 	-- Account HWM - Helm [DNT]
+	--		2265, 	-- Account HWM - Neck [DNT]
+	--		2266, 	-- Account HWM - Shoulders [DNT]
+	--		2267, 	-- Account HWM - Chest [DNT]
+	--		2268, 	-- Account HWM - Waist [DNT]
+	--		2269, 	-- Account HWM - Legs [DNT]
+	--		2270, 	-- Account HWM - Feet [DNT]
+	--		2271, 	-- Account HWM - Wrist [DNT]
+	--		2272, 	-- Account HWM - Hands [DNT]
+	--		2273, 	-- Account HWM - Ring [DNT]
+	--		2274, 	-- Account HWM - Trinket [DNT]
+	--		2275, 	-- Account HWM - Cloak [DNT]
+	--		2276, 	-- Account HWM - Two Hand [DNT]
+	--		2277, 	-- Account HWM - Main Hand [DNT]
+	--		2278, 	-- Account HWM - One Hand [DNT]
+	--		2279, 	-- Account HWM - One Hand (Second) [DNT]
+	--		2280, 	-- Account HWM - Off Hand [DNT]
+			2402, 	-- Renown - Loamm Niffen
+			2408, 	-- Bonus Flightstones
+	--		2409, 	-- Whelpling Crest Fragment Tracker [DNT]
+	--		2410, 	-- Drake Crest Fragment Tracker [DNT]
+	--		2411, 	-- Wyrm Crest Fragment Tracker [DNT]
+	--		2412, 	-- Aspect Crest Fragment Tracker [DNT]
+	--		2413, 	-- 10.1 Professions - Personal Tracker - S2 Spark Drops (Hidden)
+	--		2419, 	-- Test Charges [DNT]
+			2420, 	-- Loamm Niffen
+			2533, 	-- Renascent Shadowflame
+			2645, 	-- Soridormi's Recognition
 		},
 		[143] = { -- Battle for Azeroth
 			1299,	 -- Brawler's Gold
@@ -404,7 +435,7 @@ else
 			1553, -- Azerite
 			1585, -- Honor
 			1586, -- Honor Level
-			2001, 	-- Paden Test Currency
+			2001, -- Paden Test Currency
 		},
 		[245] = { -- Shadowlands
 	--		1743, 	 -- Fake Anima for Quest Tracking
@@ -1212,7 +1243,7 @@ else
 		[1971] = { id=1971, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Par Time Floor 3
 		[1972] = { id=1972, category=248, hidden=true }, -- Torghast - Scoreboard - Floor Par Time Floor 4
 		[1976] = { id=1976, category=248, hidden=true }, -- Torghast - Scoreboard - Toast Display - Bonus - Phant Left Group
-		[1977] = { id=1977, category=245 }, -- Stygian Ember
+		[1977] = { id=1977, category=245, }, -- Stygian Ember
 		[1979] = { id=1979, category=245, }, -- Cyphers of the First Ones
 		[1980] = { id=1980, category=248, hidden=true }, -- Torghast - Scoreboard - Run Layer
 		[1981] = { id=1981, category=248, hidden=true }, -- Torghast - Scoreboard - Run ID
@@ -1247,7 +1278,7 @@ else
 		[2029] = { id=2029, category=142, }, -- Dragon Isles Jewelcrafting Knowledge
 		[2030] = { id=2030, category=142, }, -- Dragon Isles Enchanting Knowledge
 		[2031] = { id=2031, category=142, }, -- Dragonscale Expedition
-		[2032] = { id=2032, category=1 }, -- Trader's Tender
+		[2032] = { id=2032, category=1, }, -- Trader's Tender
 		[2033] = { id=2033, category=142, }, -- Dragon Isles Skinning Knowledge
 		[2034] = { id=2034, category=142, }, -- Dragon Isles Herbalism Knowledge
 		[2035] = { id=2035, category=142, }, -- Dragon Isles Mining Knowledge
@@ -1306,7 +1337,7 @@ else
 		[2091] = { id=2091, category=251, hidden=true }, -- Dragon Racing - Tracking [DNT]
 		[2092] = { id=2092, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Easy
 		[2093] = { id=2093, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Hard
-		[2094] = { id=2094, category=142, }, -- [DNT] AC Major Faction Test Renown
+		[2094] = { id=2094, category=142, hidden=true }, -- [DNT] AC Major Faction Test Renown
 		[2095] = { id=2095, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus MP 1
 		[2096] = { id=2096, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Easy
 		[2097] = { id=2097, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Hard
@@ -1367,8 +1398,8 @@ else
 		[2161] = { id=2161, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Advanced - Fraction 10
 		[2162] = { id=2162, category=251, hidden=true }, -- Dragon Racing - Best Time Display - Advanced - Fraction 100
 		[2165] = { id=2165, category=142, hidden=true }, -- Profession - Public Order Capacity - Blacksmithing
-		[2166] = { id=2166, category=142, hidden=true }, -- Inspiration Catalyst Account-Wide Currency
-		[2167] = { id=2167, category=142, hidden=true }, -- Inspiration Catalyst Anti-Currency
+		[2166] = { id=2166, category=142, hidden=true }, -- Renascent Lifeblood
+		[2167] = { id=2167, category=142, hidden=true }, -- Catalyst Charges
 		[2169] = { id=2169, category=142, hidden=true }, -- Profession - Public Order Capacity - Leatherworking
 		[2170] = { id=2170, category=142, hidden=true }, -- Profession - Public Order Capacity - Alchemy
 		[2171] = { id=2171, category=142, hidden=true }, -- Profession - Public Order Capacity - Tailoring
@@ -1426,6 +1457,7 @@ else
 		[2235] = { id=2235, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT]
 		[2236] = { id=2236, category=251, hidden=true }, -- Dragon Racing - Scoreboard - Race Complete Time MS
 		[2237] = { id=2237, category=251, hidden=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.5 [DNT]
+		[2244] = { id=2244, category=142, }, -- Forbidden Reach Return - Renown Dailies Completed
 		[2245] = { id=2245, category=250, }, -- Flightstones
 		[2246] = { id=2246, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 01
 		[2247] = { id=2247, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 02
@@ -1445,6 +1477,23 @@ else
 		[2261] = { id=2261, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 04 Reverse
 		[2262] = { id=2262, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 05 Reverse
 		[2263] = { id=2263, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Z Cavern 06 Reverse
+		[2264] = { id=2264, category=142, hidden=true }, -- Account HWM - Helm [DNT]
+		[2265] = { id=2265, category=142, hidden=true }, -- Account HWM - Neck [DNT]
+		[2266] = { id=2266, category=142, hidden=true }, -- Account HWM - Shoulders [DNT]
+		[2267] = { id=2267, category=142, hidden=true }, -- Account HWM - Chest [DNT]
+		[2268] = { id=2268, category=142, hidden=true }, -- Account HWM - Waist [DNT]
+		[2269] = { id=2269, category=142, hidden=true }, -- Account HWM - Legs [DNT]
+		[2270] = { id=2270, category=142, hidden=true }, -- Account HWM - Feet [DNT]
+		[2271] = { id=2271, category=142, hidden=true }, -- Account HWM - Wrist [DNT]
+		[2272] = { id=2272, category=142, hidden=true }, -- Account HWM - Hands [DNT]
+		[2273] = { id=2273, category=142, hidden=true }, -- Account HWM - Ring [DNT]
+		[2274] = { id=2274, category=142, hidden=true }, -- Account HWM - Trinket [DNT]
+		[2275] = { id=2275, category=142, hidden=true }, -- Account HWM - Cloak [DNT]
+		[2276] = { id=2276, category=142, hidden=true }, -- Account HWM - Two Hand [DNT]
+		[2277] = { id=2277, category=142, hidden=true }, -- Account HWM - Main Hand [DNT]
+		[2278] = { id=2278, category=142, hidden=true }, -- Account HWM - One Hand [DNT]
+		[2279] = { id=2279, category=142, hidden=true }, -- Account HWM - One Hand (Second) [DNT]
+		[2280] = { id=2280, category=142, hidden=true }, -- Account HWM - Off Hand [DNT]
 		[2312] = { id=2312, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 01
 		[2313] = { id=2313, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 02
 		[2314] = { id=2314, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 03
@@ -1535,11 +1584,129 @@ else
 		[2399] = { id=2399, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 28 Reverse
 		[2400] = { id=2400, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 29 Reverse
 		[2401] = { id=2401, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Kalimdor 30 Reverse
+		[2402] = { id=2402, category=142, }, -- Renown - Loamm Niffen
+		[2408] = { id=2408, category=142, }, -- Bonus Flightstones
+		[2409] = { id=2409, category=142, hidden=true }, -- Whelpling Crest Fragment Tracker [DNT]
+		[2410] = { id=2410, category=142, hidden=true }, -- Drake Crest Fragment Tracker [DNT]
+		[2411] = { id=2411, category=142, hidden=true }, -- Wyrm Crest Fragment Tracker [DNT]
+		[2412] = { id=2412, category=142, hidden=true }, -- Aspect Crest Fragment Tracker [DNT]
+		[2413] = { id=2413, category=142, hidden=true }, -- 10.1 Professions - Personal Tracker - S2 Spark Drops (Hidden)
 		[2414] = { id=2414, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Black - 001 (OJF)
 		[2415] = { id=2415, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Blue - 001 (OJF)
 		[2416] = { id=2416, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Bronze - 001 (OJF)
 		[2417] = { id=2417, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Green - 001 (OJF)
 		[2418] = { id=2418, category=251, hidden=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Red - 001 (OJF)
+		[2419] = { id=2419, category=142, hidden=true }, -- Test Charges [DNT]
+		[2420] = { id=2420, category=142, }, -- Loamm Niffen
+		[2421] = { id=2421, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 01 Challeng
+		[2422] = { id=2422, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 01 ChallenR
+		[2423] = { id=2423, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 02 Challeng
+		[2424] = { id=2424, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 02 ChallenR
+		[2425] = { id=2425, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 03 Challeng
+		[2426] = { id=2426, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 03 ChallenR
+		[2427] = { id=2427, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 04 Challeng
+		[2428] = { id=2428, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 04 ChallenR
+		[2429] = { id=2429, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 05 Challeng
+		[2430] = { id=2430, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 05 ChallenR
+		[2431] = { id=2431, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 06 Challeng
+		[2432] = { id=2432, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 06 ChallenR
+		[2433] = { id=2433, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 07 Challeng
+		[2434] = { id=2434, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 07 ChallenR
+		[2435] = { id=2435, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 08 Challeng
+		[2436] = { id=2436, category=251, }, -- Dragon Racing - Personal Best Record - Waking Shores 08 ChallenR
+		[2437] = { id=2437, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 01 Chall
+		[2439] = { id=2439, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 01 ChalR
+		[2440] = { id=2440, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 02 Chall
+		[2441] = { id=2441, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 02 ChalR
+		[2442] = { id=2442, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 03 Chall
+		[2443] = { id=2443, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 03 ChalR
+		[2444] = { id=2444, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 04 Chall
+		[2445] = { id=2445, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 04 ChalR
+		[2446] = { id=2446, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 05 Chall
+		[2447] = { id=2447, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 06 Chall
+		[2448] = { id=2448, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 07 Chall
+		[2449] = { id=2449, category=251, }, -- Dragon Racing - Personal Best Record - Ohn'ahran Plains 07 ChalR
+		[2450] = { id=2450, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 01 Challenge
+		[2451] = { id=2451, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 01 Challenge R
+		[2452] = { id=2452, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 02 Challenge
+		[2453] = { id=2453, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 02 Challenge R
+		[2454] = { id=2454, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 03 Challenge
+		[2455] = { id=2455, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 03 Challenge R
+		[2456] = { id=2456, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 04 Challenge
+		[2457] = { id=2457, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 04 Challenge R
+		[2458] = { id=2458, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 05 Challenge
+		[2459] = { id=2459, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 05 Challenge R
+		[2460] = { id=2460, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 06 Challenge
+		[2461] = { id=2461, category=251, }, -- Dragon Racing - Personal Best Record - Azure Span 06 Challenge R
+		[2462] = { id=2462, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 01 Challenge
+		[2463] = { id=2463, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 01 ChallengeR
+		[2464] = { id=2464, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Challenge
+		[2465] = { id=2465, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 ChallengeR
+		[2466] = { id=2466, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Challenge
+		[2467] = { id=2467, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 ChallengeR
+		[2468] = { id=2468, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 04 Challenge
+		[2469] = { id=2469, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 04 ChallengeR
+		[2470] = { id=2470, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 05 Challenge
+		[2471] = { id=2471, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 05 ChallengeR
+		[2472] = { id=2472, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 06 Challenge
+		[2473] = { id=2473, category=251, }, -- Dragon Racing - Personal Best Record - Thaldraszus 06 ChallengeR
+		[2474] = { id=2474, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 01 Challenge
+		[2475] = { id=2475, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 01 Challenge R
+		[2476] = { id=2476, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 02 Challenge
+		[2477] = { id=2477, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 02 Challenge R
+		[2478] = { id=2478, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 03 Challenge
+		[2479] = { id=2479, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 03 Challenge R
+		[2480] = { id=2480, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 04 Challenge
+		[2481] = { id=2481, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 04 Challenge R
+		[2482] = { id=2482, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 05 Challenge
+		[2483] = { id=2483, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 05 Challenge R
+		[2484] = { id=2484, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 06 Challenge
+		[2485] = { id=2485, category=251, }, -- Dragon Racing - Personal Best Record - F Reach 06 Challenge R
+		[2486] = { id=2486, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 01 Challenge
+		[2487] = { id=2487, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 01 Challenge R
+		[2488] = { id=2488, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 02 Challenge
+		[2489] = { id=2489, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 02 Challenge R
+		[2490] = { id=2490, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 03 Challenge
+		[2491] = { id=2491, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 03 Challenge R
+		[2492] = { id=2492, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 04 Challenge
+		[2493] = { id=2493, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 04 Challenge R
+		[2494] = { id=2494, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 05 Challenge
+		[2495] = { id=2495, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 05 Challenge R
+		[2496] = { id=2496, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 06 Challenge
+		[2497] = { id=2497, category=251, }, -- Dragon Racing - Personal Best Record - Z Cavern 06 Challenge R
+		[2498] = { id=2498, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 01 Challenge
+		[2499] = { id=2499, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 01 Challenge R
+		[2500] = { id=2500, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 02 Challenge
+		[2501] = { id=2501, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 02 Challenge R
+		[2502] = { id=2502, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 03 Challenge
+		[2503] = { id=2503, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 03 Challenge R
+		[2504] = { id=2504, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 04 Challenge
+		[2505] = { id=2505, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 04 Challenge R
+		[2506] = { id=2506, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 05 Challenge
+		[2507] = { id=2507, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 05 Challenge R
+		[2508] = { id=2508, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 06 Challenge
+		[2509] = { id=2509, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 06 Challenge R
+		[2510] = { id=2510, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 07 Challenge
+		[2511] = { id=2511, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 07 Challenge R
+		[2512] = { id=2512, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 08 Challenge
+		[2513] = { id=2513, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 08 Challenge R
+		[2514] = { id=2514, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 09 Challenge
+		[2515] = { id=2515, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 09 Challenge R
+		[2516] = { id=2516, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 10 Challenge
+		[2517] = { id=2517, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 10 Challenge R
+		[2518] = { id=2518, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 11 Challenge
+		[2519] = { id=2519, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 11 Challenge R
+		[2520] = { id=2520, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 12 Challenge
+		[2521] = { id=2521, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 12 Challenge R
+		[2522] = { id=2522, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 13 Challenge
+		[2523] = { id=2523, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 13 Challenge R
+		[2524] = { id=2524, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 14 Challenge
+		[2525] = { id=2525, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 14 Challenge R
+		[2526] = { id=2526, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 15 Challenge
+		[2527] = { id=2527, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 15 Challenge R
+		[2528] = { id=2528, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 16 Challenge
+		[2529] = { id=2529, category=251, }, -- Dragon Racing - Personal Best Record - Kalimdor 16 Challenge R
+		[2533] = { id=2533, category=142, }, -- Renascent Shadowflame
 		[2536] = { id=2536, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 01
 		[2537] = { id=2537, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 02
 		[2538] = { id=2538, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 03
@@ -1588,6 +1755,7 @@ else
 		[2581] = { id=2581, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 14 Reverse
 		[2582] = { id=2582, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 15 Reverse
 		[2583] = { id=2583, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 16 Reverse
+		[2588] = { id=2588, category=1, }, -- Riders of Azeroth Badge
 		[2594] = { id=2594, category=250, }, -- Paracausal Flakes
 		[2595] = { id=2595, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Normal [DNT]
 		[2596] = { id=2596, category=251, hidden=true }, -- Dragon Racing - Medal Widget - Advanced [DNT]
@@ -1639,7 +1807,26 @@ else
 		[2642] = { id=2642, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 13 Reverse
 		[2643] = { id=2643, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 14 Reverse
 		[2644] = { id=2644, category=251, hidden=true }, -- Dragon Racing - Personal Best Record - Outland 15 Reverse
+		[2645] = { id=2645, category=142, }, -- Soridormi's Recognition
 		[2654] = { id=2654, category=251, hidden=true }, -- Dragon Racing - Kalimdor Cup Preferred Mount
+		[2658] = { id=2658, category=251, }, -- Dragon Racing - Personal Best Record - Outland 16
+		[2659] = { id=2659, category=251, }, -- Dragon Racing - Personal Best Record - Outland 17
+		[2660] = { id=2660, category=251, }, -- Dragon Racing - Personal Best Record - Outland 18
+		[2661] = { id=2661, category=251, }, -- Dragon Racing - Personal Best Record - Outland 19
+		[2662] = { id=2662, category=251, }, -- Dragon Racing - Personal Best Record - Outland 20
+		[2663] = { id=2663, category=251, }, -- Dragon Racing - Personal Best Record - Outland 21
+		[2664] = { id=2664, category=251, }, -- Dragon Racing - Personal Best Record - Outland 16 Advanced
+		[2665] = { id=2665, category=251, }, -- Dragon Racing - Personal Best Record - Outland 17 Advanced
+		[2666] = { id=2666, category=251, }, -- Dragon Racing - Personal Best Record - Outland 18 Advanced
+		[2667] = { id=2667, category=251, }, -- Dragon Racing - Personal Best Record - Outland 19 Advanced
+		[2668] = { id=2668, category=251, }, -- Dragon Racing - Personal Best Record - Outland 20 Advanced
+		[2669] = { id=2669, category=251, }, -- Dragon Racing - Personal Best Record - Outland 21 Advanced
+		[2670] = { id=2670, category=251, }, -- Dragon Racing - Personal Best Record - Outland 16 Reverse
+		[2671] = { id=2671, category=251, }, -- Dragon Racing - Personal Best Record - Outland 17 Reverse
+		[2672] = { id=2672, category=251, }, -- Dragon Racing - Personal Best Record - Outland 18 Reverse
+		[2673] = { id=2673, category=251, }, -- Dragon Racing - Personal Best Record - Outland 19 Reverse
+		[2674] = { id=2674, category=251, }, -- Dragon Racing - Personal Best Record - Outland 20 Reverse
+		[2675] = { id=2675, category=251, }, -- Dragon Racing - Personal Best Record - Outland 21 Reverse
 	}
 end
 

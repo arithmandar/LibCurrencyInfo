@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.43 (Jul. 29, 2023)
+-----------------------
+- Added more currencies
+
 * v1.42 (Jul. 29, 2023)
 -----------------------
 - Toc update to support WoW 10.1.5 / 3.4.2
