@@ -3,6 +3,17 @@ $Id$
 Revision History:
 =================
 
+* v1.44 (Jan. 21, 2024)
+-----------------------
+- Toc update to support WoW 10.2.5 / 3.4.3 / 1.15.0
+- Added currencies:
+  - Bronze, Trophy of Strife, Soridormi's Recognition, Dream Wardens, 
+  - Renown - Dream Wardens, Whelpling's Dreaming Crests, Drake's Dreaming Crests, 
+  - Wyrm's Dreaming Crests, Aspect's Dreaming Crests, Renascent Dream, 
+  - Azerothian Archives, Study of Shadowflame, Emerald Dewdrop, Seedbloom, 
+  - Mysterious Fragment, Whelpling's Dreaming Crest, Drake's Dreaming Crest, 
+  - Wyrm's Dreaming Crest, Aspect's Dreaming Crest, Dream Infusion, 
+
 * v1.43 (Jul. 29, 2023)
 -----------------------
 - Added more currencies
