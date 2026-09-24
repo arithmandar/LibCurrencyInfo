@@ -1,4 +1,4 @@
-﻿## Interface: 100205
+﻿## Interface: 11509, 16001, 20506, 50504, 120100
 ## Title: Lib: Currency Info
 ## Notes: A library to get currencies' related information
 #@end-debug@
@@ -8,6 +8,17 @@
 ## X-License: MIT
 ## X-Date: @project-date-iso@
 ## X-Website: https://www.wowace.com/projects/libcurrencyinfo
+## Category: Libraries
+## Category-deDE: Bibliotheken
+## Category-esES: Bibliotecas
+## Category-esMX: Bibliotecas
+## Category-frFR: Bibliothèques
+## Category-itIT: Librerie
+## Category-koKR: 라이브러리
+## Category-ptBR: Bibliotecas
+## Category-ruRU: Библиотеки
+## Category-zhCN: 函数库
+## Category-zhTW: 函式庫
 
 #@no-lib-strip@
 LibStub\LibStub.lua

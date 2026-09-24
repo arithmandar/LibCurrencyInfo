@@ -1,0 +1,15 @@
+	data.CurrencyCategories = {
+		[1] = { enUS="Miscellaneous",deDE="Verschiedenes",esES="Miscelánea",esMX="Miscelánea",frFR="Divers",itIT="Miscellaneous",koKR="기타",ptBR="Diversos",ruRU="Разное",zhCN="其它",zhTW="雜項", },
+		[2] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Player vs. Player",koKR="플레이어 대 플레이어",ptBR="Jogador x Jogador",ruRU="PvP",zhCN="PvP",zhTW="玩家對玩家", },
+		[3] = { enUS="Unused",deDE="Unbenutzt",esES="No las uso",esMX="No las uso",frFR="Inutilisées",itIT="Unused",koKR="미사용",ptBR="Não usado",ruRU="Неактивно",zhCN="未使用",zhTW="未使用", },
+		[4] = { enUS="Classic",deDE="Classic",esES="Clásico",esMX="Clásico",frFR="Classique",itIT="Classic",koKR="오리지널",ptBR="Clássico",ruRU="World of Warcraft",zhCN="经典旧世",zhTW="艾澤拉斯", },
+		[21] = { enUS="Wrath of the Lich King",deDE="Wrath of the Lich King",esES="Wrath of the Lich King",esMX="Wrath of the Lich King",frFR="Wrath of the Lich King",itIT="Wrath of the Lich King",koKR="리치 왕의 분노",ptBR="Wrath of the Lich King",ruRU="Wrath of the Lich King",zhCN="巫妖王之怒",zhTW="巫妖王之怒", },
+		[22] = { enUS="Dungeon and Raid",deDE="Dungeon und Schlachtzug",esES="Mazmorra y banda",esMX="Calabozo y banda",frFR="Donjons & Raids",itIT="Dungeon and Raid",koKR="던전 및 공격대",ptBR="Masmorras e Raides",ruRU="Подземелья и рейды",zhCN="地下城与团队",zhTW="地城與團隊", },
+		[23] = { enUS="Burning Crusade",deDE="Burning Crusade",esES="Burning Crusade",esMX="Burning Crusade",frFR="Burning Crusade",itIT="Burning Crusade",koKR="불타는 성전",ptBR="Burning Crusade",ruRU="Burning Crusade",zhCN="燃烧的远征",zhTW="燃燒的遠征", },
+		[41] = { enUS="Test",deDE="Test",esES="Prueba",esMX="Prueba",frFR="Test",itIT="Test",koKR="Test용",ptBR="Teste",ruRU="Test",zhCN="测试",zhTW="測試", },
+		[81] = { enUS="Cataclysm",deDE="Cataclysm",esES="Cataclysm",esMX="Cataclysm",frFR="Cataclysm",itIT="Cataclysm",koKR="대격변",ptBR="Cataclysm",ruRU="Cataclysm",zhCN="大地的裂变",zhTW="浩劫與重生", },
+		[82] = { enUS="Archaeology",deDE="Archäologie",esES="Arqueología",esMX="Arqueología",frFR="Archéologie",itIT="Archaeology",koKR="고고학",ptBR="Arqueologia",ruRU="Археология",zhCN="考古学",zhTW="考古學", },
+		[89] = { enUS="Meta",deDE="Meta",esES="Meta",esMX="Meta",frFR="Méta",itIT="Meta",koKR="점수 구분",ptBR="Meta",ruRU="Особое",zhCN="征服点数变量",zhTW="變量", },
+		[133] = { enUS="Mists of Pandaria",deDE="Mists of Pandaria",esES="Mists of Pandaria",esMX="Mists of Pandaria",frFR="Mists of Pandaria",itIT="Mists of Pandaria",koKR="판다리아의 안개",ptBR="Mists of Pandaria",ruRU="Mists of Pandaria",zhCN="熊猫人之谜",zhTW="潘達利亞之謎", },
+		[247] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="Joueur contre Joueur",itIT="Player vs. Player",koKR="플레이어 대 플레이어",ptBR="Jogador x Jogador",ruRU="Режим PvP",zhCN="PvP",zhTW="玩家對玩家", },
+	}

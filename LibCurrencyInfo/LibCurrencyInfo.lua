@@ -28,29 +28,11 @@ local _G = getfenv(0)
 local pairs, type = _G.pairs, _G.type
 -- Libraries
 local tonumber, error = _G.tonumber, _G.error
-local GetCurrencyInfo
-local GetLocale, GetBuildInfo = _G.GetLocale, _G.GetBuildInfo
+local GetLocale = _G.GetLocale
 
--- Determine WoW TOC Version
-local WoWClassicEra, WoWClassicTBC, WoWWOTLKC, WoWRetail, WoWDragonflight
-local wowversion  = select(4, GetBuildInfo())
-if wowversion < 20000 then
-	WoWClassicEra = true
-elseif wowversion < 30000 then 
-	WoWClassicTBC = true
-elseif wowversion < 40000 then 
-	WoWWOTLKC = true
-elseif wowversion < 100000 then
-	WoWRetail = true
-else
-	WoWDragonflight = true
-end
-
-if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
-	GetCurrencyInfo = _G.GetCurrencyInfo
-else 
-	GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
-end
+local C_CurrencyInfo = _G.C_CurrencyInfo
+local GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
+local GetBasicCurrencyInfo = C_CurrencyInfo.GetBasicCurrencyInfo
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -126,30 +108,17 @@ function lib:GetCurrencyByID(currencyID, lang)
 		lang = GetLocale()
 	end
 	
-	if (WoWClassicEra or WoWClassicTBC or WoWWOTLKC) then
-		name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity = GetCurrencyInfo(currencyID)
-	else
-		local curr = GetCurrencyInfo(currencyID)
-		if curr then
-		name = curr.name
-		currentAmount = curr.quantity
-		texture = curr.iconFileID
-		earnedThisWeek = curr.quantityEarnedThisWeek
-		weeklyMax = curr.maxWeeklyQuantity
-		totalMax = curr.maxQuantity
-		isDiscovered = curr.discovered
-		rarity = curr.quality
-		end
-	end
-	if not name then return end
-	local CurrencyDisplayInfo = C_CurrencyInfo.GetBasicCurrencyInfo(currencyID)
+	local curr = GetCurrencyInfo(currencyID)
+
+	if not curr then return end
+	local currInfo = GetBasicCurrencyInfo(currencyID)
 	
-	categoryID = lib.data.Currencies[currencyID].category
-	categoryName = lib.data.CurrencyCategories[categoryID] and lib.data.CurrencyCategories[categoryID][lang] or nil
-	--currencyDesc = lib.data.CurrencyDesc[currencyID] and lib.data.CurrencyDesc[currencyID][lang] or nil
-	currencyDesc = CurrencyDisplayInfo and CurrencyDisplayInfo.description or nil
+	categoryID = lib.data.Currencies[currencyID].category or nil
+	categoryName = lib.data.CurrencyCategories[categoryID] and lib.data.CurrencyCategories[categoryID][lang] or ""
+	currencyDesc = currInfo and currInfo.description or ""
 	
-	return name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity, categoryID, categoryName, currencyDesc
+	-- returns: name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity, categoryID, categoryName, currencyDesc
+	return curr.name, curr.quantity, curr.iconFileID, curr.quantityEarnedThisWeek, curr.maxWeeklyQuantity, curr.maxQuantity, curr.discovered, curr.quality, categoryID, categoryName, currencyDesc
 end
 
 function lib:GetCurrencyByCategoryID(categoryID)

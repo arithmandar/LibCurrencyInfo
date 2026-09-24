@@ -3,6 +3,11 @@ $Id$
 Revision History:
 =================
 
+* v1.45 (Sep. 24, 2026)
+-----------------------
+- TOC update to support WoW 1.15.9, 1.60.1, 2.5.6, 5.5.4, 12.1.0
+- Currency data update
+
 * v1.44 (Jan. 21, 2024)
 -----------------------
 - Toc update to support WoW 10.2.5 / 3.4.3 / 1.15.0
