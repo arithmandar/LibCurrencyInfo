@@ -1,13 +1,31 @@
 ﻿## Interface: 11509, 16001, 20506, 50504, 120100
-## Title: Lib: Currency Info
-## Notes: A library to get currencies' related information
-#@end-debug@
+## Title: Lib: CurrencyInfo
+## Notes: A library for WoW currency data, categories, and localized category names.
+## Title-deDE: Lib: CurrencyInfo
+## Notes-deDE: Eine Bibliothek für WoW-Währungsdaten, Kategorien und lokalisierte Kategorienamen.
+## Title-esES: Lib: CurrencyInfo
+## Notes-esES: Una biblioteca para datos de monedas de WoW, categorías y nombres de categorías localizados.
+## Title-esMX: Lib: CurrencyInfo
+## Notes-esMX: Una biblioteca para datos de monedas de WoW, categorías y nombres de categorías localizados.
+## Title-frFR: Lib: CurrencyInfo
+## Notes-frFR: Une bibliothèque de données sur les monnaies de WoW, leurs catégories et leurs noms localisés.
+## Title-itIT: Lib: CurrencyInfo
+## Notes-itIT: Una libreria per dati sulle valute di WoW, categorie e nomi di categorie localizzati.
+## Title-koKR: Lib: CurrencyInfo
+## Notes-koKR: WoW 화폐 데이터, 분류 및 현지화된 분류 이름을 위한 라이브러리입니다.
+## Title-ptBR: Lib: CurrencyInfo
+## Notes-ptBR: Uma biblioteca para dados de moedas do WoW, categorias e nomes de categorias localizados.
+## Title-ruRU: Lib: CurrencyInfo
+## Notes-ruRU: Библиотека данных о валютах WoW, категориях и локализованных названиях категорий.
+## Title-zhCN: Lib: CurrencyInfo
+## Notes-zhCN: 用于 WoW 货币数据、分类及本地化分类名称的库。
+## Title-zhTW: Lib: CurrencyInfo
+## Notes-zhTW: 用於 WoW 貨幣資料、分類及本地化分類名稱的函式庫。
 ## Author: Arith
-## X-eMail: arithmandarjp at yahoo.co.jp
 ## X-Category: Library
 ## X-License: MIT
 ## X-Date: @project-date-iso@
-## X-Website: https://www.wowace.com/projects/libcurrencyinfo
+## X-Website: https://www.curseforge.com/wow/addons/libcurrencyinfo
 ## Category: Libraries
 ## Category-deDE: Bibliotheken
 ## Category-esES: Bibliotecas

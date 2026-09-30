@@ -14,7 +14,7 @@ you only need to call one function to get everything you want.
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
-local FOLDER_NAME, private = ...
+local _, private = ...
 
 -- Functions
 local _G = getfenv(0)
@@ -37,52 +37,52 @@ if (isRetail) then
 	local data = {}
 
 	data.CurrencyCategories = {
-		[1] = { enUS="Miscellaneous",deDE="Verschiedenes",esES="Miscelánea",esMX="Miscelánea",frFR="Divers",itIT="Varie",koKR="기타",ptBR="Diversos",ruRU="Разное",zhTW="雜項",znCN="其它", },
-		[2] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Personaggio vs Personaggio",koKR="플레이어 간 전투",ptBR="Jogador x Jogador",ruRU="PvP",zhTW="玩家對玩家",znCN="PvP", },
-		[3] = { enUS="Unused",deDE="Unbenutzt",esES="No las uso",esMX="No las uso",frFR="Inutilisées",itIT="Non usato",koKR="미사용",ptBR="Não usado",ruRU="Неактивно",zhTW="未使用",znCN="未使用", hide=true, },
-		[4] = { enUS="Classic",deDE="Classic",esES="Clásico",esMX="Clásico",frFR="Classique",itIT="Classico",koKR="오리지널",ptBR="Clássico",ruRU="World of Warcraft",zhTW="艾澤拉斯",znCN="经典旧世", },
-		[21] = { enUS="Wrath of the Lich King",deDE="Wrath of the Lich King",esES="Wrath of the Lich King",esMX="Wrath of the Lich King",frFR="Wrath of the Lich King",itIT="Wrath of the Lich King",koKR="리치 왕의 분노",ptBR="Wrath of the Lich King",ruRU="Wrath of the Lich King",zhTW="巫妖王之怒",znCN="巫妖王之怒", },
-		[22] = { enUS="Dungeon and Raid",deDE="Dungeon und Schlachtzug",esES="Mazmorra y banda",esMX="Calabozo y banda",frFR="Donjons & Raids",itIT="Spedizioni e Incursioni",koKR="던전 및 공격대",ptBR="Masmorras e Raides",ruRU="Подземелья и рейды",zhTW="地城與團隊",znCN="地下城与团队副本", },
-		[23] = { enUS="Burning Crusade",deDE="Burning Crusade",esES="Burning Crusade",esMX="Burning Crusade",frFR="Burning Crusade",itIT="Burning Crusade",koKR="불타는 성전",ptBR="Burning Crusade",ruRU="Burning Crusade",zhTW="燃燒的遠征",znCN="燃烧的远征", },
-		[41] = { enUS="Test",deDE="Test",esES="Prueba",esMX="Prueba",frFR="Test",itIT="Prova",koKR="Test용",ptBR="Teste",ruRU="Test",zhTW="測試",znCN="测试", hide=true, },
-		[81] = { enUS="Cataclysm",deDE="Cataclysm",esES="Cataclysm",esMX="Cataclysm",frFR="Cataclysm",itIT="Cataclysm",koKR="대격변",ptBR="Cataclysm",ruRU="Cataclysm",zhTW="浩劫與重生",znCN="大地的裂变", },
-		[82] = { enUS="Archaeology",deDE="Archäologie",esES="Arqueología",esMX="Arqueología",frFR="Archéologie",itIT="Archeologia",koKR="고고학",ptBR="Arqueologia",ruRU="Археология",zhTW="考古學",znCN="考古学", },
-		[89] = { enUS="Meta",deDE="Meta",esES="Meta",esMX="Meta",frFR="Méta",itIT="Meta",koKR="점수 구분",ptBR="Meta",ruRU="Особое",zhTW="變量",znCN="征服点数变量", },
-		[133] = { enUS="Mists of Pandaria",deDE="Mists of Pandaria",esES="Mists of Pandaria",esMX="Mists of Pandaria",frFR="Mists of Pandaria",itIT="Mists of Pandaria",koKR="판다리아의 안개",ptBR="Mists of Pandaria",ruRU="Mists of Pandaria",zhTW="潘達利亞之謎",znCN="熊猫人之谜", },
-		[137] = { enUS="Warlords of Draenor",deDE="Warlords of Draenor",esES="Warlords of Draenor",esMX="Warlords of Draenor",frFR="Warlords of Draenor",itIT="Warlords of Draenor",koKR="드레노어의 전쟁군주",ptBR="Warlords of Draenor",ruRU="Warlords of Draenor",zhTW="德拉諾之霸",znCN="德拉诺之王", },
-		[141] = { enUS="Legion",deDE="Legion",esES="Legion",esMX="Legion",frFR="Legion",itIT="Legion",koKR="군단",ptBR="Legion",ruRU="Legion",zhTW="軍團",znCN="军团再临", },
-		[142] = { enUS="Hidden",deDE="Hidden",esES="Hidden",esMX="Hidden",frFR="Hidden",itIT="Nascosto",koKR="Hidden",ptBR="Hidden",ruRU="Hidden",zhTW="Hidden",znCN="Hidden", },
-		[143] = { enUS="Battle for Azeroth",deDE="Battle for Azeroth",esES="Battle for Azeroth",esMX="Battle for Azeroth",frFR="Battle for Azeroth",itIT="Battle for Azeroth",koKR="격전의 아제로스",ptBR="Battle for Azeroth",ruRU="Battle for Azeroth",zhTW="決戰艾澤拉斯",znCN="争霸艾泽拉斯", },
-		[144] = { enUS="Virtual",deDE="Virtuell",esES="Virtual",esMX="Virtual",frFR="Virtuelle",itIT="Virtuale",koKR="가상",ptBR="Virtual",ruRU="Виртуальная валюта",zhTW="虛擬",znCN="虚拟", },
-		[245] = { enUS="Shadowlands",deDE="Shadowlands",esES="Shadowlands",esMX="Shadowlands",frFR="Shadowlands",itIT="Shadowlands",koKR="어둠땅",ptBR="Shadowlands",ruRU="Shadowlands",zhTW="暗影之境",znCN="暗影国度", },
-		[246] = { enUS="Debug",deDE="Debug",esES="Depurar",esMX="Debug",frFR="Débogage",itIT="Debug",koKR="디버그",ptBR="Depuração",ruRU="Настройка",zhTW="除蟲",znCN="调试", hide=true, },
-		[248] = { enUS="Torghast UI (Hidden)",deDE="Torghast UI (Hidden)",esES="Torghast UI (Hidden)",esMX="Torghast UI (Hidden)",frFR="Torghast UI (Hidden)",itIT="Torghast UI (Hidden)",koKR="Torghast UI (Hidden)",ptBR="Torghast UI (Hidden)",ruRU="Torghast UI (Hidden)",zhTW="Torghast UI (Hidden)",znCN="Torghast UI (Hidden)", },
-		[250] = { enUS="Dragonflight",deDE="Dragonflight",esES="Dragonflight",esMX="Dragonflight",frFR="Dragonflight",itIT="Dragonflight",koKR="용군단",ptBR="Revoada Dragônica",ruRU="Dragonflight",zhTW="巨龍軍團",znCN="巨龙时代", },
-		[251] = { enUS="Dragon Racing UI (Hidden)",deDE="Dragon Racing UI (Hidden)",esES="Dragon Racing UI (Hidden)",esMX="Dragon Racing UI (Hidden)",frFR="Dragon Racing UI (Hidden)",itIT="Dragon Racing UI (Hidden)",koKR="Dragon Racing UI (Hidden)",ptBR="Dragon Racing UI (Hidden)",ruRU="Dragon Racing UI (Hidden)",zhTW="Dragon Racing UI (Hidden)",znCN="Dragon Racing UI (Hidden)", hide=true, },
-		[252] = { enUS="Tuskarr - Fishing Nets (Hidden)",deDE="Tuskarr - Fischernetze (verborgen)",esES="Colmillarr - Redes de pesca (oculto)",esMX="Colmillarr - Redes de pesca (Oculto)",frFR="Roharts – filets de pêche (cachés)",itIT="Tuskarr - Reti da pesca (Nascosto)",koKR="투스카르 - 낚시 그물 (숨겨짐)",ptBR="Morsanos – Redes de Pesca (Escondidas)",ruRU="Клыкарры – рыболовные сети (скрыто)",zhTW="巨牙海民 - 漁網（隱藏）",znCN="Tuskarr - Fishing Nets (Hidden)", hide=true, },
-		[253] = { enUS="Test Subcategory 1",deDE="Test Subcategory 1",esES="Test Subcategory 1",esMX="Test Subcategory 1",frFR="Test Subcategory 1",itIT="Test Subcategory 1",koKR="Test Subcategory 1",ptBR="Test Subcategory 1",ruRU="Test Subcategory 1",zhTW="Test Subcategory 1",znCN="Test Subcategory 1", hide=true, },
-		[254] = { enUS="Test Subcategory 2",deDE="Test Subcategory 2",esES="Test Subcategory 2",esMX="Test Subcategory 2",frFR="Test Subcategory 2",itIT="Test Subcategory 2",koKR="Test Subcategory 2",ptBR="Test Subcategory 2",ruRU="Test Subcategory 2",zhTW="Test Subcategory 2",znCN="Test Subcategory 2", hide=true, },
-		[255] = { enUS="Test Subcategory 3",deDE="Test Subcategory 3",esES="Test Subcategory 3",esMX="Test Subcategory 3",frFR="Test Subcategory 3",itIT="Test Subcategory 3",koKR="Test Subcategory 3",ptBR="Test Subcategory 3",ruRU="Test Subcategory 3",zhTW="Test Subcategory 3",znCN="Test Subcategory 3", hide=true, },
-		[256] = { enUS="Test Subcategory 4",deDE="Test Subcategory 4",esES="Test Subcategory 4",esMX="Test Subcategory 4",frFR="Test Subcategory 4",itIT="Test Subcategory 4",koKR="Test Subcategory 4",ptBR="Test Subcategory 4",ruRU="Test Subcategory 4",zhTW="Test Subcategory 4",znCN="Test Subcategory 4", hide=true, },
-		[257] = { enUS="Legacy",deDE="Vermächtnis",esES="Antigua",esMX="Legado",frFR="Héritage",itIT="Oggetto del passato",koKR="옛 재화",ptBR="Legado",ruRU="Классические",zhTW="遺物",znCN="旧版", },
-		[260] = { enUS="War Within",deDE="War Within",esES="The War Within",esMX="War Within",frFR="The War Within",itIT="War Within",koKR="내부 전쟁",ptBR="The War Within",ruRU="War Within",zhTW="地心之戰",znCN="地心之战", },
-		[263] = { enUS="Season 2",deDE="Saison 2",esES="Temporada 2",esMX="Temporada 2",frFR="Saison 2",itIT="Stagione 2",koKR="2 시즌",ptBR="Série 2",ruRU="2-й сезон",zhTW="第2季",znCN="第2赛季" },
-		[264] = { enUS="Midnight",deDE="Midnight",esES="Midnight",esMX="Midnight",frFR="Midnight",itIT="Midnight",koKR="한밤",ptBR="Midnight",ruRU="Midnight",zhTW="至暗之夜",znCN="至暗之夜", },
-		[265] = { enUS="Season 3",deDE="Saison 3",esES="Temporada 3",esMX="Temporada 3",frFR="Saison 3",itIT="Stagione 3",koKR="3 시즌",ptBR="Série 3",ruRU="3-й сезон",zhTW="第3季",znCN="第3赛季" },
-		[266] = { enUS="Timerunning",deDE="Zeitläufer",esES="Asalto temporal",esMX="Cronotravesía",frFR="Cours du temps",itIT="Corse nel Tempo",koKR="시간질주",ptBR="Trilha Temporal",ruRU="Путешествия во времени",zhTW="時光奔走",znCN="时空奔行", },
-		[268] = { enUS="Season 1",deDE="Saison 1",esES="Temporada 1",esMX="Temporada 1",frFR="Saison 1",itIT="Stagione 1",koKR="1 시즌",ptBR="Série 1",ruRU="1-й сезон",zhTW="第1季",znCN="第1赛季", },
-		[277] = { enUS="Season 2",deDE="Saison 2",esES="Temporada 2",esMX="Temporada 2",frFR="Saison 2",itIT="Stagione 2",koKR="2 시즌",ptBR="Série 2",ruRU="2-й сезон",zhTW="第2賽季",znCN="第2赛季", },
-		[278] = { enUS="Sites Score UI (Hidden)",deDE="Stättenwertungs-UI (Versteckt)",esES="IU de puntuación de lugares (oculta)",esMX="Interfaz de puntaje de sitios (oculto)",frFR="Interface de score de site (cachée)",itIT="Interfaccia Punteggio Siti (Nascosta)",koKR="지점 점수 사용자 인터페이스 (숨겨짐)",ptBR="IU de pontuação do local (oculto)",ruRU="Интерфейс счета ритуалов (скрыто)",zhTW="地點分數介面（隱藏）",znCN="场地得分界面（隐藏）", hide=true, },
-		[280] = { enUS="Professions",deDE="Berufe",esES="Profesiones",esMX="Profesiones",frFR="Métiers",itIT="Professioni",koKR="전문 기술",ptBR="Profissões",ruRU="Профессии",zhTW="專業技能",znCN="专业", },
-		[281] = { enUS="Delves",deDE="Tiefen",esES="Profundidades",esMX="Abismos",frFR="Gouffres",itIT="Scorribande",koKR="구렁",ptBR="Imersões",ruRU="Вылазки",zhTW="探究",znCN="地下堡", },
-		[282] = { enUS="Crests",deDE="Wappen",esES="Blasones",esMX="Emblemas",frFR="Écus",itIT="Emblemi",koKR="문장",ptBR="Brasões",ruRU="Гербы",zhTW="紋章",znCN="纹章", },
-		[283] = { enUS="Zones",deDE="Zonen",esES="Zonas",esMX="Zonas",frFR="Régions",itIT="Zone",koKR="지역",ptBR="Áreas",ruRU="Зоны",zhTW="區域",znCN="区域", },
-		[284] = { enUS="Features",deDE="Features",esES="Destacados",esMX="Características",frFR="Détails",itIT="Funzionalità",koKR="특징",ptBR="Características",ruRU="Особенности",zhTW="功能",znCN="特色", },
+		[1] = { enUS="Miscellaneous",deDE="Verschiedenes",esES="Miscelánea",esMX="Miscelánea",frFR="Divers",itIT="Varie",koKR="기타",ptBR="Diversos",ruRU="Разное",zhTW="雜項",zhCN="其它", },
+		[2] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Personaggio vs Personaggio",koKR="플레이어 간 전투",ptBR="Jogador x Jogador",ruRU="PvP",zhTW="玩家對玩家",zhCN="PvP", },
+		[3] = { enUS="Unused",deDE="Unbenutzt",esES="No las uso",esMX="No las uso",frFR="Inutilisées",itIT="Non usato",koKR="미사용",ptBR="Não usado",ruRU="Неактивно",zhTW="未使用",zhCN="未使用", hide=true, },
+		[4] = { enUS="Classic",deDE="Classic",esES="Clásico",esMX="Clásico",frFR="Classique",itIT="Classico",koKR="오리지널",ptBR="Clássico",ruRU="World of Warcraft",zhTW="艾澤拉斯",zhCN="经典旧世", },
+		[21] = { enUS="Wrath of the Lich King",deDE="Wrath of the Lich King",esES="Wrath of the Lich King",esMX="Wrath of the Lich King",frFR="Wrath of the Lich King",itIT="Wrath of the Lich King",koKR="리치 왕의 분노",ptBR="Wrath of the Lich King",ruRU="Wrath of the Lich King",zhTW="巫妖王之怒",zhCN="巫妖王之怒", },
+		[22] = { enUS="Dungeon and Raid",deDE="Dungeon und Schlachtzug",esES="Mazmorra y banda",esMX="Calabozo y banda",frFR="Donjons & Raids",itIT="Spedizioni e Incursioni",koKR="던전 및 공격대",ptBR="Masmorras e Raides",ruRU="Подземелья и рейды",zhTW="地城與團隊",zhCN="地下城与团队副本", },
+		[23] = { enUS="Burning Crusade",deDE="Burning Crusade",esES="Burning Crusade",esMX="Burning Crusade",frFR="Burning Crusade",itIT="Burning Crusade",koKR="불타는 성전",ptBR="Burning Crusade",ruRU="Burning Crusade",zhTW="燃燒的遠征",zhCN="燃烧的远征", },
+		[41] = { enUS="Test",deDE="Test",esES="Prueba",esMX="Prueba",frFR="Test",itIT="Prova",koKR="Test용",ptBR="Teste",ruRU="Test",zhTW="測試",zhCN="测试", hide=true, },
+		[81] = { enUS="Cataclysm",deDE="Cataclysm",esES="Cataclysm",esMX="Cataclysm",frFR="Cataclysm",itIT="Cataclysm",koKR="대격변",ptBR="Cataclysm",ruRU="Cataclysm",zhTW="浩劫與重生",zhCN="大地的裂变", },
+		[82] = { enUS="Archaeology",deDE="Archäologie",esES="Arqueología",esMX="Arqueología",frFR="Archéologie",itIT="Archeologia",koKR="고고학",ptBR="Arqueologia",ruRU="Археология",zhTW="考古學",zhCN="考古学", },
+		[89] = { enUS="Meta",deDE="Meta",esES="Meta",esMX="Meta",frFR="Méta",itIT="Meta",koKR="점수 구분",ptBR="Meta",ruRU="Особое",zhTW="變量",zhCN="征服点数变量", },
+		[133] = { enUS="Mists of Pandaria",deDE="Mists of Pandaria",esES="Mists of Pandaria",esMX="Mists of Pandaria",frFR="Mists of Pandaria",itIT="Mists of Pandaria",koKR="판다리아의 안개",ptBR="Mists of Pandaria",ruRU="Mists of Pandaria",zhTW="潘達利亞之謎",zhCN="熊猫人之谜", },
+		[137] = { enUS="Warlords of Draenor",deDE="Warlords of Draenor",esES="Warlords of Draenor",esMX="Warlords of Draenor",frFR="Warlords of Draenor",itIT="Warlords of Draenor",koKR="드레노어의 전쟁군주",ptBR="Warlords of Draenor",ruRU="Warlords of Draenor",zhTW="德拉諾之霸",zhCN="德拉诺之王", },
+		[141] = { enUS="Legion",deDE="Legion",esES="Legion",esMX="Legion",frFR="Legion",itIT="Legion",koKR="군단",ptBR="Legion",ruRU="Legion",zhTW="軍團",zhCN="军团再临", },
+		[142] = { enUS="Hidden",deDE="Hidden",esES="Hidden",esMX="Hidden",frFR="Hidden",itIT="Nascosto",koKR="Hidden",ptBR="Hidden",ruRU="Hidden",zhTW="Hidden",zhCN="Hidden", },
+		[143] = { enUS="Battle for Azeroth",deDE="Battle for Azeroth",esES="Battle for Azeroth",esMX="Battle for Azeroth",frFR="Battle for Azeroth",itIT="Battle for Azeroth",koKR="격전의 아제로스",ptBR="Battle for Azeroth",ruRU="Battle for Azeroth",zhTW="決戰艾澤拉斯",zhCN="争霸艾泽拉斯", },
+		[144] = { enUS="Virtual",deDE="Virtuell",esES="Virtual",esMX="Virtual",frFR="Virtuelle",itIT="Virtuale",koKR="가상",ptBR="Virtual",ruRU="Виртуальная валюта",zhTW="虛擬",zhCN="虚拟", },
+		[245] = { enUS="Shadowlands",deDE="Shadowlands",esES="Shadowlands",esMX="Shadowlands",frFR="Shadowlands",itIT="Shadowlands",koKR="어둠땅",ptBR="Shadowlands",ruRU="Shadowlands",zhTW="暗影之境",zhCN="暗影国度", },
+		[246] = { enUS="Debug",deDE="Debug",esES="Depurar",esMX="Debug",frFR="Débogage",itIT="Debug",koKR="디버그",ptBR="Depuração",ruRU="Настройка",zhTW="除蟲",zhCN="调试", hide=true, },
+		[248] = { enUS="Torghast UI (Hidden)",deDE="Torghast UI (Hidden)",esES="Torghast UI (Hidden)",esMX="Torghast UI (Hidden)",frFR="Torghast UI (Hidden)",itIT="Torghast UI (Hidden)",koKR="Torghast UI (Hidden)",ptBR="Torghast UI (Hidden)",ruRU="Torghast UI (Hidden)",zhTW="Torghast UI (Hidden)",zhCN="Torghast UI (Hidden)", },
+		[250] = { enUS="Dragonflight",deDE="Dragonflight",esES="Dragonflight",esMX="Dragonflight",frFR="Dragonflight",itIT="Dragonflight",koKR="용군단",ptBR="Revoada Dragônica",ruRU="Dragonflight",zhTW="巨龍軍團",zhCN="巨龙时代", },
+		[251] = { enUS="Dragon Racing UI (Hidden)",deDE="Dragon Racing UI (Hidden)",esES="Dragon Racing UI (Hidden)",esMX="Dragon Racing UI (Hidden)",frFR="Dragon Racing UI (Hidden)",itIT="Dragon Racing UI (Hidden)",koKR="Dragon Racing UI (Hidden)",ptBR="Dragon Racing UI (Hidden)",ruRU="Dragon Racing UI (Hidden)",zhTW="Dragon Racing UI (Hidden)",zhCN="Dragon Racing UI (Hidden)", hide=true, },
+		[252] = { enUS="Tuskarr - Fishing Nets (Hidden)",deDE="Tuskarr - Fischernetze (verborgen)",esES="Colmillarr - Redes de pesca (oculto)",esMX="Colmillarr - Redes de pesca (Oculto)",frFR="Roharts – filets de pêche (cachés)",itIT="Tuskarr - Reti da pesca (Nascosto)",koKR="투스카르 - 낚시 그물 (숨겨짐)",ptBR="Morsanos – Redes de Pesca (Escondidas)",ruRU="Клыкарры – рыболовные сети (скрыто)",zhTW="巨牙海民 - 漁網（隱藏）",zhCN="Tuskarr - Fishing Nets (Hidden)", hide=true, },
+		[253] = { enUS="Test Subcategory 1",deDE="Test Subcategory 1",esES="Test Subcategory 1",esMX="Test Subcategory 1",frFR="Test Subcategory 1",itIT="Test Subcategory 1",koKR="Test Subcategory 1",ptBR="Test Subcategory 1",ruRU="Test Subcategory 1",zhTW="Test Subcategory 1",zhCN="Test Subcategory 1", hide=true, },
+		[254] = { enUS="Test Subcategory 2",deDE="Test Subcategory 2",esES="Test Subcategory 2",esMX="Test Subcategory 2",frFR="Test Subcategory 2",itIT="Test Subcategory 2",koKR="Test Subcategory 2",ptBR="Test Subcategory 2",ruRU="Test Subcategory 2",zhTW="Test Subcategory 2",zhCN="Test Subcategory 2", hide=true, },
+		[255] = { enUS="Test Subcategory 3",deDE="Test Subcategory 3",esES="Test Subcategory 3",esMX="Test Subcategory 3",frFR="Test Subcategory 3",itIT="Test Subcategory 3",koKR="Test Subcategory 3",ptBR="Test Subcategory 3",ruRU="Test Subcategory 3",zhTW="Test Subcategory 3",zhCN="Test Subcategory 3", hide=true, },
+		[256] = { enUS="Test Subcategory 4",deDE="Test Subcategory 4",esES="Test Subcategory 4",esMX="Test Subcategory 4",frFR="Test Subcategory 4",itIT="Test Subcategory 4",koKR="Test Subcategory 4",ptBR="Test Subcategory 4",ruRU="Test Subcategory 4",zhTW="Test Subcategory 4",zhCN="Test Subcategory 4", hide=true, },
+		[257] = { enUS="Legacy",deDE="Vermächtnis",esES="Antigua",esMX="Legado",frFR="Héritage",itIT="Oggetto del passato",koKR="옛 재화",ptBR="Legado",ruRU="Классические",zhTW="遺物",zhCN="旧版", },
+		[260] = { enUS="War Within",deDE="War Within",esES="The War Within",esMX="War Within",frFR="The War Within",itIT="War Within",koKR="내부 전쟁",ptBR="The War Within",ruRU="War Within",zhTW="地心之戰",zhCN="地心之战", },
+		[263] = { enUS="Season 2",deDE="Saison 2",esES="Temporada 2",esMX="Temporada 2",frFR="Saison 2",itIT="Stagione 2",koKR="2 시즌",ptBR="Série 2",ruRU="2-й сезон",zhTW="第2季",zhCN="第2赛季" },
+		[264] = { enUS="Midnight",deDE="Midnight",esES="Midnight",esMX="Midnight",frFR="Midnight",itIT="Midnight",koKR="한밤",ptBR="Midnight",ruRU="Midnight",zhTW="至暗之夜",zhCN="至暗之夜", },
+		[265] = { enUS="Season 3",deDE="Saison 3",esES="Temporada 3",esMX="Temporada 3",frFR="Saison 3",itIT="Stagione 3",koKR="3 시즌",ptBR="Série 3",ruRU="3-й сезон",zhTW="第3季",zhCN="第3赛季" },
+		[266] = { enUS="Timerunning",deDE="Zeitläufer",esES="Asalto temporal",esMX="Cronotravesía",frFR="Cours du temps",itIT="Corse nel Tempo",koKR="시간질주",ptBR="Trilha Temporal",ruRU="Путешествия во времени",zhTW="時光奔走",zhCN="时空奔行", },
+		[268] = { enUS="Season 1",deDE="Saison 1",esES="Temporada 1",esMX="Temporada 1",frFR="Saison 1",itIT="Stagione 1",koKR="1 시즌",ptBR="Série 1",ruRU="1-й сезон",zhTW="第1季",zhCN="第1赛季", },
+		[277] = { enUS="Season 2",deDE="Saison 2",esES="Temporada 2",esMX="Temporada 2",frFR="Saison 2",itIT="Stagione 2",koKR="2 시즌",ptBR="Série 2",ruRU="2-й сезон",zhTW="第2賽季",zhCN="第2赛季", },
+		[278] = { enUS="Sites Score UI (Hidden)",deDE="Stättenwertungs-UI (Versteckt)",esES="IU de puntuación de lugares (oculta)",esMX="Interfaz de puntaje de sitios (oculto)",frFR="Interface de score de site (cachée)",itIT="Interfaccia Punteggio Siti (Nascosta)",koKR="지점 점수 사용자 인터페이스 (숨겨짐)",ptBR="IU de pontuação do local (oculto)",ruRU="Интерфейс счета ритуалов (скрыто)",zhTW="地點分數介面（隱藏）",zhCN="场地得分界面（隐藏）", hide=true, },
+		[280] = { enUS="Professions",deDE="Berufe",esES="Profesiones",esMX="Profesiones",frFR="Métiers",itIT="Professioni",koKR="전문 기술",ptBR="Profissões",ruRU="Профессии",zhTW="專業技能",zhCN="专业", },
+		[281] = { enUS="Delves",deDE="Tiefen",esES="Profundidades",esMX="Abismos",frFR="Gouffres",itIT="Scorribande",koKR="구렁",ptBR="Imersões",ruRU="Вылазки",zhTW="探究",zhCN="地下堡", },
+		[282] = { enUS="Crests",deDE="Wappen",esES="Blasones",esMX="Emblemas",frFR="Écus",itIT="Emblemi",koKR="문장",ptBR="Brasões",ruRU="Гербы",zhTW="紋章",zhCN="纹章", },
+		[283] = { enUS="Zones",deDE="Zonen",esES="Zonas",esMX="Zonas",frFR="Régions",itIT="Zone",koKR="지역",ptBR="Áreas",ruRU="Зоны",zhTW="區域",zhCN="区域", },
+		[284] = { enUS="Features",deDE="Features",esES="Destacados",esMX="Características",frFR="Détails",itIT="Funzionalità",koKR="특징",ptBR="Características",ruRU="Особенности",zhTW="功能",zhCN="特色", },
 	}
 
 	data.CurrencyByCategory = {
 		[1] = { -- Miscellaneous
-	--		42, -- Badge of Justice
+			42, -- Badge of Justice
 			81, -- Epicurean's Award
 			402, -- Ironpaw Token
 			515, -- Darkmoon Prize Ticket
@@ -104,16 +104,16 @@ if (isRetail) then
 			3508, -- Salty Pet Charms
 		},
 		[2] = { -- Player vs. Player
-	--		103, -- Arena Points
-	--		121, -- Alterac Valley Mark of Honor
-	--		122, -- Arathi Basin Mark of Honor
-	--		123, -- Eye of the Storm Mark of Honor
-	--		124, -- Strand of the Ancients Mark of Honor
-	--		125, -- Warsong Gulch Mark of Honor
-	--		126, -- Wintergrasp Mark of Honor
-	--		161, -- Stone Keeper's Shard
-	--		201, -- Venture Coin
-	--		321, -- Isle of Conquest Mark of Honor
+			103, -- Arena Points
+			121, -- Alterac Valley Mark of Honor
+			122, -- Arathi Basin Mark of Honor
+			123, -- Eye of the Storm Mark of Honor
+			124, -- Strand of the Ancients Mark of Honor
+			125, -- Warsong Gulch Mark of Honor
+			126, -- Wintergrasp Mark of Honor
+			161, -- Stone Keeper's Shard
+			201, -- Venture Coin
+			321, -- Isle of Conquest Mark of Honor
 			391, -- Tol Barad Commendation
 			1602, -- Conquest
 			1792, -- Honor
@@ -123,14 +123,14 @@ if (isRetail) then
 		[21] = { -- Wrath of the Lich King
 			61, -- Dalaran Jewelcrafter's Token
 			241, -- Champion's Seal
-	--		3351, -- Social Meter
+			3351, -- Social Meter
 		},
 		[22] = { -- Dungeon and Raid
-	--		101, -- Emblem of Heroism
-	--		102, -- Emblem of Valor
-	--		221, -- Emblem of Conquest
-	--		301, -- Emblem of Triumph
-	--		341, -- Emblem of Frost
+			101, -- Emblem of Heroism
+			102, -- Emblem of Valor
+			221, -- Emblem of Conquest
+			301, -- Emblem of Triumph
+			341, -- Emblem of Frost
 			1166, -- Timewarped Badge
 		},
 		[23] = { -- Burning Crusade
@@ -143,32 +143,32 @@ if (isRetail) then
 			615, -- Essence of Corrupted Deathwing
 		},
 		[82] = { -- Archaeology
-	--		384, -- Dwarf Archaeology Fragment
-	--		385, -- Troll Archaeology Fragment
-	--		393, -- Fossil Archaeology Fragment
-	--		394, -- Night Elf Archaeology Fragment
-	--		397, -- Orc Archaeology Fragment
-	--		398, -- Draenei Archaeology Fragment
-	--		399, -- Vrykul Archaeology Fragment
-	--		400, -- Nerubian Archaeology Fragment
-	--		401, -- Tol'vir Archaeology Fragment
-	--		676, -- Pandaren Archaeology Fragment
-	--		677, -- Mogu Archaeology Fragment
-	--		754, -- Mantid Archaeology Fragment
-	--		821, -- Draenor Clans Archaeology Fragment
-	--		828, -- Ogre Archaeology Fragment
-	--		829, -- Arakkoa Archaeology Fragment
+			384, -- Dwarf Archaeology Fragment
+			385, -- Troll Archaeology Fragment
+			393, -- Fossil Archaeology Fragment
+			394, -- Night Elf Archaeology Fragment
+			397, -- Orc Archaeology Fragment
+			398, -- Draenei Archaeology Fragment
+			399, -- Vrykul Archaeology Fragment
+			400, -- Nerubian Archaeology Fragment
+			401, -- Tol'vir Archaeology Fragment
+			676, -- Pandaren Archaeology Fragment
+			677, -- Mogu Archaeology Fragment
+			754, -- Mantid Archaeology Fragment
+			821, -- Draenor Clans Archaeology Fragment
+			828, -- Ogre Archaeology Fragment
+			829, -- Arakkoa Archaeology Fragment
 	--		830, -- n/a
-	--		1172, -- Highborne Archaeology Fragment
-	--		1173, -- Highmountain Tauren Archaeology Fragment
-	--		1174, -- Demonic Archaeology Fragment
-	--		1534, -- Zandalari Archaeology Fragment
-	--		1535, -- Drust Archaeology Fragment
+			1172, -- Highborne Archaeology Fragment
+			1173, -- Highmountain Tauren Archaeology Fragment
+			1174, -- Demonic Archaeology Fragment
+			1534, -- Zandalari Archaeology Fragment
+			1535, -- Drust Archaeology Fragment
 		},
 		[89] = { -- Meta
-	--		483, -- Conquest Arena Meta
-	--		484, -- Conquest Rated BG Meta
-	--		692, -- Conquest Random BG Meta
+			483, -- Conquest Arena Meta
+			484, -- Conquest Rated BG Meta
+			692, -- Conquest Random BG Meta
 		},
 		[133] = { -- Mists of Pandaria
 			697, -- Elder Charm of Good Fortune
@@ -246,15 +246,15 @@ if (isRetail) then
 			1728, -- Phantasma
 			1738, -- Unshackled
 			1739, -- Ankoan
-			1740, -- Rustbolt Resistance (Hidden)
+	--		1740, -- Rustbolt Resistance (Hidden)
 			1742, -- Rustbolt Resistance
-	--		1744, -- Corrupted Memento
-			1745, -- Nazjatar Ally - Neri Sharpfin
-			1746, -- Nazjatar Ally - Vim Brineheart
-			1747, -- Nazjatar Ally - Poen Gillbrack
-			1748, -- Nazjatar Ally - Bladesman Inowari
-			1749, -- Nazjatar Ally - Hunter Akana
-			1750, -- Nazjatar Ally - Farseer Ori
+			1744, -- Corrupted Memento
+	--		1745, -- Nazjatar Ally - Neri Sharpfin
+	--		1746, -- Nazjatar Ally - Vim Brineheart
+	--		1747, -- Nazjatar Ally - Poen Gillbrack
+	--		1748, -- Nazjatar Ally - Bladesman Inowari
+	--		1749, -- Nazjatar Ally - Hunter Akana
+	--		1750, -- Nazjatar Ally - Farseer Ori
 			1752, -- Honeyback Hive
 			1757, -- Uldum Accord
 			1758, -- Rajani
@@ -303,7 +303,7 @@ if (isRetail) then
 			1982, -- The Enlightened
 	--		1986, -- Players Remaining
 			1997, -- Archivists' Codex
-	--		2000, -- Motes of Fate
+			2000, -- Motes of Fate
 			2002, -- Renown-Maruuk Centaur
 			2021, -- Renown-Dragonscale Expedition
 			2023, -- Dragon Isles Blacksmithing Knowledge
@@ -321,7 +321,7 @@ if (isRetail) then
 			2036, -- Ancient Waygate Energy
 			2087, -- Renown-Iskaara Tuskarr
 			2088, -- Renown-Valdrakken
-			2094, -- [DNT] AC Major Faction Test Renown
+	--		2094, -- [DNT] AC Major Faction Test Renown
 			2106, -- Valdrakken Accord
 			2107, -- Artisan's Consortium - Dragon Isles Branch
 			2108, -- Maruuk Centaur
@@ -372,7 +372,7 @@ if (isRetail) then
 			2420, -- Loamm Niffen
 			2533, -- Renascent Shadowflame
 			2645, -- Soridormi's Recognition
-			2649, -- [DNT] The Currency Formerly Named Dream Ephemera
+	--		2649, -- [DNT] The Currency Formerly Named Dream Ephemera
 			2652, -- Dream Wardens
 			2653, -- Renown - Dream Wardens
 			2655, -- Revives
@@ -400,7 +400,7 @@ if (isRetail) then
 			2794, -- Khaz Algar Skinning Knowledge
 			2795, -- Khaz Algar Tailoring Knowledge
 			2796, -- Renascent Dream
-			2799, -- [DNT] Beetle Ranch Invisible Currency
+	--		2799, -- [DNT] Beetle Ranch Invisible Currency
 	--		2800, -- 10.2.6 Professions - Personal Tracker - S4 Spark Drops (Hidden)
 			2805, -- Whelpling's Awakened Crest
 			2808, -- Drake's Awakened Crest
@@ -409,30 +409,30 @@ if (isRetail) then
 			2813, -- Harmonized Silk
 			2814, -- Renown-Keg Leg's Crew
 			2819, -- Azerothian Archives
-			2853, -- 10.2.7 Timewalking Season - Artifact - Cloak - Primary
-			2854, -- 10.2.7 Timewalking Season - Artifact - Cloak - Stamina
-			2855, -- 10.2.7 Timewalking Season - Artifact - Cloak - Critical Strike
-			2856, -- 10.2.7 Timewalking Season - Artifact - Cloak - Haste
-			2857, -- 10.2.7 Timewalking Season - Artifact - Cloak - Leech
-			2858, -- 10.2.7 Timewalking Season - Artifact - Cloak - Mastery
-			2859, -- 10.2.7 Timewalking Season - Artifact - Cloak - Speed
-			2860, -- 10.2.7 Timewalking Season - Artifact - Cloak - Versatility
-			2861, -- 10.2.7 Timewalking Season - Artifact - Head - Aberration
-			2862, -- 10.2.7 Timewalking Season - Artifact - Head - Beast
-			2863, -- 10.2.7 Timewalking Season - Artifact - Head - Demon
-			2864, -- 10.2.7 Timewalking Season - Artifact - Head - Dragonkin
-			2865, -- 10.2.7 Timewalking Season - Artifact - Head - Elemental
-			2866, -- 10.2.7 Timewalking Season - Artifact - Head - Giant
-			2867, -- 10.2.7 Timewalking Season - Artifact - Head - Humanoid
-			2868, -- 10.2.7 Timewalking Season - Artifact - Head - Mechanical
-			2869, -- 10.2.7 Timewalking Season - Artifact - Head - Undead
-			2870, -- 10.2.7 Timewalking Season - Artifact - Waist - Physical
-			2871, -- 10.2.7 Timewalking Season - Artifact - Waist - Arcane
-			2872, -- 10.2.7 Timewalking Season - Artifact - Waist - Fire
-			2873, -- 10.2.7 Timewalking Season - Artifact - Waist - Frost
-			2874, -- 10.2.7 Timewalking Season - Artifact - Waist - Holy
-			2875, -- 10.2.7 Timewalking Season - Artifact - Waist - Shadow
-			2876, -- 10.2.7 Timewalking Season - Artifact - Waist - Nature
+	--		2853, -- 10.2.7 Timewalking Season - Artifact - Cloak - Primary
+	--		2854, -- 10.2.7 Timewalking Season - Artifact - Cloak - Stamina
+	--		2855, -- 10.2.7 Timewalking Season - Artifact - Cloak - Critical Strike
+	--		2856, -- 10.2.7 Timewalking Season - Artifact - Cloak - Haste
+	--		2857, -- 10.2.7 Timewalking Season - Artifact - Cloak - Leech
+	--		2858, -- 10.2.7 Timewalking Season - Artifact - Cloak - Mastery
+	--		2859, -- 10.2.7 Timewalking Season - Artifact - Cloak - Speed
+	--		2860, -- 10.2.7 Timewalking Season - Artifact - Cloak - Versatility
+	--		2861, -- 10.2.7 Timewalking Season - Artifact - Head - Aberration
+	--		2862, -- 10.2.7 Timewalking Season - Artifact - Head - Beast
+	--		2863, -- 10.2.7 Timewalking Season - Artifact - Head - Demon
+	--		2864, -- 10.2.7 Timewalking Season - Artifact - Head - Dragonkin
+	--		2865, -- 10.2.7 Timewalking Season - Artifact - Head - Elemental
+	--		2866, -- 10.2.7 Timewalking Season - Artifact - Head - Giant
+	--		2867, -- 10.2.7 Timewalking Season - Artifact - Head - Humanoid
+	--		2868, -- 10.2.7 Timewalking Season - Artifact - Head - Mechanical
+	--		2869, -- 10.2.7 Timewalking Season - Artifact - Head - Undead
+	--		2870, -- 10.2.7 Timewalking Season - Artifact - Waist - Physical
+	--		2871, -- 10.2.7 Timewalking Season - Artifact - Waist - Arcane
+	--		2872, -- 10.2.7 Timewalking Season - Artifact - Waist - Fire
+	--		2873, -- 10.2.7 Timewalking Season - Artifact - Waist - Frost
+	--		2874, -- 10.2.7 Timewalking Season - Artifact - Waist - Holy
+	--		2875, -- 10.2.7 Timewalking Season - Artifact - Waist - Shadow
+	--		2876, -- 10.2.7 Timewalking Season - Artifact - Waist - Nature
 	--		2878, -- 10.2 Professions - Personal Tracker - Legendary - Restored Leaf
 			2897, -- Council of Dornogal
 			2898, -- Renown - The Assembly of the Deeps
@@ -443,7 +443,7 @@ if (isRetail) then
 			2903, -- The Severed Threads
 			2904, -- Renown - The Severed Threads
 			2906, -- Plunder
-	--		2907, -- Pirate Booty Visual
+			2907, -- Pirate Booty Visual
 			2908, -- Dominance Offensive
 			2909, -- Operation: Shieldwall
 			2910, -- The Klaxxi
@@ -459,14 +459,14 @@ if (isRetail) then
 			2920, -- Runed Harbinger Crest
 			2921, -- Gilded Harbinger Crest
 			2922, -- Plunder
-			3000, -- 10.2.7 Timewalking Season - Random Gem Counter
-			3001, -- 10.2.7 Timewalking Season - Artifact - Cloak - Experience Gain
-			3002, -- The Weaver (Notoriety)
-			3003, -- The General (Notoriety)
-			3004, -- The Vizier (Notoriety)
-			3005, -- The General (Notoriety)
-			3006, -- The Vizier (Notoriety)
-			3007, -- The Weaver (Notoriety)
+	--		3000, -- 10.2.7 Timewalking Season - Random Gem Counter
+	--		3001, -- 10.2.7 Timewalking Season - Artifact - Cloak - Experience Gain
+	--		3002, -- The Weaver (Notoriety)
+	--		3003, -- The General (Notoriety)
+	--		3004, -- The Vizier (Notoriety)
+	--		3005, -- The General (Notoriety)
+	--		3006, -- The Vizier (Notoriety)
+	--		3007, -- The Weaver (Notoriety)
 			3008, -- Valorstones
 			3009, -- Bonus Valorstones
 	--		3010, -- 10.2.6 Rewards - Personal Tracker - S4 Dinar Drops (Hidden)
@@ -505,9 +505,9 @@ if (isRetail) then
 	--		3066, -- 11.0 Professions - Tracker - Weekly Skinning Knowledge
 	--		3067, -- 11.0 Professions - Tracker - Weekly Tailoring Knowledge
 			3068, -- Delver's Journey
-			3069, -- 11.0 Professions - Tailoring - Fishing - Khaz Algar - Skill
-			3070, -- 11.0 Professions - Fishing - Algari Weaverthread - Perception
-			3071, -- 11.0 Professions - Fishing - Algari Weaverthread - Skill
+	--		3069, -- 11.0 Professions - Tailoring - Fishing - Khaz Algar - Skill
+	--		3070, -- 11.0 Professions - Fishing - Algari Weaverthread - Perception
+	--		3071, -- 11.0 Professions - Fishing - Algari Weaverthread - Skill
 			3072, -- Everburning Ignition Refund
 	--		3073, -- 11.0 Professions - Tracker - Insc Book - Tailoring Knowledge
 	--		3074, -- 11.0 Professions - Tracker - Insc Book - Skinning Knowledge
@@ -538,7 +538,7 @@ if (isRetail) then
 			3112, -- Carved Undermine Crest
 			3113, -- Runed Undermine Crest
 			3114, -- Gilded Undermine Crest
-			3115, -- [DNT] Worldsoul Memory Score
+	--		3115, -- [DNT] Worldsoul Memory Score
 			3116, -- Essence of Kaja'mite
 			3118, -- The Cartels of Undermine
 			3120, -- The Cartels of Undermine
@@ -551,9 +551,9 @@ if (isRetail) then
 			3136, -- Gallagio Loyalty Rewards Club
 			3137, -- Renown - Gallagio Loyalty Rewards Club
 	--		3139, -- Plunder
-			3140, -- 11.1.5 Arathi - Renown Rank
+	--		3140, -- 11.1.5 Arathi - Renown Rank
 			3141, -- Starlight Spark Dust
-			3142, -- EVERGREEN Delves - Tracker - EoD Account Rewards - Weekly Cap
+	--		3142, -- EVERGREEN Delves - Tracker - EoD Account Rewards - Weekly Cap
 	--		3143, -- 11.0 Delves - Bountiful Tracker - Delver's Journey Cap
 	--		3144, -- 11.0.5 20th Anniversary - Tracker
 	--		3145, -- 11.0.5 20th Anniversary - Tracker
@@ -684,7 +684,7 @@ if (isRetail) then
 			3370, -- The Hara'ti
 			3371, -- Renown - Silvermoon Court
 			3372, -- Bronze
-			3375, -- [DNT] Moth Hunt Tracking Currency
+	--		3375, -- [DNT] Moth Hunt Tracking Currency
 			3378, -- Dawnlight Manaflux
 			3383, -- Adventurer Dawncrest
 			3385, -- Luminous Dust
@@ -730,14 +730,14 @@ if (isRetail) then
 	--		3505, -- [DNT] Diver Score
 	--		3506, -- [DNT] Diver Display Currency
 			3513, -- Nebulous Voidcore
-			3514, -- Renown - Prey Season 2
+	--		3514, -- Renown - Prey Season 2
 			3515, -- Preyseeker's Journey
 	--		3532, -- 12.1 Delves - Personal Tracker - S2 Weekly Turn-In (Hidden)
-			3536, -- Renown - Season 2 Labyrinth
+	--		3536, -- Renown - Season 2 Labyrinth
 			3537, -- Kindo'jan's Labyrinth Journey
 			3540, -- Captain Tokka
 			3544, -- Aqir Research Enclave
-			3545, -- Renown - Season 3 Delves
+	--		3545, -- Renown - Season 3 Delves
 	--		3568, -- Contained Corruption
 	--		3569, -- Cleansing Multiplier
 	--		3570, -- Wave Multiplier
@@ -767,9 +767,9 @@ if (isRetail) then
 			1585, -- Warband Wide Honor
 			1586, -- Honor Level
 	--		2001, -- Paden Test Currency
-			2230, -- Darkmoon Prize Ticket (Void)
-			2822, -- [DNT] Corgi Cache
-			3180, -- Weekly Limit Test Currency
+	--		2230, -- Darkmoon Prize Ticket (Void)
+	--		2822, -- [DNT] Corgi Cache
+	--		3180, -- Weekly Limit Test Currency
 		},
 		[245] = { -- Shadowlands
 			1743, -- Fake Anima for Quest Tracking
@@ -883,10 +883,10 @@ if (isRetail) then
 			2122, -- Storm Sigil
 			2134, -- Cobalt Assembly
 			2245, -- Flightstones
-			2531, -- zzOLD Delving Gems
+		--	2531, -- zzOLD Delving Gems
 			2590, -- Lost Transcripts
-			2591, -- 11.0 Delves - Score Inside
-			2592, -- 11.0 Delves - Reputation Score
+		--	2591, -- 11.0 Delves - Score Inside
+		--	2592, -- 11.0 Delves - Reputation Score
 			2594, -- Paracausal Flakes
 			2650, -- Emerald Dewdrop
 			2651, -- Seedbloom
@@ -1591,8 +1591,8 @@ if (isRetail) then
 		},
 		[264] = { -- Midnight
 			3316, -- Voidlight Marl
-			3349, -- [DNT] [PH] Evergreen Initiative Currency
-	--		3352, -- Party Favor
+	--		3349, -- [DNT] [PH] Evergreen Initiative Currency
+			3352, -- Party Favor
 			3418, -- Nebulous Voidcore
 			3509, -- Tidal Spark Dust
 		},
@@ -1601,11 +1601,11 @@ if (isRetail) then
 			3293, -- Epoch Memento
 		},
 		[268] = { -- Season 1
-			3543, -- Test Myth Dawncrest
+	--		3543, -- Test Myth Dawncrest
 		},
 		[277] = { -- Season 2
 			3465, -- Venomblight Manaflux
-			3511, -- [DNT, Unused] Venomous Voidcore
+	--		3511, -- [DNT, Unused] Venomous Voidcore
 		},
 		[278] = { -- Sites Score UI (Hidden)
 	--		3449, -- Total Score
@@ -1675,59 +1675,59 @@ if (isRetail) then
 		[42] = { id=42, category=1, hide=true }, -- Badge of Justice, Miscellaneous
 		[61] = { id=61, category=21 }, -- Dalaran Jewelcrafter's Token, Wrath of the Lich King
 		[81] = { id=81, category=1 }, -- Epicurean's Award, Miscellaneous
-		[101] = { id=101, category=22, hide=true }, -- Emblem of Heroism, Dungeon and Raid
-		[102] = { id=102, category=22, hide=true }, -- Emblem of Valor, Dungeon and Raid
-		[103] = { id=103, category=2, hide=true }, -- Arena Points, Player vs. Player
-		[121] = { id=121, category=2, hide=true }, -- Alterac Valley Mark of Honor, Player vs. Player
-		[122] = { id=122, category=2, hide=true }, -- Arathi Basin Mark of Honor, Player vs. Player
-		[123] = { id=123, category=2, hide=true }, -- Eye of the Storm Mark of Honor, Player vs. Player
-		[124] = { id=124, category=2, hide=true }, -- Strand of the Ancients Mark of Honor, Player vs. Player
-		[125] = { id=125, category=2, hide=true }, -- Warsong Gulch Mark of Honor, Player vs. Player
-		[126] = { id=126, category=2, hide=true }, -- Wintergrasp Mark of Honor, Player vs. Player
-		[161] = { id=161, category=2, hide=true }, -- Stone Keeper's Shard, Player vs. Player
-		[201] = { id=201, category=2, hide=true }, -- Venture Coin, Player vs. Player
-		[221] = { id=221, category=22, hide=true }, -- Emblem of Conquest, Dungeon and Raid
+		[101] = { id=101, category=22 }, -- Emblem of Heroism, Dungeon and Raid
+		[102] = { id=102, category=22 }, -- Emblem of Valor, Dungeon and Raid
+		[103] = { id=103, category=2 }, -- Arena Points, Player vs. Player
+		[121] = { id=121, category=2 }, -- Alterac Valley Mark of Honor, Player vs. Player
+		[122] = { id=122, category=2 }, -- Arathi Basin Mark of Honor, Player vs. Player
+		[123] = { id=123, category=2 }, -- Eye of the Storm Mark of Honor, Player vs. Player
+		[124] = { id=124, category=2 }, -- Strand of the Ancients Mark of Honor, Player vs. Player
+		[125] = { id=125, category=2 }, -- Warsong Gulch Mark of Honor, Player vs. Player
+		[126] = { id=126, category=2 }, -- Wintergrasp Mark of Honor, Player vs. Player
+		[161] = { id=161, category=2 }, -- Stone Keeper's Shard, Player vs. Player
+		[201] = { id=201, category=2 }, -- Venture Coin, Player vs. Player
+		[221] = { id=221, category=22 }, -- Emblem of Conquest, Dungeon and Raid
 		[241] = { id=241, category=21 }, -- Champion's Seal, Wrath of the Lich King
-		[301] = { id=301, category=22, hide=true }, -- Emblem of Triumph, Dungeon and Raid
-		[321] = { id=321, category=2, hide=true }, -- Isle of Conquest Mark of Honor, Player vs. Player
-		[341] = { id=341, category=22, hide=true }, -- Emblem of Frost, Dungeon and Raid
+		[301] = { id=301, category=22 }, -- Emblem of Triumph, Dungeon and Raid
+		[321] = { id=321, category=2 }, -- Isle of Conquest Mark of Honor, Player vs. Player
+		[341] = { id=341, category=22 }, -- Emblem of Frost, Dungeon and Raid
 		[361] = { id=361, category=81 }, -- Illustrious Jewelcrafter's Token, Cataclysm
-		[384] = { id=384, category=82, hide=true }, -- Dwarf Archaeology Fragment, Archaeology
-		[385] = { id=385, category=82, hide=true }, -- Troll Archaeology Fragment, Archaeology
+		[384] = { id=384, category=82 }, -- Dwarf Archaeology Fragment, Archaeology
+		[385] = { id=385, category=82 }, -- Troll Archaeology Fragment, Archaeology
 		[391] = { id=391, category=2 }, -- Tol Barad Commendation, Player vs. Player
-		[393] = { id=393, category=82, hide=true }, -- Fossil Archaeology Fragment, Archaeology
-		[394] = { id=394, category=82, hide=true }, -- Night Elf Archaeology Fragment, Archaeology
+		[393] = { id=393, category=82 }, -- Fossil Archaeology Fragment, Archaeology
+		[394] = { id=394, category=82 }, -- Night Elf Archaeology Fragment, Archaeology
 		[395] = { id=395, category=142 }, -- Justice Points, Hidden
 		[396] = { id=396, category=142 }, -- Valor Points, Hidden
-		[397] = { id=397, category=82, hide=true }, -- Orc Archaeology Fragment, Archaeology
-		[398] = { id=398, category=82, hide=true }, -- Draenei Archaeology Fragment, Archaeology
-		[399] = { id=399, category=82, hide=true }, -- Vrykul Archaeology Fragment, Archaeology
-		[400] = { id=400, category=82, hide=true }, -- Nerubian Archaeology Fragment, Archaeology
-		[401] = { id=401, category=82, hide=true }, -- Tol'vir Archaeology Fragment, Archaeology
+		[397] = { id=397, category=82 }, -- Orc Archaeology Fragment, Archaeology
+		[398] = { id=398, category=82 }, -- Draenei Archaeology Fragment, Archaeology
+		[399] = { id=399, category=82 }, -- Vrykul Archaeology Fragment, Archaeology
+		[400] = { id=400, category=82 }, -- Nerubian Archaeology Fragment, Archaeology
+		[401] = { id=401, category=82 }, -- Tol'vir Archaeology Fragment, Archaeology
 		[402] = { id=402, category=1 }, -- Ironpaw Token, Miscellaneous
 		[416] = { id=416, category=81 }, -- Mark of the World Tree, Cataclysm
-		[483] = { id=483, category=89, hide=true }, -- Conquest Arena Meta, Meta
-		[484] = { id=484, category=89, hide=true }, -- Conquest Rated BG Meta, Meta
+		[483] = { id=483, category=89 }, -- Conquest Arena Meta, Meta
+		[484] = { id=484, category=89 }, -- Conquest Rated BG Meta, Meta
 		[515] = { id=515, category=1 }, -- Darkmoon Prize Ticket, Miscellaneous
 		[614] = { id=614, category=81 }, -- Mote of Darkness, Cataclysm
 		[615] = { id=615, category=81 }, -- Essence of Corrupted Deathwing, Cataclysm
-		[676] = { id=676, category=82, hide=true }, -- Pandaren Archaeology Fragment, Archaeology
-		[677] = { id=677, category=82, hide=true }, -- Mogu Archaeology Fragment, Archaeology
-		[692] = { id=692, category=89, hide=true }, -- Conquest Random BG Meta, Meta
+		[676] = { id=676, category=82 }, -- Pandaren Archaeology Fragment, Archaeology
+		[677] = { id=677, category=82 }, -- Mogu Archaeology Fragment, Archaeology
+		[692] = { id=692, category=89 }, -- Conquest Random BG Meta, Meta
 		[697] = { id=697, category=133 }, -- Elder Charm of Good Fortune, Mists of Pandaria
 		[698] = { id=698, category=133 }, -- Zen Jewelcrafter's Token, Mists of Pandaria
 		[738] = { id=738, category=133 }, -- Lesser Charm of Good Fortune, Mists of Pandaria
 		[752] = { id=752, category=133 }, -- Mogu Rune of Fate, Mists of Pandaria
-		[754] = { id=754, category=82, hide=true }, -- Mantid Archaeology Fragment, Archaeology
+		[754] = { id=754, category=82 }, -- Mantid Archaeology Fragment, Archaeology
 		[776] = { id=776, category=133 }, -- Warforged Seal, Mists of Pandaria
 		[777] = { id=777, category=133 }, -- Timeless Coin, Mists of Pandaria
 		[789] = { id=789, category=133 }, -- Bloody Coin, Mists of Pandaria
 		[810] = { id=810, category=133 }, -- Black Iron Fragment, Mists of Pandaria
-		[821] = { id=821, category=82, hide=true }, -- Draenor Clans Archaeology Fragment, Archaeology
+		[821] = { id=821, category=82 }, -- Draenor Clans Archaeology Fragment, Archaeology
 		[823] = { id=823, category=137 }, -- Apexis Crystal, Warlords of Draenor
 		[824] = { id=824, category=137 }, -- Garrison Resources, Warlords of Draenor
-		[828] = { id=828, category=82, hide=true }, -- Ogre Archaeology Fragment, Archaeology
-		[829] = { id=829, category=82, hide=true }, -- Arakkoa Archaeology Fragment, Archaeology
+		[828] = { id=828, category=82 }, -- Ogre Archaeology Fragment, Archaeology
+		[829] = { id=829, category=82 }, -- Arakkoa Archaeology Fragment, Archaeology
 		[830] = { id=830, category=82, hide=true }, -- n/a, Archaeology
 		[897] = { id=897, category=137, hide=true }, -- UNUSED, Warlords of Draenor
 		[910] = { id=910, category=137 }, -- Secret of Draenor Alchemy, Warlords of Draenor
@@ -1745,9 +1745,9 @@ if (isRetail) then
 		[1155] = { id=1155, category=141 }, -- Ancient Mana, Legion
 		[1166] = { id=1166, category=22 }, -- Timewarped Badge, Dungeon and Raid
 		[1171] = { id=1171, category=142 }, -- Artifact Knowledge, Hidden
-		[1172] = { id=1172, category=82, hide=true }, -- Highborne Archaeology Fragment, Archaeology
-		[1173] = { id=1173, category=82, hide=true }, -- Highmountain Tauren Archaeology Fragment, Archaeology
-		[1174] = { id=1174, category=82, hide=true }, -- Demonic Archaeology Fragment, Archaeology
+		[1172] = { id=1172, category=82 }, -- Highborne Archaeology Fragment, Archaeology
+		[1173] = { id=1173, category=82 }, -- Highmountain Tauren Archaeology Fragment, Archaeology
+		[1174] = { id=1174, category=82 }, -- Demonic Archaeology Fragment, Archaeology
 		[1191] = { id=1191, category=142 }, -- Valor, Hidden
 		[1220] = { id=1220, category=141 }, -- Order Resources, Legion
 		[1226] = { id=1226, category=141 }, -- Nethershard, Legion
@@ -1773,8 +1773,8 @@ if (isRetail) then
 		[1506] = { id=1506, category=142 }, -- Argus Waystone, Hidden
 		[1508] = { id=1508, category=141 }, -- Veiled Argunite, Legion
 		[1533] = { id=1533, category=141 }, -- Wakening Essence, Legion
-		[1534] = { id=1534, category=82, hide=true }, -- Zandalari Archaeology Fragment, Archaeology
-		[1535] = { id=1535, category=82, hide=true }, -- Drust Archaeology Fragment, Archaeology
+		[1534] = { id=1534, category=82 }, -- Zandalari Archaeology Fragment, Archaeology
+		[1535] = { id=1535, category=82 }, -- Drust Archaeology Fragment, Archaeology
 		[1540] = { id=1540, category=142 }, -- Wood, Hidden
 		[1541] = { id=1541, category=142 }, -- Iron, Hidden
 		[1553] = { id=1553, category=144 }, -- Azerite, Virtual
@@ -1812,16 +1812,16 @@ if (isRetail) then
 		[1728] = { id=1728, category=142 }, -- Phantasma, Hidden
 		[1738] = { id=1738, category=142 }, -- Unshackled, Hidden
 		[1739] = { id=1739, category=142 }, -- Ankoan, Hidden
-		[1740] = { id=1740, category=142 }, -- Rustbolt Resistance (Hidden), Hidden
+		[1740] = { id=1740, category=142, hide=true }, -- Rustbolt Resistance (Hidden), Hidden
 		[1742] = { id=1742, category=142 }, -- Rustbolt Resistance, Hidden
 		[1743] = { id=1743, category=245 }, -- Fake Anima for Quest Tracking, Shadowlands
 		[1744] = { id=1744, category=142, hide=true }, -- Corrupted Memento, Hidden
-		[1745] = { id=1745, category=142 }, -- Nazjatar Ally - Neri Sharpfin, Hidden
-		[1746] = { id=1746, category=142 }, -- Nazjatar Ally - Vim Brineheart, Hidden
-		[1747] = { id=1747, category=142 }, -- Nazjatar Ally - Poen Gillbrack, Hidden
-		[1748] = { id=1748, category=142 }, -- Nazjatar Ally - Bladesman Inowari, Hidden
-		[1749] = { id=1749, category=142 }, -- Nazjatar Ally - Hunter Akana, Hidden
-		[1750] = { id=1750, category=142 }, -- Nazjatar Ally - Farseer Ori, Hidden
+		[1745] = { id=1745, category=142, hide=true }, -- Nazjatar Ally - Neri Sharpfin, Hidden
+		[1746] = { id=1746, category=142, hide=true }, -- Nazjatar Ally - Vim Brineheart, Hidden
+		[1747] = { id=1747, category=142, hide=true }, -- Nazjatar Ally - Poen Gillbrack, Hidden
+		[1748] = { id=1748, category=142, hide=true }, -- Nazjatar Ally - Bladesman Inowari, Hidden
+		[1749] = { id=1749, category=142, hide=true }, -- Nazjatar Ally - Hunter Akana, Hidden
+		[1750] = { id=1750, category=142, hide=true }, -- Nazjatar Ally - Farseer Ori, Hidden
 		[1752] = { id=1752, category=142 }, -- Honeyback Hive, Hidden
 		[1754] = { id=1754, category=245 }, -- Argent Commendation, Shadowlands
 		[1755] = { id=1755, category=143 }, -- Coalescing Visions, Battle for Azeroth
@@ -1987,21 +1987,21 @@ if (isRetail) then
 		[2018] = { id=2018, category=251, hide=true }, -- Dragon Racing - Temp Storage - Race Quest ID, Dragon Racing UI (Hidden)
 		[2019] = { id=2019, category=251, hide=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Silver, Dragon Racing UI (Hidden)
 		[2020] = { id=2020, category=251, hide=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Gold, Dragon Racing UI (Hidden)
-		[2021] = { id=2021, category=142 }, -- Renown-Dragonscale Expedition, Hidden
+		[2021] = { id=2021, category=142, hide=true }, -- Renown-Dragonscale Expedition, Hidden
 		[2022] = { id=2022, category=251, hide=true }, -- Dragon Racing - Multiplayer Race Placement, Dragon Racing UI (Hidden)
-		[2023] = { id=2023, category=142 }, -- Dragon Isles Blacksmithing Knowledge, Hidden
-		[2024] = { id=2024, category=142 }, -- Dragon Isles Alchemy Knowledge, Hidden
-		[2025] = { id=2025, category=142 }, -- Dragon Isles Leatherworking Knowledge, Hidden
-		[2026] = { id=2026, category=142 }, -- Dragon Isles Tailoring Knowledge, Hidden
-		[2027] = { id=2027, category=142 }, -- Dragon Isles Engineering Knowledge, Hidden
-		[2028] = { id=2028, category=142 }, -- Dragon Isles Inscription Knowledge, Hidden
-		[2029] = { id=2029, category=142 }, -- Dragon Isles Jewelcrafting Knowledge, Hidden
-		[2030] = { id=2030, category=142 }, -- Dragon Isles Enchanting Knowledge, Hidden
+		[2023] = { id=2023, category=142, hide=true }, -- Dragon Isles Blacksmithing Knowledge, Hidden
+		[2024] = { id=2024, category=142, hide=true }, -- Dragon Isles Alchemy Knowledge, Hidden
+		[2025] = { id=2025, category=142, hide=true }, -- Dragon Isles Leatherworking Knowledge, Hidden
+		[2026] = { id=2026, category=142, hide=true }, -- Dragon Isles Tailoring Knowledge, Hidden
+		[2027] = { id=2027, category=142, hide=true }, -- Dragon Isles Engineering Knowledge, Hidden
+		[2028] = { id=2028, category=142, hide=true }, -- Dragon Isles Inscription Knowledge, Hidden
+		[2029] = { id=2029, category=142, hide=true }, -- Dragon Isles Jewelcrafting Knowledge, Hidden
+		[2030] = { id=2030, category=142, hide=true }, -- Dragon Isles Enchanting Knowledge, Hidden
 		[2031] = { id=2031, category=142 }, -- Dragonscale Expedition, Hidden
 		[2032] = { id=2032, category=1 }, -- Trader's Tender, Miscellaneous
 		[2033] = { id=2033, category=142 }, -- Dragon Isles Skinning Knowledge, Hidden
-		[2034] = { id=2034, category=142 }, -- Dragon Isles Herbalism Knowledge, Hidden
-		[2035] = { id=2035, category=142 }, -- Dragon Isles Mining Knowledge, Hidden
+		[2034] = { id=2034, category=142, hide=true }, -- Dragon Isles Herbalism Knowledge, Hidden
+		[2035] = { id=2035, category=142, hide=true }, -- Dragon Isles Mining Knowledge, Hidden
 		[2036] = { id=2036, category=142 }, -- Ancient Waygate Energy, Hidden
 		[2037] = { id=2037, category=251, hide=true }, -- Dragon Racing - Scoreboard - Race Complete Time -Silver Fract 1, Dragon Racing UI (Hidden)
 		[2038] = { id=2038, category=251, hide=true }, -- Dragon Racing - Scoreboard - Race Complete Time - Gold Fract 1, Dragon Racing UI (Hidden)
@@ -2049,14 +2049,14 @@ if (isRetail) then
 		[2084] = { id=2084, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Azure Span 04 Hard, Dragon Racing UI (Hidden)
 		[2085] = { id=2085, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Azure Span 05 Easy, Dragon Racing UI (Hidden)
 		[2086] = { id=2086, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Azure Span 05 Hard, Dragon Racing UI (Hidden)
-		[2087] = { id=2087, category=142 }, -- Renown-Iskaara Tuskarr, Hidden
-		[2088] = { id=2088, category=142 }, -- Renown-Valdrakken, Hidden
+		[2087] = { id=2087, category=142, hide=true }, -- Renown-Iskaara Tuskarr, Hidden
+		[2088] = { id=2088, category=142, hide=true }, -- Renown-Valdrakken, Hidden
 		[2089] = { id=2089, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Azure Span 06 Easy, Dragon Racing UI (Hidden)
 		[2090] = { id=2090, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Azure Span 06 Hard, Dragon Racing UI (Hidden)
 		[2091] = { id=2091, category=251, hide=true }, -- Dragon Racing - Tracking [DNT], Dragon Racing UI (Hidden)
 		[2092] = { id=2092, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Easy, Dragon Racing UI (Hidden)
 		[2093] = { id=2093, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 02 Hard, Dragon Racing UI (Hidden)
-		[2094] = { id=2094, category=142 }, -- [DNT] AC Major Faction Test Renown, Hidden
+		[2094] = { id=2094, category=142, hide=true }, -- [DNT] AC Major Faction Test Renown, Hidden
 		[2095] = { id=2095, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Thaldraszus MP 1, Dragon Racing UI (Hidden)
 		[2096] = { id=2096, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Easy, Dragon Racing UI (Hidden)
 		[2097] = { id=2097, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Thaldraszus 03 Hard, Dragon Racing UI (Hidden)
@@ -2173,7 +2173,7 @@ if (isRetail) then
 		[2226] = { id=2226, category=251, hide=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 10, Dragon Racing UI (Hidden)
 		[2227] = { id=2227, category=251, hide=true }, -- Dragon Racing - Best Time Display - Reverse - Fraction 100, Dragon Racing UI (Hidden)
 		[2228] = { id=2228, category=252, hide=true }, -- Tuskarr - Fishing Net - Location 06 - Net 01 - Loot, Tuskarr - Fishing Nets (Hidden)
-		[2230] = { id=2230, category=144 }, -- Darkmoon Prize Ticket (Void), Virtual
+		[2230] = { id=2230, category=144, hide=true }, -- Darkmoon Prize Ticket (Void), Virtual
 		[2231] = { id=2231, category=142, hide=true }, -- Players, Hidden
 		[2235] = { id=2235, category=251, hide=true }, -- 10.0 Dragonrider PVP - Whirling Surge Dismounts 10.0.2 [DNT], Dragon Racing UI (Hidden)
 		[2236] = { id=2236, category=251, hide=true }, -- Dragon Racing - Scoreboard - Race Complete Time MS, Dragon Racing UI (Hidden)
@@ -2309,9 +2309,9 @@ if (isRetail) then
 		[2402] = { id=2402, category=142 }, -- Renown - Loamm Niffen, Hidden
 		[2408] = { id=2408, category=142 }, -- Bonus Flightstones, Hidden
 		[2409] = { id=2409, category=142 }, -- Whelpling Crest Fragment Tracker [DNT], Hidden
-		[2410] = { id=2410, category=142 }, -- Drake Crest Fragment Tracker [DNT], Hidden
-		[2411] = { id=2411, category=142 }, -- Wyrm Crest Fragment Tracker [DNT], Hidden
-		[2412] = { id=2412, category=142 }, -- Aspect Crest Fragment Tracker [DNT], Hidden
+		[2410] = { id=2410, category=142, hide=true }, -- Drake Crest Fragment Tracker [DNT], Hidden
+		[2411] = { id=2411, category=142, hide=true }, -- Wyrm Crest Fragment Tracker [DNT], Hidden
+		[2412] = { id=2412, category=142, hide=true }, -- Aspect Crest Fragment Tracker [DNT], Hidden
 		[2413] = { id=2413, category=142, hide=true }, -- 10.1 Professions - Personal Tracker - S2 Spark Drops (Hidden), Hidden
 		[2414] = { id=2414, category=251, hide=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Black - 001 (OJF), Dragon Racing UI (Hidden)
 		[2415] = { id=2415, category=251, hide=true }, -- 10.1.5 Whelp Daycare - Whelp Racing - Blue - 001 (OJF), Dragon Racing UI (Hidden)
@@ -2428,7 +2428,7 @@ if (isRetail) then
 		[2527] = { id=2527, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Kalimdor 15 Challenge R, Dragon Racing UI (Hidden)
 		[2528] = { id=2528, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Kalimdor 16 Challenge, Dragon Racing UI (Hidden)
 		[2529] = { id=2529, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Kalimdor 16 Challenge R, Dragon Racing UI (Hidden)
-		[2531] = { id=2531, category=250 }, -- zzOLD Delving Gems, Dragonflight
+		[2531] = { id=2531, category=250, hide=true }, -- zzOLD Delving Gems, Dragonflight
 		[2533] = { id=2533, category=142 }, -- Renascent Shadowflame, Hidden
 		[2536] = { id=2536, category=251, hide=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 01, Dragon Racing UI (Hidden)
 		[2537] = { id=2537, category=251, hide=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 02, Dragon Racing UI (Hidden)
@@ -2480,8 +2480,8 @@ if (isRetail) then
 		[2583] = { id=2583, category=251, hide=true }, -- Dragon Racing - Personal Best Record - E Kingdoms 16 Reverse, Dragon Racing UI (Hidden)
 		[2588] = { id=2588, category=1 }, -- Riders of Azeroth Badge, Miscellaneous
 		[2590] = { id=2590, category=250 }, -- Lost Transcripts, Dragonflight
-		[2591] = { id=2591, category=250 }, -- 11.0 Delves - Score Inside, Dragonflight
-		[2592] = { id=2592, category=250 }, -- 11.0 Delves - Reputation Score, Dragonflight
+		[2591] = { id=2591, category=250, hide=true }, -- 11.0 Delves - Score Inside, Dragonflight
+		[2592] = { id=2592, category=250, hide=true }, -- 11.0 Delves - Reputation Score, Dragonflight
 		[2594] = { id=2594, category=250 }, -- Paracausal Flakes, Dragonflight
 		[2595] = { id=2595, category=251, hide=true }, -- Dragon Racing - Medal Widget - Normal [DNT], Dragon Racing UI (Hidden)
 		[2596] = { id=2596, category=251, hide=true }, -- Dragon Racing - Medal Widget - Advanced [DNT], Dragon Racing UI (Hidden)
@@ -2534,11 +2534,11 @@ if (isRetail) then
 		[2643] = { id=2643, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Outland 14 Reverse, Dragon Racing UI (Hidden)
 		[2644] = { id=2644, category=251, hide=true }, -- Dragon Racing - Personal Best Record - Outland 15 Reverse, Dragon Racing UI (Hidden)
 		[2645] = { id=2645, category=142 }, -- Soridormi's Recognition, Hidden
-		[2649] = { id=2649, category=142 }, -- [DNT] The Currency Formerly Named Dream Ephemera, Hidden
+		[2649] = { id=2649, category=142, hide=true }, -- [DNT] The Currency Formerly Named Dream Ephemera, Hidden
 		[2650] = { id=2650, category=250 }, -- Emerald Dewdrop, Dragonflight
 		[2651] = { id=2651, category=250 }, -- Seedbloom, Dragonflight
 		[2652] = { id=2652, category=142 }, -- Dream Wardens, Hidden
-		[2653] = { id=2653, category=142 }, -- Renown - Dream Wardens, Hidden
+		[2653] = { id=2653, category=142, hide=true }, -- Renown - Dream Wardens, Hidden
 		[2654] = { id=2654, category=251, hide=true }, -- Dragon Racing - Kalimdor Cup Preferred Mount, Dragon Racing UI (Hidden)
 		[2655] = { id=2655, category=142 }, -- Revives, Hidden
 		[2657] = { id=2657, category=250 }, -- Mysterious Fragment, Dragonflight
@@ -2656,71 +2656,71 @@ if (isRetail) then
 		[2774] = { id=2774, category=142, hide=true }, -- 10.2 Professions - Personal Tracker - S3 Spark Drops (Hidden), Hidden
 		[2777] = { id=2777, category=250 }, -- Dream Infusion, Dragonflight
 		[2778] = { id=2778, category=1 }, -- Bronze, Miscellaneous
-		[2780] = { id=2780, category=142 }, -- Echoed Ephemera Tracker [DNT], Hidden
+		[2780] = { id=2780, category=142, hide=true }, -- Echoed Ephemera Tracker [DNT], Hidden
 		[2784] = { id=2784, category=142, hide=true }, -- 10.2 Legendary - Progressive Advance - Tracker, Hidden
-		[2785] = { id=2785, category=142 }, -- Khaz Algar Alchemy Knowledge, Hidden
-		[2786] = { id=2786, category=142 }, -- Khaz Algar Blacksmithing Knowledge, Hidden
-		[2787] = { id=2787, category=142 }, -- Khaz Algar Enchanting Knowledge, Hidden
-		[2788] = { id=2788, category=142 }, -- Khaz Algar Engineering Knowledge, Hidden
-		[2789] = { id=2789, category=142 }, -- Khaz Algar Herbalism Knowledge, Hidden
-		[2790] = { id=2790, category=142 }, -- Khaz Algar Inscription Knowledge, Hidden
-		[2791] = { id=2791, category=142 }, -- Khaz Algar Jewelcrafting Knowledge, Hidden
-		[2792] = { id=2792, category=142 }, -- Khaz Algar Leatherworking Knowledge, Hidden
-		[2793] = { id=2793, category=142 }, -- Khaz Algar Mining Knowledge, Hidden
-		[2794] = { id=2794, category=142 }, -- Khaz Algar Skinning Knowledge, Hidden
-		[2795] = { id=2795, category=142 }, -- Khaz Algar Tailoring Knowledge, Hidden
+		[2785] = { id=2785, category=142, hide=true }, -- Khaz Algar Alchemy Knowledge, Hidden
+		[2786] = { id=2786, category=142, hide=true }, -- Khaz Algar Blacksmithing Knowledge, Hidden
+		[2787] = { id=2787, category=142, hide=true }, -- Khaz Algar Enchanting Knowledge, Hidden
+		[2788] = { id=2788, category=142, hide=true }, -- Khaz Algar Engineering Knowledge, Hidden
+		[2789] = { id=2789, category=142, hide=true }, -- Khaz Algar Herbalism Knowledge, Hidden
+		[2790] = { id=2790, category=142, hide=true }, -- Khaz Algar Inscription Knowledge, Hidden
+		[2791] = { id=2791, category=142, hide=true }, -- Khaz Algar Jewelcrafting Knowledge, Hidden
+		[2792] = { id=2792, category=142, hide=true }, -- Khaz Algar Leatherworking Knowledge, Hidden
+		[2793] = { id=2793, category=142, hide=true }, -- Khaz Algar Mining Knowledge, Hidden
+		[2794] = { id=2794, category=142, hide=true }, -- Khaz Algar Skinning Knowledge, Hidden
+		[2795] = { id=2795, category=142, hide=true }, -- Khaz Algar Tailoring Knowledge, Hidden
 		[2796] = { id=2796, category=142 }, -- Renascent Dream, Hidden
 		[2797] = { id=2797, category=2 }, -- Trophy of Strife, Player vs. Player
-		[2799] = { id=2799, category=142 }, -- [DNT] Beetle Ranch Invisible Currency, Hidden
+		[2799] = { id=2799, category=142, hide=true }, -- [DNT] Beetle Ranch Invisible Currency, Hidden
 		[2800] = { id=2800, category=142, hide=true }, -- 10.2.6 Professions - Personal Tracker - S4 Spark Drops (Hidden), Hidden
 		[2803] = { id=2803, category=281 }, -- Undercoin, Delves
-		[2805] = { id=2805, category=142 }, -- Whelpling's Awakened Crest, Hidden
-		[2806] = { id=2806, category=250 }, -- Whelpling's Awakened Crest, Dragonflight
-		[2807] = { id=2807, category=250 }, -- Drake's Awakened Crest, Dragonflight
-		[2808] = { id=2808, category=142 }, -- Drake's Awakened Crest, Hidden
-		[2809] = { id=2809, category=250 }, -- Wyrm's Awakened Crest, Dragonflight
-		[2810] = { id=2810, category=142 }, -- Wyrm's Awakened Crest, Hidden
-		[2811] = { id=2811, category=142 }, -- Aspect's Awakened Crest, Hidden
-		[2812] = { id=2812, category=250 }, -- Aspect's Awakened Crest, Dragonflight
+		[2805] = { id=2805, category=142, hide=true }, -- Whelpling's Awakened Crest, Hidden
+		[2806] = { id=2806, category=250, hide=true }, -- Whelpling's Awakened Crest, Dragonflight
+		[2807] = { id=2807, category=250, hide=true }, -- Drake's Awakened Crest, Dragonflight
+		[2808] = { id=2808, category=142, hide=true }, -- Drake's Awakened Crest, Hidden
+		[2809] = { id=2809, category=250, hide=true }, -- Wyrm's Awakened Crest, Dragonflight
+		[2810] = { id=2810, category=142, hide=true }, -- Wyrm's Awakened Crest, Hidden
+		[2811] = { id=2811, category=142, hide=true }, -- Aspect's Awakened Crest, Hidden
+		[2812] = { id=2812, category=250, hide=true }, -- Aspect's Awakened Crest, Dragonflight
 		[2813] = { id=2813, category=142 }, -- Harmonized Silk, Hidden
 		[2814] = { id=2814, category=142 }, -- Renown-Keg Leg's Crew, Hidden
 		[2815] = { id=2815, category=260 }, -- Resonance Crystals, War Within
 		[2819] = { id=2819, category=142 }, -- Azerothian Archives, Hidden
-		[2822] = { id=2822, category=144 }, -- [DNT] Corgi Cache, Virtual
+		[2822] = { id=2822, category=144, hide=true }, -- [DNT] Corgi Cache, Virtual
 		[2839] = { id=2839, category=260, hide=true }, -- [DNT] Awakening Currency, War Within
-		[2853] = { id=2853, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Primary, Hidden
-		[2854] = { id=2854, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Stamina, Hidden
-		[2855] = { id=2855, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Critical Strike, Hidden
-		[2856] = { id=2856, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Haste, Hidden
-		[2857] = { id=2857, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Leech, Hidden
-		[2858] = { id=2858, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Mastery, Hidden
-		[2859] = { id=2859, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Speed, Hidden
-		[2860] = { id=2860, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Versatility, Hidden
-		[2861] = { id=2861, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Aberration, Hidden
-		[2862] = { id=2862, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Beast, Hidden
-		[2863] = { id=2863, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Demon, Hidden
-		[2864] = { id=2864, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Dragonkin, Hidden
-		[2865] = { id=2865, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Elemental, Hidden
-		[2866] = { id=2866, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Giant, Hidden
-		[2867] = { id=2867, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Humanoid, Hidden
-		[2868] = { id=2868, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Mechanical, Hidden
-		[2869] = { id=2869, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Head - Undead, Hidden
-		[2870] = { id=2870, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Physical, Hidden
-		[2871] = { id=2871, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Arcane, Hidden
-		[2872] = { id=2872, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Fire, Hidden
-		[2873] = { id=2873, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Frost, Hidden
-		[2874] = { id=2874, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Holy, Hidden
-		[2875] = { id=2875, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Shadow, Hidden
-		[2876] = { id=2876, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Waist - Nature, Hidden
+		[2853] = { id=2853, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Primary, Hidden
+		[2854] = { id=2854, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Stamina, Hidden
+		[2855] = { id=2855, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Critical Strike, Hidden
+		[2856] = { id=2856, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Haste, Hidden
+		[2857] = { id=2857, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Leech, Hidden
+		[2858] = { id=2858, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Mastery, Hidden
+		[2859] = { id=2859, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Speed, Hidden
+		[2860] = { id=2860, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Versatility, Hidden
+		[2861] = { id=2861, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Aberration, Hidden
+		[2862] = { id=2862, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Beast, Hidden
+		[2863] = { id=2863, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Demon, Hidden
+		[2864] = { id=2864, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Dragonkin, Hidden
+		[2865] = { id=2865, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Elemental, Hidden
+		[2866] = { id=2866, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Giant, Hidden
+		[2867] = { id=2867, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Humanoid, Hidden
+		[2868] = { id=2868, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Mechanical, Hidden
+		[2869] = { id=2869, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Head - Undead, Hidden
+		[2870] = { id=2870, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Physical, Hidden
+		[2871] = { id=2871, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Arcane, Hidden
+		[2872] = { id=2872, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Fire, Hidden
+		[2873] = { id=2873, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Frost, Hidden
+		[2874] = { id=2874, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Holy, Hidden
+		[2875] = { id=2875, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Shadow, Hidden
+		[2876] = { id=2876, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Waist - Nature, Hidden
 		[2878] = { id=2878, category=142, hide=true }, -- 10.2 Professions - Personal Tracker - Legendary - Restored Leaf, Hidden
 		[2897] = { id=2897, category=142 }, -- Council of Dornogal, Hidden
-		[2898] = { id=2898, category=142 }, -- Renown - The Assembly of the Deeps, Hidden
+		[2898] = { id=2898, category=142, hide=true }, -- Renown - The Assembly of the Deeps, Hidden
 		[2899] = { id=2899, category=142 }, -- Hallowfall Arathi, Hidden
-		[2900] = { id=2900, category=142 }, -- Renown - Council of Dornogal, Hidden
-		[2901] = { id=2901, category=142 }, -- Renown - Hallowfall Arathi, Hidden
+		[2900] = { id=2900, category=142, hide=true }, -- Renown - Council of Dornogal, Hidden
+		[2901] = { id=2901, category=142, hide=true }, -- Renown - Hallowfall Arathi, Hidden
 		[2902] = { id=2902, category=142 }, -- The Assembly of the Deeps, Hidden
 		[2903] = { id=2903, category=142 }, -- The Severed Threads, Hidden
-		[2904] = { id=2904, category=142 }, -- Renown - The Severed Threads, Hidden
+		[2904] = { id=2904, category=142, hide=true }, -- Renown - The Severed Threads, Hidden
 		[2906] = { id=2906, category=142 }, -- Plunder, Hidden
 		[2907] = { id=2907, category=142, hide=true }, -- Pirate Booty Visual, Hidden
 		[2908] = { id=2908, category=142 }, -- Dominance Offensive, Hidden
@@ -2810,14 +2810,14 @@ if (isRetail) then
 		[2992] = { id=2992, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z5 R4 Reverse, Dragon Racing UI (Hidden)
 		[2993] = { id=2993, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z5 R5 Reverse, Dragon Racing UI (Hidden)
 		[2994] = { id=2994, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z5 R6 Reverse, Dragon Racing UI (Hidden)
-		[3000] = { id=3000, category=142 }, -- 10.2.7 Timewalking Season - Random Gem Counter, Hidden
-		[3001] = { id=3001, category=142 }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Experience Gain, Hidden
-		[3002] = { id=3002, category=142 }, -- The Weaver (Notoriety), Hidden
-		[3003] = { id=3003, category=142 }, -- The General (Notoriety), Hidden
-		[3004] = { id=3004, category=142 }, -- The Vizier (Notoriety), Hidden
-		[3005] = { id=3005, category=142 }, -- The General (Notoriety), Hidden
-		[3006] = { id=3006, category=142 }, -- The Vizier (Notoriety), Hidden
-		[3007] = { id=3007, category=142 }, -- The Weaver (Notoriety), Hidden
+		[3000] = { id=3000, category=142, hide=true }, -- 10.2.7 Timewalking Season - Random Gem Counter, Hidden
+		[3001] = { id=3001, category=142, hide=true }, -- 10.2.7 Timewalking Season - Artifact - Cloak - Experience Gain, Hidden
+		[3002] = { id=3002, category=142, hide=true }, -- The Weaver (Notoriety), Hidden
+		[3003] = { id=3003, category=142, hide=true }, -- The General (Notoriety), Hidden
+		[3004] = { id=3004, category=142, hide=true }, -- The Vizier (Notoriety), Hidden
+		[3005] = { id=3005, category=142, hide=true }, -- The General (Notoriety), Hidden
+		[3006] = { id=3006, category=142, hide=true }, -- The Vizier (Notoriety), Hidden
+		[3007] = { id=3007, category=142, hide=true }, -- The Weaver (Notoriety), Hidden
 		[3008] = { id=3008, category=142 }, -- Valorstones, Hidden
 		[3009] = { id=3009, category=142 }, -- Bonus Valorstones, Hidden
 		[3010] = { id=3010, category=142, hide=true }, -- 10.2.6 Rewards - Personal Tracker - S4 Dinar Drops (Hidden), Hidden
@@ -2859,9 +2859,9 @@ if (isRetail) then
 		[3066] = { id=3066, category=142, hide=true }, -- 11.0 Professions - Tracker - Weekly Skinning Knowledge, Hidden
 		[3067] = { id=3067, category=142, hide=true }, -- 11.0 Professions - Tracker - Weekly Tailoring Knowledge, Hidden
 		[3068] = { id=3068, category=142 }, -- Delver's Journey, Hidden
-		[3069] = { id=3069, category=142 }, -- 11.0 Professions - Tailoring - Fishing - Khaz Algar - Skill, Hidden
-		[3070] = { id=3070, category=142 }, -- 11.0 Professions - Fishing - Algari Weaverthread - Perception, Hidden
-		[3071] = { id=3071, category=142 }, -- 11.0 Professions - Fishing - Algari Weaverthread - Skill, Hidden
+		[3069] = { id=3069, category=142, hide=true }, -- 11.0 Professions - Tailoring - Fishing - Khaz Algar - Skill, Hidden
+		[3070] = { id=3070, category=142, hide=true }, -- 11.0 Professions - Fishing - Algari Weaverthread - Perception, Hidden
+		[3071] = { id=3071, category=142, hide=true }, -- 11.0 Professions - Fishing - Algari Weaverthread - Skill, Hidden
 		[3072] = { id=3072, category=142 }, -- Everburning Ignition Refund, Hidden
 		[3073] = { id=3073, category=142, hide=true }, -- 11.0 Professions - Tracker - Insc Book - Tailoring Knowledge, Hidden
 		[3074] = { id=3074, category=142, hide=true }, -- 11.0 Professions - Tracker - Insc Book - Skinning Knowledge, Hidden
@@ -2896,7 +2896,7 @@ if (isRetail) then
 		[3112] = { id=3112, category=142 }, -- Carved Undermine Crest, Hidden
 		[3113] = { id=3113, category=142 }, -- Runed Undermine Crest, Hidden
 		[3114] = { id=3114, category=142 }, -- Gilded Undermine Crest, Hidden
-		[3115] = { id=3115, category=142 }, -- [DNT] Worldsoul Memory Score, Hidden
+		[3115] = { id=3115, category=142, hide=true }, -- [DNT] Worldsoul Memory Score, Hidden
 		[3116] = { id=3116, category=142 }, -- Essence of Kaja'mite, Hidden
 		[3118] = { id=3118, category=142 }, -- The Cartels of Undermine, Hidden
 		[3119] = { id=3119, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R1 Easy, Dragon Racing UI (Hidden)
@@ -2908,16 +2908,16 @@ if (isRetail) then
 		[3125] = { id=3125, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R3 Reverse, Dragon Racing UI (Hidden)
 		[3126] = { id=3126, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R4 Easy, Dragon Racing UI (Hidden)
 		[3127] = { id=3127, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R4 Reverse, Dragon Racing UI (Hidden)
-		[3128] = { id=3128, category=142 }, -- Renown - The K'aresh Trust, Hidden
+		[3128] = { id=3128, category=142, hide=true }, -- Renown - The K'aresh Trust, Hidden
 		[3129] = { id=3129, category=142 }, -- The K'aresh Trust, Hidden
-		[3130] = { id=3130, category=142 }, -- Renown - Season 2 Delves, Hidden
+		[3130] = { id=3130, category=142, hide=true }, -- Renown - Season 2 Delves, Hidden
 		[3131] = { id=3131, category=142 }, -- Delver's Journey, Hidden
 		[3132] = { id=3132, category=142, hide=true }, -- 11.1 Professions - Personal Tracker - S2 Spark Drops (Hidden), Hidden
 		[3135] = { id=3135, category=142, hide=true }, -- 11.1 Delves - Personal Tracker - S2 Weekly Elise Turn-In(Hidden), Hidden
 		[3136] = { id=3136, category=142 }, -- Gallagio Loyalty Rewards Club, Hidden
-		[3137] = { id=3137, category=142 }, -- Renown - Gallagio Loyalty Rewards Club, Hidden
+		[3137] = { id=3137, category=142, hide=true }, -- Renown - Gallagio Loyalty Rewards Club, Hidden
 		[3139] = { id=3139, category=142, hide=true }, -- Plunder, Hidden
-		[3140] = { id=3140, category=142 }, -- 11.1.5 Arathi - Renown Rank, Hidden
+		[3140] = { id=3140, category=142, hide=true }, -- 11.1.5 Arathi - Renown Rank, Hidden
 		[3141] = { id=3141, category=142 }, -- Starlight Spark Dust, Hidden
 		[3142] = { id=3142, category=142 }, -- EVERGREEN Delves - Tracker - EoD Account Rewards - Weekly Cap, Hidden
 		[3143] = { id=3143, category=142, hide=true }, -- 11.0 Delves - Bountiful Tracker - Delver's Journey Cap, Hidden
@@ -2926,17 +2926,17 @@ if (isRetail) then
 		[3146] = { id=3146, category=142, hide=true }, -- 11.0.5 20th Anniversary - Tracker, Hidden
 		[3147] = { id=3147, category=142, hide=true }, -- 11.0 Delves - Vendor - Bountiful Key Tracker - Cap, Hidden
 		[3149] = { id=3149, category=260 }, -- Displaced Corrupted Mementos, War Within
-		[3150] = { id=3150, category=142 }, -- Midnight Alchemy Knowledge, Hidden
-		[3151] = { id=3151, category=142 }, -- Midnight Blacksmithing Knowledge, Hidden
-		[3152] = { id=3152, category=142 }, -- Midnight Enchanting Knowledge, Hidden
-		[3153] = { id=3153, category=142 }, -- Midnight Engineering Knowledge, Hidden
-		[3154] = { id=3154, category=142 }, -- Midnight Herbalism Knowledge, Hidden
-		[3155] = { id=3155, category=142 }, -- Midnight Inscription Knowledge, Hidden
-		[3156] = { id=3156, category=142 }, -- Midnight Jewelcrafting Knowledge, Hidden
-		[3157] = { id=3157, category=142 }, -- Midnight Leatherworking Knowledge, Hidden
-		[3158] = { id=3158, category=142 }, -- Midnight Mining Knowledge, Hidden
-		[3159] = { id=3159, category=142 }, -- Midnight Skinning Knowledge, Hidden
-		[3160] = { id=3160, category=142 }, -- Midnight Tailoring Knowledge, Hidden
+		[3150] = { id=3150, category=142, hide=true }, -- Midnight Alchemy Knowledge, Hidden
+		[3151] = { id=3151, category=142, hide=true }, -- Midnight Blacksmithing Knowledge, Hidden
+		[3152] = { id=3152, category=142, hide=true }, -- Midnight Enchanting Knowledge, Hidden
+		[3153] = { id=3153, category=142, hide=true }, -- Midnight Engineering Knowledge, Hidden
+		[3154] = { id=3154, category=142, hide=true }, -- Midnight Herbalism Knowledge, Hidden
+		[3155] = { id=3155, category=142, hide=true }, -- Midnight Inscription Knowledge, Hidden
+		[3156] = { id=3156, category=142, hide=true }, -- Midnight Jewelcrafting Knowledge, Hidden
+		[3157] = { id=3157, category=142, hide=true }, -- Midnight Leatherworking Knowledge, Hidden
+		[3158] = { id=3158, category=142, hide=true }, -- Midnight Mining Knowledge, Hidden
+		[3159] = { id=3159, category=142, hide=true }, -- Midnight Skinning Knowledge, Hidden
+		[3160] = { id=3160, category=142, hide=true }, -- Midnight Tailoring Knowledge, Hidden
 		[3161] = { id=3161, category=142, hide=true }, -- Alchemy Concentration, Hidden
 		[3162] = { id=3162, category=142, hide=true }, -- Blacksmithing Concentration, Hidden
 		[3163] = { id=3163, category=142, hide=true }, -- Enchanting Concentration, Hidden
@@ -2946,16 +2946,16 @@ if (isRetail) then
 		[3167] = { id=3167, category=142, hide=true }, -- Leatherworking Concentration, Hidden
 		[3168] = { id=3168, category=142, hide=true }, -- Tailoring Concentration, Hidden
 		[3169] = { id=3169, category=142 }, -- The Bilgewater Cartel, Hidden
-		[3170] = { id=3170, category=142 }, -- The Bilgewater Cartel, Hidden
-		[3171] = { id=3171, category=142 }, -- The Blackwater Cartel, Hidden
-		[3172] = { id=3172, category=142 }, -- The Blackwater Cartel, Hidden
-		[3173] = { id=3173, category=142 }, -- The Steamwheedle Cartel, Hidden
-		[3174] = { id=3174, category=142 }, -- The Steamwheedle Cartel, Hidden
-		[3175] = { id=3175, category=142 }, -- The Venture Company, Hidden
-		[3176] = { id=3176, category=142 }, -- Venture Company, Hidden
-		[3177] = { id=3177, category=142 }, -- Darkfuse Solutions, Hidden
-		[3178] = { id=3178, category=142 }, -- Darkfuse Solutions, Hidden
-		[3180] = { id=3180, category=144 }, -- Weekly Limit Test Currency, Virtual
+		[3170] = { id=3170, category=142, hide=true }, -- The Bilgewater Cartel, Hidden
+		[3171] = { id=3171, category=142, hide=true }, -- The Blackwater Cartel, Hidden
+		[3172] = { id=3172, category=142, hide=true }, -- The Blackwater Cartel, Hidden
+		[3173] = { id=3173, category=142, hide=true }, -- The Steamwheedle Cartel, Hidden
+		[3174] = { id=3174, category=142, hide=true }, -- The Steamwheedle Cartel, Hidden
+		[3175] = { id=3175, category=142, hide=true }, -- The Venture Company, Hidden
+		[3176] = { id=3176, category=142, hide=true }, -- Venture Company, Hidden
+		[3177] = { id=3177, category=142, hide=true }, -- Darkfuse Solutions, Hidden
+		[3178] = { id=3178, category=142, hide=true }, -- Darkfuse Solutions, Hidden
+		[3180] = { id=3180, category=144, hide=true }, -- Weekly Limit Test Currency, Virtual
 		[3181] = { id=3181, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R5 Easy, Dragon Racing UI (Hidden)
 		[3182] = { id=3182, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R5 Reverse, Dragon Racing UI (Hidden)
 		[3183] = { id=3183, category=251, hide=true }, -- Dragon Racing - Personal Best Record - 11 Z6 R6 Easy, Dragon Racing UI (Hidden)
@@ -3038,7 +3038,7 @@ if (isRetail) then
 		[3267] = { id=3267, category=142 }, -- Felforged Bronze, Hidden
 		[3269] = { id=3269, category=142 }, -- Ethereal Voidsplinter, Hidden
 		[3270] = { id=3270, category=142, hide=true }, -- 11.2 Delves - Personal Tracker - S3 Weekly Elise Turn-In(Hidden), Hidden
-		[3271] = { id=3271, category=142 }, -- Renown - Season 3 Delves, Hidden
+		[3271] = { id=3271, category=142, hide=true }, -- Renown - Season 3 Delves, Hidden
 		[3272] = { id=3272, category=142 }, -- Delver's Journey, Hidden
 		[3278] = { id=3278, category=142 }, -- Ethereal Strands, Hidden
 		[3279] = { id=3279, category=142, hide=true }, -- 11. Raid Renown - Gallagio - Raid Buff Acct Tracker, Hidden
@@ -3077,9 +3077,9 @@ if (isRetail) then
 		[3346] = { id=3346, category=142 }, -- Hero Dawncrest, Hidden
 		[3347] = { id=3347, category=142 }, -- Myth Dawncrest, Hidden
 		[3348] = { id=3348, category=142 }, -- Myth Dawncrest, Hidden
-		[3349] = { id=3349, category=264 }, -- [DNT] [PH] Evergreen Initiative Currency, Midnight
+		[3349] = { id=3349, category=264, hide=true }, -- [DNT] [PH] Evergreen Initiative Currency, Midnight
 		[3351] = { id=3351, category=21, hide=true }, -- Social Meter, Wrath of the Lich King
-		[3352] = { id=3352, category=264, hide=true }, -- Party Favor, Midnight
+		[3352] = { id=3352, category=264 }, -- Party Favor, Midnight
 		[3354] = { id=3354, category=142 }, -- The Amani Tribe, Hidden
 		[3355] = { id=3355, category=142 }, -- Renown - The Amani Tribe, Hidden
 		[3356] = { id=3356, category=281 }, -- Untainted Mana-Crystals, Delves
@@ -3092,7 +3092,7 @@ if (isRetail) then
 		[3371] = { id=3371, category=142 }, -- Renown - Silvermoon Court, Hidden
 		[3372] = { id=3372, category=142 }, -- Bronze, Hidden
 		[3373] = { id=3373, category=283 }, -- Angler Pearls, Zones
-		[3375] = { id=3375, category=142 }, -- [DNT] Moth Hunt Tracking Currency, Hidden
+		[3375] = { id=3375, category=142, hide=true }, -- [DNT] Moth Hunt Tracking Currency, Hidden
 		[3376] = { id=3376, category=283 }, -- Shard of Dundun, Zones
 		[3377] = { id=3377, category=283 }, -- Unalloyed Abundance, Zones
 		[3378] = { id=3378, category=142 }, -- Dawnlight Manaflux, Hidden
@@ -3175,11 +3175,11 @@ if (isRetail) then
 		[3496] = { id=3496, category=142, hide=true }, -- Blacksmithing Specialization Reset, Hidden
 		[3497] = { id=3497, category=142, hide=true }, -- Alchemy Specialization Reset, Hidden
 		[3504] = { id=3504, category=142 }, -- Zul'jarra's Forces, Hidden
-		[3505] = { id=3505, category=142 }, -- [DNT] Diver Score, Hidden
-		[3506] = { id=3506, category=142 }, -- [DNT] Diver Display Currency, Hidden
+		[3505] = { id=3505, category=142, hide=true }, -- [DNT] Diver Score, Hidden
+		[3506] = { id=3506, category=142, hide=true }, -- [DNT] Diver Display Currency, Hidden
 		[3508] = { id=3508, category=1 }, -- Salty Pet Charms, Miscellaneous
 		[3509] = { id=3509, category=264 }, -- Tidal Spark Dust, Midnight
-		[3511] = { id=3511, category=277 }, -- [DNT, Unused] Venomous Voidcore, Season 2
+		[3511] = { id=3511, category=277, hide=true }, -- [DNT, Unused] Venomous Voidcore, Season 2
 		[3513] = { id=3513, category=142 }, -- Nebulous Voidcore, Hidden
 		[3514] = { id=3514, category=142 }, -- Renown - Prey Season 2, Hidden
 		[3515] = { id=3515, category=142 }, -- Preyseeker's Journey, Hidden
@@ -3187,7 +3187,7 @@ if (isRetail) then
 		[3536] = { id=3536, category=142 }, -- Renown - Season 2 Labyrinth, Hidden
 		[3537] = { id=3537, category=142 }, -- Kindo'jan's Labyrinth Journey, Hidden
 		[3540] = { id=3540, category=142 }, -- Captain Tokka, Hidden
-		[3543] = { id=3543, category=268 }, -- Test Myth Dawncrest, Season 1
+		[3543] = { id=3543, category=268, hide=true }, -- Test Myth Dawncrest, Season 1
 		[3544] = { id=3544, category=142 }, -- Aqir Research Enclave, Hidden
 		[3545] = { id=3545, category=142 }, -- Renown - Season 3 Delves, Hidden
 		[3546] = { id=3546, category=280 }, -- Coiled Filament, Professions

@@ -6,160 +6,273 @@ Website: https://www.wowace.com/projects/libcurrencyinfo
 Dependencies: None
 License: MIT
 
-This library provide the ability to get currency's corresponding category, 
-get currency category's localized name, and get currency's description if available. 
-It will also returtn the info for those you can get from GetCurrencyInfo, that way 
-you only need to call one function to get everything you want.
+LibCurrencyInfo provides curated World of Warcraft currency category data,
+localized category names, and currency-category lookup functions.
 
-Sample of function calls:
-////////////////////////////////////////////////////
-local lib = LibStub:GetLibrary("LibCurrencyInfo")
+It also provides convenience methods that combine the library's category
+metadata with live currency information returned by C_CurrencyInfo.
 
-local name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity, categoryID, categoryName, currencyDesc = lib:GetCurrencyByID(currencyID)
-
-local currencyPerCategory = {}
-currencyPerCategory = lib:GetCurrencyByCategoryID(categoryID)
+For new code, prefer lib:GetCurrencyInfo(currencyID[, locale]), which
+returns a table with named fields. GetCurrencyByID is retained for
+compatibility and returns the same information as positional values.
 ]]
--- ----------------------------------------------------------------------------
--- Localized Lua globals.
--- ----------------------------------------------------------------------------
--- Functions
+
 local _G = getfenv(0)
-local pairs, type = _G.pairs, _G.type
--- Libraries
-local tonumber, error = _G.tonumber, _G.error
+
+local type = _G.type
+local tonumber = _G.tonumber
+local error = _G.error
+local format = _G.format
 local GetLocale = _G.GetLocale
-
-local C_CurrencyInfo = _G.C_CurrencyInfo
-local GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
-local GetBasicCurrencyInfo = C_CurrencyInfo.GetBasicCurrencyInfo
-
--- ----------------------------------------------------------------------------
--- AddOn namespace.
--- ----------------------------------------------------------------------------
-local FOLDER_NAME, private = ...
-
 local LibStub = _G.LibStub
+
+local _, private = ...
 
 local MAJOR_VERSION = "LibCurrencyInfo"
 local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
 
 local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
-if not lib then return end
+if not lib then
+    return
+end
 
-lib.data = private.data
+local C_CurrencyInfo = _G.C_CurrencyInfo
+local BlizzardGetCurrencyInfo = C_CurrencyInfo and C_CurrencyInfo.GetCurrencyInfo
+local BlizzardGetBasicCurrencyInfo = C_CurrencyInfo and C_CurrencyInfo.GetBasicCurrencyInfo
 
-local LANGS = {
-	["enUS"] = true,
-	["deDE"] = true,
-	["esES"] = true,
-	["esMX"] = true,
-	["frFR"] = true,
-	["itIT"] = true,
-	["koKR"] = true,
-	["ptBR"] = true,
-	["ruRU"] = true,
-	["zhCN"] = true,
-	["zhTW"] = true,
+local EMPTY_DATA = {
+    Currencies = {},
+    CurrencyCategories = {},
+    CurrencyByCategory = {},
 }
 
-local function CheckLang(lang)
-	if not lang then return end
-	if (LANGS[lang]) then return true end
+-- The relevant data file must load before this file. The empty fallback keeps
+-- the library safe if this file is accidentally loaded without its data file.
+lib.data = private and private.data or EMPTY_DATA
+
+local LANGS = {
+    enUS = true,
+    deDE = true,
+    esES = true,
+    esMX = true,
+    frFR = true,
+    itIT = true,
+    koKR = true,
+    ptBR = true,
+    ruRU = true,
+    zhCN = true,
+    zhTW = true,
+}
+
+local function IsSupportedLocale(locale)
+    return locale ~= nil and LANGS[locale] == true
 end
 
---[[ /////////////////////////////////////////
--- lib:GetCurrencyByID(currencyID, lang)
--- Returns:
-    name 
-        String - the name of the currency, localized to the language
-    amount 
-        Number - Current amount of the currency at index
-    texture 
-        Number - The textureID of the currency's icon. 
-    earnedThisWeek 
-        Number - The amount of the currency earned this week
-    weeklyMax 
-        Number - Maximum amount of currency possible to be earned this week
-    totalMax 
-        Number - Total maximum currency possible to stockpile
-    isDiscovered 
-        Boolean - Whether the character has ever got some of this currency
-    rarity 
-        Integer - Rarity indicator for this currency 
-    categoryID
-        Number  - The currency's corresponding categoryID
-    categoryName
-        String  - The currency's corresponding category name
-    currencyDesc
-        String  - The currency's description
--- /////////////////////////////////////////]]
-function lib:GetCurrencyByID(currencyID, lang)
-	if not currencyID or type(currencyID) ~= "number" then return end
+local function ResolveLocale(locale)
+    if locale == nil then
+        return GetLocale()
+    end
 
-	local name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity, categoryID, categoryName, currencyDesc
+    if not IsSupportedLocale(locale) then
+        error(format(
+            "The specified locale \"%s\" is invalid or unavailable.",
+            tostring(locale)
+        ), 3)
+    end
 
-	if (lang) then
-		if ( not CheckLang(lang) ) then
-			error(format("The specified language \"%s\" is invalid or not available", lang))
-			return nil
-		end
-	else
-		lang = GetLocale()
-	end
-	
-	local curr = GetCurrencyInfo(currencyID)
-
-	if not curr then return end
-	local currInfo = GetBasicCurrencyInfo(currencyID)
-	
-	categoryID = lib.data.Currencies[currencyID].category or nil
-	categoryName = lib.data.CurrencyCategories[categoryID] and lib.data.CurrencyCategories[categoryID][lang] or ""
-	currencyDesc = currInfo and currInfo.description or ""
-	
-	-- returns: name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity, categoryID, categoryName, currencyDesc
-	return curr.name, curr.quantity, curr.iconFileID, curr.quantityEarnedThisWeek, curr.maxWeeklyQuantity, curr.maxQuantity, curr.discovered, curr.quality, categoryID, categoryName, currencyDesc
+    return locale
 end
 
+local function GetData()
+    return lib.data or EMPTY_DATA
+end
+
+local function GetCategoryData(categoryID)
+    if not categoryID then
+        return nil
+    end
+
+    return GetData().CurrencyCategories[categoryID]
+end
+
+local function GetLocalizedCategoryName(categoryID, locale)
+    local categoryData = GetCategoryData(categoryID)
+
+    if not categoryData then
+        return nil
+    end
+
+    return categoryData[locale] or categoryData.enUS
+end
+
+--[[
+lib:GetCurrencyByID(currencyID[, locale])
+
+Returns, in order:
+  1. name
+  2. quantity
+  3. iconFileID
+  4. quantityEarnedThisWeek
+  5. maxWeeklyQuantity
+  6. maxQuantity
+  7. discovered
+  8. quality
+  9. categoryID
+ 10. categoryName
+ 11. description
+]]
+function lib:GetCurrencyByID(currencyID, locale)
+    if not currencyID or type(currencyID) ~= "number" then
+        return nil
+    end
+
+    if type(BlizzardGetCurrencyInfo) ~= "function" then
+        return nil
+    end
+
+    locale = ResolveLocale(locale)
+
+    local curr = BlizzardGetCurrencyInfo(currencyID)
+    if not curr then
+        return nil
+    end
+
+    local currInfo = type(BlizzardGetBasicCurrencyInfo) == "function"
+        and BlizzardGetBasicCurrencyInfo(currencyID)
+        or nil
+
+    local currencyData = GetData().Currencies[currencyID]
+    local categoryID = currencyData and currencyData.category or nil
+    local categoryName = GetLocalizedCategoryName(categoryID, locale) or ""
+    local description = currInfo and currInfo.description or ""
+
+    return
+        curr.name,
+        curr.quantity,
+        curr.iconFileID,
+        curr.quantityEarnedThisWeek,
+        curr.maxWeeklyQuantity,
+        curr.maxQuantity,
+        curr.discovered,
+        curr.quality,
+        categoryID,
+        categoryName,
+        description
+end
+
+--[[
+lib:GetCurrencyInfo(currencyID[, locale])
+
+Returns a table containing the same information as GetCurrencyByID(), with
+named fields. Returns nil if the currency is unavailable or unsupported by the
+current WoW client.
+]]
+function lib:GetCurrencyInfo(currencyID, locale)
+    local name, quantity, iconFileID,
+        quantityEarnedThisWeek, maxWeeklyQuantity, maxQuantity,
+        discovered, quality,
+        categoryID, categoryName, description =
+        self:GetCurrencyByID(currencyID, locale)
+
+    if not name then
+        return nil
+    end
+
+    return {
+        name = name,
+        quantity = quantity,
+        iconFileID = iconFileID,
+        quantityEarnedThisWeek = quantityEarnedThisWeek,
+        maxWeeklyQuantity = maxWeeklyQuantity,
+        maxQuantity = maxQuantity,
+        discovered = discovered,
+        quality = quality,
+        categoryID = categoryID,
+        categoryName = categoryName,
+        description = description,
+    }
+end
+
+--[[
+lib:GetCurrencyByCategoryID(categoryID)
+
+Returns the library-owned array of currency IDs for categoryID, or nil when
+unknown. Treat the returned table as read-only.
+]]
 function lib:GetCurrencyByCategoryID(categoryID)
-	if not categoryID or type(categoryID) ~= "number" then return end
-	
-	if lib.data.CurrencyByCategory[categoryID] then return lib.data.CurrencyByCategory[categoryID] end
+    if not categoryID or type(categoryID) ~= "number" then
+        return nil
+    end
+
+    return GetData().CurrencyByCategory[categoryID]
 end
 
-function lib:GetCurrencyTokenStrings(currencyID, lang)
-	if not currencyID or type(currencyID) ~= "number" then return end
+--[[
+lib:GetCurrencyCategoryNameByCurrencyID(currencyID[, locale])
 
-	local name, count, _, _, _, totalMax, _, _, _, _, currencyDesc = lib:GetCurrencyByID(currencyID, lang)
-	if not name then return end
-	if not count then count = 0 end
+Returns the localized category name assigned by LibCurrencyInfo, or nil if the
+currency has no known category.
+]]
+function lib:GetCurrencyCategoryNameByCurrencyID(currencyID, locale)
+    if not currencyID or type(currencyID) ~= "number" then
+        return nil
+    end
 
-	local str = HIGHLIGHT_FONT_COLOR_CODE..name
-	if currencyDesc then str = str.."\n"..NORMAL_FONT_COLOR_CODE..currencyDesc end
-	if (totalMax and totalMax > 0) then
-		str = str.."\n\n"..NORMAL_FONT_COLOR_CODE..format(CURRENCY_TOTAL_CAP, HIGHLIGHT_FONT_COLOR_CODE, count, totalMax)
-	else
-		str = str.."\n\n"..NORMAL_FONT_COLOR_CODE..format(CURRENCY_TOTAL, HIGHLIGHT_FONT_COLOR_CODE, count)
-	end
-	
-	return str
+    local currencyData = GetData().Currencies[currencyID]
+    if not currencyData or not currencyData.category then
+        return nil
+    end
+
+    return self:GetCurrencyCategoryNameByCategoryID(currencyData.category, locale)
 end
 
-function lib:GetCurrencyCategoryNameByCurrencyID(currencyID, lang)
-	if not currencyID or type(currencyID) ~= "number" then return end
-	if not lib.data.Currencies[currencyID] then return end
-	
-	local categoryID = lib.data.Currencies[currencyID].category
-	if not categoryID then return end
-	if not lib.data.CurrencyCategories[categoryID] then return end
-	
-	return lib.data.CurrencyCategories[categoryID][lang] or lib.data.CurrencyCategories[categoryID]["enUS"]
-	
+--[[
+lib:GetCurrencyCategoryNameByCategoryID(categoryID[, locale])
+
+Returns the localized category name, falling back to enUS when a translation is
+not available. Returns nil for an unknown category.
+]]
+function lib:GetCurrencyCategoryNameByCategoryID(categoryID, locale)
+    if not categoryID or type(categoryID) ~= "number" then
+        return nil
+    end
+
+    locale = ResolveLocale(locale)
+
+    return GetLocalizedCategoryName(categoryID, locale)
 end
 
-function lib:GetCurrencyCategoryNameByCategoryID(categoryID, lang)
-	if not lib.data.CurrencyCategories[categoryID] then return end
-	
-	return lib.data.CurrencyCategories[categoryID][lang] or lib.data.CurrencyCategories[categoryID]["enUS"]
-	
+--[[
+lib:GetCurrencyTokenStrings(currencyID[, locale])
+
+Returns formatted text suitable for adding to a GameTooltip. The result includes
+the currency name, description when available, current quantity, and total cap
+when the client provides one.
+]]
+function lib:GetCurrencyTokenStrings(currencyID, locale)
+    local name, quantity, _, _, _, maxQuantity, _, _, _, _, description =
+        self:GetCurrencyByID(currencyID, locale)
+
+    if not name then
+        return nil
+    end
+
+    quantity = quantity or 0
+
+    local text = HIGHLIGHT_FONT_COLOR_CODE .. name
+
+    if description and description ~= "" then
+        text = text .. "\n" .. NORMAL_FONT_COLOR_CODE .. description
+    end
+
+    if maxQuantity and maxQuantity > 0 then
+        text = text .. "\n\n" .. NORMAL_FONT_COLOR_CODE
+            .. format(CURRENCY_TOTAL_CAP, HIGHLIGHT_FONT_COLOR_CODE, quantity, maxQuantity)
+    else
+        text = text .. "\n\n" .. NORMAL_FONT_COLOR_CODE
+            .. format(CURRENCY_TOTAL, HIGHLIGHT_FONT_COLOR_CODE, quantity)
+    end
+
+    return text
 end
+

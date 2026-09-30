@@ -47,7 +47,7 @@ if (isAnniversaryTBC) then
 	local data = {}
 
 	data.CurrencyCategories = {
-		[247] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Personaggio vs Personaggio",koKR="플레이어 간 전투",ptBR="Jogador x Jogador",ruRU="PvP",zhTW="玩家對玩家",znCN="PvP", },
+		[247] = { enUS="Player vs. Player",deDE="Spieler gegen Spieler",esES="Jugador contra Jugador",esMX="Jugador contra Jugador",frFR="JcJ",itIT="Personaggio vs Personaggio",koKR="플레이어 간 전투",ptBR="Jogador x Jogador",ruRU="PvP",zhTW="玩家對玩家",zhCN="PvP", },
 	}
 
 	data.CurrencyByCategory = {
