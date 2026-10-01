@@ -772,7 +772,7 @@ if (isRetail) then
 	--		3180, -- Weekly Limit Test Currency
 		},
 		[245] = { -- Shadowlands
-			1743, -- Fake Anima for Quest Tracking
+	--		1743, -- Fake Anima for Quest Tracking
 			1754, -- Argent Commendation
 			1767, -- Stygia
 			1802, -- Shadowlands PvP Weekly Reward Progress
@@ -1814,7 +1814,7 @@ if (isRetail) then
 		[1739] = { id=1739, category=142 }, -- Ankoan, Hidden
 		[1740] = { id=1740, category=142, hide=true }, -- Rustbolt Resistance (Hidden), Hidden
 		[1742] = { id=1742, category=142 }, -- Rustbolt Resistance, Hidden
-		[1743] = { id=1743, category=245 }, -- Fake Anima for Quest Tracking, Shadowlands
+		[1743] = { id=1743, category=245, hide=true }, -- Fake Anima for Quest Tracking, Shadowlands
 		[1744] = { id=1744, category=142, hide=true }, -- Corrupted Memento, Hidden
 		[1745] = { id=1745, category=142, hide=true }, -- Nazjatar Ally - Neri Sharpfin, Hidden
 		[1746] = { id=1746, category=142, hide=true }, -- Nazjatar Ally - Vim Brineheart, Hidden
