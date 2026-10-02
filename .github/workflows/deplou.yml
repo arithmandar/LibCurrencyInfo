@@ -1,0 +1,27 @@
+name: Automatic Package and Deploy
+
+on:
+  push:
+    branches:
+      - main     # Triggers on every commit pushed to main
+    tags:
+      - "v*"    # Also triggers when you push a version tag
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required so the packager can read git history for changelogs
+
+      - name: Package and Upload Addon
+        uses: BigWigsMods/packager@v2
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

@@ -8,7 +8,7 @@ enable-nolib-creation: yes
 
 externals:
    LibStub:
-        url: https://repos.wowace.com/wow/libstub/trunk
+        url: https://repos.curseforge.com/wow/libstub/trunk
         tag: latest
 
 ignore:

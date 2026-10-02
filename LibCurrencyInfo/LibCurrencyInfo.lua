@@ -132,8 +132,8 @@ function lib:GetCurrencyByID(currencyID, locale)
 
     locale = ResolveLocale(locale)
 
-    local curr = BlizzardGetCurrencyInfo(currencyID)
-    if not curr then
+    local info = BlizzardGetCurrencyInfo(currencyID)
+    if not info then
         return nil
     end
 
@@ -143,18 +143,24 @@ function lib:GetCurrencyByID(currencyID, locale)
 
     local currencyData = GetData().Currencies[currencyID]
     local categoryID = currencyData and currencyData.category or nil
-    local categoryName = GetLocalizedCategoryName(categoryID, locale) or ""
+    local categoryName = categoryID
+        and lib.data.CurrencyCategories[categoryID]
+        and (
+            lib.data.CurrencyCategories[categoryID][locale]
+            or lib.data.CurrencyCategories[categoryID].enUS
+        )
+        or ""
     local description = currInfo and currInfo.description or ""
 
     return
-        curr.name,
-        curr.quantity,
-        curr.iconFileID,
-        curr.quantityEarnedThisWeek,
-        curr.maxWeeklyQuantity,
-        curr.maxQuantity,
-        curr.discovered,
-        curr.quality,
+        info.name,
+        info.quantity,
+        info.iconFileID,
+        info.quantityEarnedThisWeek,
+        info.maxWeeklyQuantity,
+        info.maxQuantity,
+        info.discovered,
+        info.quality,
         categoryID,
         categoryName,
         description

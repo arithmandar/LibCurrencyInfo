@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.47 (Oct. xx, 2026)
+-----------------------
+- lib:GetCurrencyByID will return English category names when the specified locale is not available
+
 * v1.46 (Oct. 01, 2026)
 -----------------------
 - Fine tuned currencies / category's hidden status
