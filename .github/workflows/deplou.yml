@@ -2,8 +2,8 @@ name: Automatic Package and Deploy
 
 on:
   push:
-    branches:
-      - main     # Triggers on every commit pushed to main
+    #branches:
+    #  - main     # Triggers on every commit pushed to main
     tags:
       - "v*"    # Also triggers when you push a version tag
 
