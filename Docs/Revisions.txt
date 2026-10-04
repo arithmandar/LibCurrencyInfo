@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.51 (Oct. 05, 2026)
+-----------------------
+- Due to migrate to GitHub, SVN keywords and Revision ID are no longer used
+
 * v1.50 (Oct. 04, 2026)
 -----------------------
 - Fixed TOC to X-WoWI-ID

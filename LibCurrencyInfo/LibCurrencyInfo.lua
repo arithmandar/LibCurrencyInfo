@@ -1,6 +1,5 @@
 --[[
 Name: LibCurrencyInfo
-Revision: $Rev$
 Maintainers: Arith
 Website: https://www.wowace.com/projects/libcurrencyinfo
 Dependencies: None
@@ -20,7 +19,6 @@ compatibility and returns the same information as positional values.
 local _G = getfenv(0)
 
 local type = _G.type
-local tonumber = _G.tonumber
 local error = _G.error
 local format = _G.format
 local GetLocale = _G.GetLocale
@@ -29,7 +27,7 @@ local LibStub = _G.LibStub
 local _, private = ...
 
 local MAJOR_VERSION = "LibCurrencyInfo"
-local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
+local MINOR_VERSION = 91051
 
 local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
 if not lib then

@@ -1,6 +1,5 @@
 --[[
 Name: LibCurrencyInfo
-Revision: $Rev$
 Maintainers: Arith
 Website: https://www.wowace.com/projects/libcurrencyinfo
 Dependencies: None
