@@ -1,6 +1,5 @@
 --[[
 Name: LibCurrencyInfo
-Revision: $Rev: 88 $
 Maintainers: Arith
 Website: https://www.wowace.com/projects/libcurrencyinfo
 Dependencies: None
@@ -14,11 +13,10 @@ you only need to call one function to get everything you want.
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
-local FOLDER_NAME, private = ...
+local _, private = ...
 
 -- Functions
 local _G = getfenv(0)
-local GetBuildInfo = _G.GetBuildInfo
 
 -- Determine WoW client family
 local projectID = WOW_PROJECT_ID
