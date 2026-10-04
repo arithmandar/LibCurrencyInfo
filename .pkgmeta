@@ -6,6 +6,10 @@ manual-changelog:
 
 enable-nolib-creation: yes
 
+# configs for WowInterface
+wowi-archive-previous: yes
+wowi-create-changelog: no
+
 externals:
    LibStub:
         url: https://repos.curseforge.com/wow/libstub/trunk
@@ -14,4 +18,4 @@ externals:
 ignore:
     - .util
     - .data
-    - pkgmeta.yaml
+    - .github

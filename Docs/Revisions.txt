@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.48 (Oct. 04, 2026)
+-----------------------
+- Update TOC to add WoWInterface's project ID, in order to add auto-packaging for both CurseForge and WoWInterface
+
 * v1.47 (Oct. 02, 2026)
 -----------------------
 - lib:GetCurrencyByID will return English category names when the specified locale is not available
