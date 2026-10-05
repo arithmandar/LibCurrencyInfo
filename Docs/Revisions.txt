@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.52 (Oct. 05, 2026)
+-----------------------
+- Added IconTexture field to the TOC file
+
 * v1.51 (Oct. 05, 2026)
 -----------------------
 - Due to migrate to GitHub, SVN keywords and Revision ID are no longer used
