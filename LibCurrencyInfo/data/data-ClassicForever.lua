@@ -15,21 +15,9 @@ you only need to call one function to get everything you want.
 -- ----------------------------------------------------------------------------
 local _, private = ...
 
--- Functions
-local _G = getfenv(0)
-local GetBuildInfo = _G.GetBuildInfo
-
 -- Determine WoW client family
-local _, _, _, interfaceVersion = GetBuildInfo()
 local projectID = WOW_PROJECT_ID
-
-local PROJECT_MAINLINE = WOW_PROJECT_MAINLINE
-
--- Beta-only fallback:
--- Replace these bounds with values verified from the actual Forever client.
-local isForeverBeta = projectID == PROJECT_MAINLINE and interfaceVersion >= 10000 and interfaceVersion < 20000
-local isClassicForever = isForeverBeta
-
+local isClassicForever = projectID == WOW_PROJECT_CAMELOT
 
 if (isClassicForever) then
 	local data = {}

@@ -27,7 +27,7 @@ local LibStub = _G.LibStub
 local _, private = ...
 
 local MAJOR_VERSION = "LibCurrencyInfo"
-local MINOR_VERSION = 91051
+local MINOR_VERSION = 91053
 
 local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
 if not lib then

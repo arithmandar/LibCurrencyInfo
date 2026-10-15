@@ -1,4 +1,4 @@
-﻿## Interface: 11509, 16001, 20506, 50504, 120100
+﻿## Interface: 11509, 16001, 20506, 50504, 120105
 ## Title: Lib: CurrencyInfo
 ## Notes: A library for WoW currency data, categories, and localized category names.
 ## Title-deDE: Lib: CurrencyInfo
@@ -22,12 +22,7 @@
 ## Title-zhTW: Lib: CurrencyInfo
 ## Notes-zhTW: 用於 WoW 貨幣資料、分類及本地化分類名稱的函式庫。
 ## Author: Arith
-## X-Category: Library
-## X-License: MIT
-## X-Date: @project-date-iso@
-## X-Website: https://www.curseforge.com/wow/addons/libcurrencyinfo
-## X-Curse-Project-ID: 272977
-## X-WoWI-ID: 27237
+## IconTexture: Interface\Icons\wow_token02
 ## Category: Libraries
 ## Category-deDE: Bibliotheken
 ## Category-esES: Bibliotecas
@@ -39,7 +34,12 @@
 ## Category-ruRU: Библиотеки
 ## Category-zhCN: 函数库
 ## Category-zhTW: 函式庫
-
+## X-Category: Library
+## X-License: MIT
+## X-Date: @project-date-iso@
+## X-Website: https://www.curseforge.com/wow/addons/libcurrencyinfo
+## X-Curse-Project-ID: 272977
+## X-WoWI-ID: 27237
 
 #@no-lib-strip@
 LibStub\LibStub.lua

@@ -1,7 +1,11 @@
-$Id$
-
 Revision History:
 =================
+
+* v1.53 (Oct. 15, 2026)
+-----------------------
+- TOC update to support WoW 12.1.5
+- Update Forever's detection as it now has its own project ID
+- Re-added IconTexture field to the TOC file
 
 * v1.52 (Oct. 05, 2026)
 -----------------------
